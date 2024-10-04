@@ -1,0 +1,7 @@
+Building DAG of jobs...
+MissingInputException in rule all  in line 18 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/Snakefile:
+Missing input files for rule all:
+    affected files:
+        output/MISC/1_feature_selection/MISC.counts.val.VST.sig.tsv
+        output/MISC/1_feature_selection/MISC.counts.train.VST.sig.tsv
+        output/MISC/1_feature_selection/MISC.counts.test.VST.sig.tsv

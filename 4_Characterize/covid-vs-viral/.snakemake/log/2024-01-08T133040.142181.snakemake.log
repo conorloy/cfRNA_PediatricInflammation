@@ -1,0 +1,219 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models       13              1              1
+total        14              1              1
+
+Select jobs to execute...
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt
+    jobid: 7
+    reason: Missing output files: output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt
+    jobid: 8
+    reason: Missing output files: output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt
+    jobid: 10
+    reason: Missing output files: output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt
+    jobid: 12
+    reason: Missing output files: output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt
+    jobid: 2
+    reason: Missing output files: output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt
+    jobid: 14
+    reason: Missing output files: output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt
+    jobid: 4
+    reason: Missing output files: output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=GLM
+    resources: tmpdir=/tmp
+
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt
+    jobid: 6
+    reason: Missing output files: output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt
+    jobid: 9
+    reason: Missing output files: output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=NB
+    resources: tmpdir=/tmp
+
+
+[Mon Jan  8 13:30:40 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt
+    jobid: 11
+    reason: Missing output files: output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:30:40 2024]
+[Mon Jan  8 13:30:40 2024]
+Error in rule models:
+    jobid: 10
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt
+
+[Mon Jan  8 13:30:40 2024]
+[Mon Jan  8 13:30:40 2024]
+[Mon Jan  8 13:30:40 2024]
+[Mon Jan  8 13:30:40 2024]
+Error in rule models:
+    jobid: 7
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt
+
+Error in rule models:
+    jobid: 2
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt
+
+Error in rule models:
+    jobid: 12
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt
+
+Error in rule models:
+    jobid: 14
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmpdimvbcep.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Error in rule models:
+    jobid: 8
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt
+
+[Mon Jan  8 13:30:40 2024]
+[Mon Jan  8 13:30:40 2024]
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmpz9z4jhj2.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmpiwhiem0w.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Error in rule models:
+    jobid: 6
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt
+
+Error in rule models:
+    jobid: 4
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmp5f61ci64.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmp825m0huy.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmppex7ickx.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmpi9z8d12h.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmp2r_h33f7.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Mon Jan  8 13:30:40 2024]
+Error in rule models:
+    jobid: 9
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmpip781a4v.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Mon Jan  8 13:30:40 2024]
+Error in rule models:
+    jobid: 11
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/.snakemake/scripts/tmphnnra1qc.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/2_viral-vs-bacterial/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-08T133040.142181.snakemake.log

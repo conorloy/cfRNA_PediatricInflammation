@@ -1,0 +1,3 @@
+NameError in line 13 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/Snakefile:
+name 'my_list' is not defined
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/Snakefile", line 13, in <module>

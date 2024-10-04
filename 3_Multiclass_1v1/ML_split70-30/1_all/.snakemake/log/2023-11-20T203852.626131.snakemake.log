@@ -1,0 +1,8 @@
+Building DAG of jobs...
+MissingInputException in rule feature_selection_and_normalization  in line 1 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Missing input files for rule feature_selection_and_normalization:
+    output: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    wildcards: sample=MISC
+    affected files:
+        /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv
+        /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv

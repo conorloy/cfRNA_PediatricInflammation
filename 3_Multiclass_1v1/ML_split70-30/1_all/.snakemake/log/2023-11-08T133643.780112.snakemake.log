@@ -1,0 +1,373 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models       26              1              1
+total        27              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.rds, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.train.txt, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.test.txt, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.val.txt
+    jobid: 6
+    reason: Missing output files: output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_1_sep, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.rds, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.train.txt, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.test.txt, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.val.txt
+    jobid: 7
+    reason: Missing output files: output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_1_sep, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.rds, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.train.txt, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.test.txt, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.val.txt
+    jobid: 21
+    reason: Missing output files: output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/LDA/seed_1_sep.LDA.rds, output/seed_1_sep/LDA/seed_1_sep.LDA.train.txt, output/seed_1_sep/LDA/seed_1_sep.LDA.test.txt, output/seed_1_sep/LDA/seed_1_sep.LDA.val.txt
+    jobid: 9
+    reason: Missing output files: output/seed_1_sep/LDA/seed_1_sep.LDA.rds
+    wildcards: sample=seed_1_sep, model=LDA
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/NNET/seed_1_sep.NNET.rds, output/seed_1_sep/NNET/seed_1_sep.NNET.train.txt, output/seed_1_sep/NNET/seed_1_sep.NNET.test.txt, output/seed_1_sep/NNET/seed_1_sep.NNET.val.txt
+    jobid: 11
+    reason: Missing output files: output/seed_1_sep/NNET/seed_1_sep.NNET.rds
+    wildcards: sample=seed_1_sep, model=NNET
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/RF/seed_1_sep.RF.rds, output/seed_1_sep/RF/seed_1_sep.RF.train.txt, output/seed_1_sep/RF/seed_1_sep.RF.test.txt, output/seed_1_sep/RF/seed_1_sep.RF.val.txt
+    jobid: 13
+    reason: Missing output files: output/seed_1_sep/RF/seed_1_sep.RF.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_1_sep, model=RF
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/C5/seed_1_sep.C5.rds, output/seed_1_sep/C5/seed_1_sep.C5.train.txt, output/seed_1_sep/C5/seed_1_sep.C5.test.txt, output/seed_1_sep/C5/seed_1_sep.C5.val.txt
+    jobid: 3
+    reason: Missing output files: output/seed_1_sep/C5/seed_1_sep.C5.rds
+    wildcards: sample=seed_1_sep, model=C5
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.rds, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.train.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.test.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.val.txt
+    jobid: 15
+    reason: Missing output files: output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.rds
+    wildcards: sample=seed_1_sep, model=SVMLin
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.rds, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.train.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.test.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.val.txt
+    jobid: 29
+    reason: Missing output files: output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.rds
+    wildcards: sample=seed_2_sep, model=SVMLin
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/KNN/seed_1_sep.KNN.rds, output/seed_1_sep/KNN/seed_1_sep.KNN.train.txt, output/seed_1_sep/KNN/seed_1_sep.KNN.test.txt, output/seed_1_sep/KNN/seed_1_sep.KNN.val.txt
+    jobid: 8
+    reason: Missing output files: output/seed_1_sep/KNN/seed_1_sep.KNN.rds
+    wildcards: sample=seed_1_sep, model=KNN
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/NB/seed_1_sep.NB.rds, output/seed_1_sep/NB/seed_1_sep.NB.train.txt, output/seed_1_sep/NB/seed_1_sep.NB.test.txt, output/seed_1_sep/NB/seed_1_sep.NB.val.txt
+    jobid: 10
+    reason: Missing output files: output/seed_1_sep/NB/seed_1_sep.NB.rds
+    wildcards: sample=seed_1_sep, model=NB
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/PAM/seed_1_sep.PAM.rds, output/seed_1_sep/PAM/seed_1_sep.PAM.train.txt, output/seed_1_sep/PAM/seed_1_sep.PAM.test.txt, output/seed_1_sep/PAM/seed_1_sep.PAM.val.txt
+    jobid: 12
+    reason: Missing output files: output/seed_1_sep/PAM/seed_1_sep.PAM.rds
+    wildcards: sample=seed_1_sep, model=PAM
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/RPART/seed_1_sep.RPART.rds, output/seed_1_sep/RPART/seed_1_sep.RPART.train.txt, output/seed_1_sep/RPART/seed_1_sep.RPART.test.txt, output/seed_1_sep/RPART/seed_1_sep.RPART.val.txt
+    jobid: 14
+    reason: Missing output files: output/seed_1_sep/RPART/seed_1_sep.RPART.rds
+    wildcards: sample=seed_1_sep, model=RPART
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.rds, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.train.txt, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.test.txt, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.val.txt
+    jobid: 16
+    reason: Missing output files: output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.rds
+    wildcards: sample=seed_1_sep, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:44 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.rds, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.train.txt, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.test.txt, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.val.txt
+    jobid: 4
+    reason: Missing output files: output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.rds
+    wildcards: sample=seed_1_sep, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:46 2023]
+Error in rule models:
+    jobid: 29
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.rds, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.train.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.test.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmp2bbl608m.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Select jobs to execute...
+
+[Wed Nov  8 13:36:46 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.rds, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.train.txt, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.test.txt, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.val.txt
+    jobid: 20
+    reason: Missing output files: output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:46 2023]
+Error in rule models:
+    jobid: 15
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.rds, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.train.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.test.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmp8cj87b0p.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Select jobs to execute...
+
+[Wed Nov  8 13:36:46 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/LDA/seed_2_sep.LDA.rds, output/seed_2_sep/LDA/seed_2_sep.LDA.train.txt, output/seed_2_sep/LDA/seed_2_sep.LDA.test.txt, output/seed_2_sep/LDA/seed_2_sep.LDA.val.txt
+    jobid: 23
+    reason: Missing output files: output/seed_2_sep/LDA/seed_2_sep.LDA.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=LDA
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:47 2023]
+Finished job 9.
+1 of 27 steps (4%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:47 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/NNET/seed_2_sep.NNET.rds, output/seed_2_sep/NNET/seed_2_sep.NNET.train.txt, output/seed_2_sep/NNET/seed_2_sep.NNET.test.txt, output/seed_2_sep/NNET/seed_2_sep.NNET.val.txt
+    jobid: 25
+    reason: Missing output files: output/seed_2_sep/NNET/seed_2_sep.NNET.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=NNET
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:47 2023]
+Finished job 12.
+2 of 27 steps (7%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:47 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/RF/seed_2_sep.RF.rds, output/seed_2_sep/RF/seed_2_sep.RF.train.txt, output/seed_2_sep/RF/seed_2_sep.RF.test.txt, output/seed_2_sep/RF/seed_2_sep.RF.val.txt
+    jobid: 27
+    reason: Missing output files: output/seed_2_sep/RF/seed_2_sep.RF.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=RF
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:47 2023]
+Finished job 14.
+3 of 27 steps (11%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:47 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/C5/seed_2_sep.C5.rds, output/seed_2_sep/C5/seed_2_sep.C5.train.txt, output/seed_2_sep/C5/seed_2_sep.C5.test.txt, output/seed_2_sep/C5/seed_2_sep.C5.val.txt
+    jobid: 17
+    reason: Missing output files: output/seed_2_sep/C5/seed_2_sep.C5.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=C5
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:47 2023]
+Finished job 3.
+4 of 27 steps (15%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:47 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/KNN/seed_2_sep.KNN.rds, output/seed_2_sep/KNN/seed_2_sep.KNN.train.txt, output/seed_2_sep/KNN/seed_2_sep.KNN.test.txt, output/seed_2_sep/KNN/seed_2_sep.KNN.val.txt
+    jobid: 22
+    reason: Missing output files: output/seed_2_sep/KNN/seed_2_sep.KNN.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=KNN
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:49 2023]
+Finished job 8.
+5 of 27 steps (19%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:49 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/NB/seed_2_sep.NB.rds, output/seed_2_sep/NB/seed_2_sep.NB.train.txt, output/seed_2_sep/NB/seed_2_sep.NB.test.txt, output/seed_2_sep/NB/seed_2_sep.NB.val.txt
+    jobid: 24
+    reason: Missing output files: output/seed_2_sep/NB/seed_2_sep.NB.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=NB
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:49 2023]
+Finished job 23.
+6 of 27 steps (22%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:49 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/PAM/seed_2_sep.PAM.rds, output/seed_2_sep/PAM/seed_2_sep.PAM.train.txt, output/seed_2_sep/PAM/seed_2_sep.PAM.test.txt, output/seed_2_sep/PAM/seed_2_sep.PAM.val.txt
+    jobid: 26
+    reason: Missing output files: output/seed_2_sep/PAM/seed_2_sep.PAM.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=PAM
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:51 2023]
+Finished job 17.
+7 of 27 steps (26%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:51 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/RPART/seed_2_sep.RPART.rds, output/seed_2_sep/RPART/seed_2_sep.RPART.train.txt, output/seed_2_sep/RPART/seed_2_sep.RPART.test.txt, output/seed_2_sep/RPART/seed_2_sep.RPART.val.txt
+    jobid: 28
+    reason: Missing output files: output/seed_2_sep/RPART/seed_2_sep.RPART.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=RPART
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:52 2023]
+Finished job 22.
+8 of 27 steps (30%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:52 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.rds, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.train.txt, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.test.txt, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.val.txt
+    jobid: 30
+    reason: Missing output files: output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:53 2023]
+Finished job 26.
+9 of 27 steps (33%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:36:53 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.train.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.test.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.val.txt
+    jobid: 18
+    reason: Missing output files: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds; Set of input files has changed since last execution
+    wildcards: sample=seed_2_sep, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:36:54 2023]
+Finished job 28.
+10 of 27 steps (37%) done
+[Wed Nov  8 13:36:55 2023]
+Error in rule models:
+    jobid: 18
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.train.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.test.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmp9s4u1d4g.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov  8 13:36:56 2023]
+Finished job 24.
+11 of 27 steps (41%) done
+[Wed Nov  8 13:36:56 2023]
+Finished job 4.
+12 of 27 steps (44%) done
+[Wed Nov  8 13:36:57 2023]
+Finished job 10.
+13 of 27 steps (48%) done
+[Wed Nov  8 13:37:01 2023]
+Finished job 27.
+14 of 27 steps (52%) done
+[Wed Nov  8 13:37:07 2023]
+Finished job 13.
+15 of 27 steps (56%) done
+[Wed Nov  8 13:37:19 2023]
+Finished job 11.
+16 of 27 steps (59%) done
+[Wed Nov  8 13:37:30 2023]
+Finished job 6.
+17 of 27 steps (63%) done
+[Wed Nov  8 13:37:30 2023]
+Finished job 21.
+18 of 27 steps (67%) done
+[Wed Nov  8 13:37:32 2023]
+Finished job 7.
+19 of 27 steps (70%) done
+[Wed Nov  8 13:37:32 2023]
+Finished job 20.
+20 of 27 steps (74%) done
+[Wed Nov  8 13:37:45 2023]
+Finished job 25.
+21 of 27 steps (78%) done
+[Wed Nov  8 13:40:18 2023]
+Finished job 30.
+22 of 27 steps (81%) done
+[Wed Nov  8 13:40:50 2023]
+Finished job 16.
+23 of 27 steps (85%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-08T133643.780112.snakemake.log

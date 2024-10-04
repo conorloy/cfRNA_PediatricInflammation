@@ -1,0 +1,3 @@
+SyntaxError in line 16 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/tmp.smk:
+invalid syntax
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/Snakefile", line 44, in <module>

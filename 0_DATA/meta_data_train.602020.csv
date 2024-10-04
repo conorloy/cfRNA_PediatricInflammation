@@ -1,0 +1,115 @@
+PTID,sample_id,diagnosis,severity,inflam_cat,Xsample_id,sample_group_granular,sample_group,cfrna_id
+193100,cfrna_kd_140,KD,KD subtype 1,KD,cfrna_kd_140,KD_KD subtype 1_UCSD,KD,cfrna_kd_140
+163045,cfrna_kd_56,KD,KD subtype 1,KD,cfrna_kd_56,KD_KD subtype 1_UCSD,KD,cfrna_kd_56
+153002,cfrna_kd_128,KD,KD subtype 1,KD,cfrna_kd_128,KD_KD subtype 1_UCSD,KD,cfrna_kd_128
+183003,cfrna_kd_133,KD,KD subtype 1,KD,cfrna_kd_133,KD_KD subtype 1_UCSD,KD,cfrna_kd_133
+163014,cfrna_kd_130,KD,KD subtype 1,KD,cfrna_kd_130,KD_KD subtype 1_UCSD,KD,cfrna_kd_130
+3511,cfrna_kd_49,KD,KD subtype 1,KD,cfrna_kd_49,KD_KD subtype 1_UCSD,KD,cfrna_kd_49
+3847,cfrna_kd_127,KD,KD subtype 1,KD,cfrna_kd_127,KD_KD subtype 1_UCSD,KD,cfrna_kd_127
+193007,cfrna_kd_138,KD,KD subtype 1,KD,cfrna_kd_138,KD_KD subtype 1_UCSD,KD,cfrna_kd_138
+173020,cfrna_kd_58,KD,KD subtype 1,KD,cfrna_kd_58,KD_KD subtype 1_UCSD,KD,cfrna_kd_58
+3622,cfrna_kd_125,KD,KD subtype 1,KD,cfrna_kd_125,KD_KD subtype 1_UCSD,KD,cfrna_kd_125
+173048,cfrna_kd_60,KD,KD subtype 1,KD,cfrna_kd_60,KD_KD subtype 1_UCSD,KD,cfrna_kd_60
+3768,cfrna_kd_54,KD,KD subtype 1,KD,cfrna_kd_54,KD_KD subtype 1_UCSD,KD,cfrna_kd_54
+193086,cfrna_kd_139,KD,KD subtype 1,KD,cfrna_kd_139,KD_KD subtype 1_UCSD,KD,cfrna_kd_139
+3696,cfrna_kd_53,KD,KD subtype 1,KD,cfrna_kd_53,KD_KD subtype 1_UCSD,KD,cfrna_kd_53
+153060,cfrna_kd_129,KD,KD subtype 1,KD,cfrna_kd_129,KD_KD subtype 1_UCSD,KD,cfrna_kd_129
+3625,cfrna_kd_190_trimmed,KD,KD subtype 2,KD,cfrna_kd_190_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_190_trimmed
+163056,cfrna_kd_208_trimmed,KD,KD subtype 2,KD,cfrna_kd_208_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_208_trimmed
+213149,cfrna_kd_198_trimmed,KD,KD subtype 2,KD,cfrna_kd_198_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_198_trimmed
+163085,cfrna_kd_229_trimmed,KD,KD subtype 2,KD,cfrna_kd_229_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_229_trimmed
+173070,cfrna_kd_231_trimmed,KD,KD subtype 2,KD,cfrna_kd_231_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_231_trimmed
+3589,cfrna_kd_176_trimmed,KD,KD subtype 2,KD,cfrna_kd_176_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_176_trimmed
+3776,cfrna_kd_217_trimmed,KD,KD subtype 2,KD,cfrna_kd_217_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_217_trimmed
+153047,cfrna_kd_218_trimmed,KD,KD subtype 2,KD,cfrna_kd_218_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_218_trimmed
+203009,cfrna_kd_219_trimmed,KD,KD subtype 2,KD,cfrna_kd_219_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_219_trimmed
+3833,cfrna_kd_179_trimmed,KD,KD subtype 2,KD,cfrna_kd_179_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_179_trimmed
+3243,cfrna_kd_206_trimmed,KD,KD subtype 2,KD,cfrna_kd_206_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_206_trimmed
+153036,cfrna_kd_207_trimmed,KD,KD subtype 2,KD,cfrna_kd_207_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_207_trimmed
+3848,cfrna_kd_228_trimmed,KD,KD subtype 2,KD,cfrna_kd_228_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_228_trimmed
+3675,cfrna_kd_177_trimmed,KD,KD subtype 2,KD,cfrna_kd_177_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_177_trimmed
+3326,cfrna_kd_226_trimmed,KD,KD subtype 2,KD,cfrna_kd_226_trimmed,KD_KD subtype 2_UCSD,KD,cfrna_kd_226_trimmed
+3668,cfrna_kd_200_trimmed,KD,KD subtype 3,KD,cfrna_kd_200_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_200_trimmed
+3861,cfrna_kd_181_trimmed,KD,KD subtype 3,KD,cfrna_kd_181_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_181_trimmed
+183043,cfrna_kd_183_trimmed,KD,KD subtype 3,KD,cfrna_kd_183_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_183_trimmed
+163048,cfrna_kd_203_trimmed,KD,KD subtype 3,KD,cfrna_kd_203_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_203_trimmed
+3901,cfrna_kd_211_trimmed,KD,KD subtype 3,KD,cfrna_kd_211_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_211_trimmed
+3781,cfrna_kd_234_trimmed,KD,KD subtype 3,KD,cfrna_kd_234_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_234_trimmed
+3638,cfrna_kd_209_trimmed,KD,KD subtype 3,KD,cfrna_kd_209_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_209_trimmed
+163058,cfrna_kd_235_trimmed,KD,KD subtype 3,KD,cfrna_kd_235_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_235_trimmed
+3815,cfrna_kd_201_trimmed,KD,KD subtype 3,KD,cfrna_kd_201_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_201_trimmed
+153065,cfrna_kd_222_trimmed,KD,KD subtype 3,KD,cfrna_kd_222_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_222_trimmed
+3868,cfrna_kd_221_trimmed,KD,KD subtype 3,KD,cfrna_kd_221_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_221_trimmed
+3678,cfrna_kd_233_trimmed,KD,KD subtype 3,KD,cfrna_kd_233_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_233_trimmed
+153086,cfrna_kd_212_trimmed,KD,KD subtype 3,KD,cfrna_kd_212_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_212_trimmed
+3938,cfrna_kd_182_trimmed,KD,KD subtype 3,KD,cfrna_kd_182_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_182_trimmed
+163100,cfrna_kd_213_trimmed,KD,KD subtype 3,KD,cfrna_kd_213_trimmed,KD_KD subtype 3_UCSD,KD,cfrna_kd_213_trimmed
+3635,cfrna_kd_111,KD,KD subtype 4,KD,cfrna_kd_111,KD_KD subtype 4_UCSD,KD,cfrna_kd_111
+3821,cfrna_kd_114,KD,KD subtype 4,KD,cfrna_kd_114,KD_KD subtype 4_UCSD,KD,cfrna_kd_114
+3667,cfrna_kd_112,KD,KD subtype 4,KD,cfrna_kd_112,KD_KD subtype 4_UCSD,KD,cfrna_kd_112
+173028,cfrna_kd_122,KD,KD subtype 4,KD,cfrna_kd_122,KD_KD subtype 4_UCSD,KD,cfrna_kd_122
+3749,cfrna_kd_44,KD,KD subtype 4,KD,cfrna_kd_44,KD_KD subtype 4_UCSD,KD,cfrna_kd_44
+153034,cfrna_kd_47,KD,KD subtype 4,KD,cfrna_kd_47,KD_KD subtype 4_UCSD,KD,cfrna_kd_47
+163054,cfrna_kd_57,KD,KD subtype 4,KD,cfrna_kd_57,KD_KD subtype 4_UCSD,KD,cfrna_kd_57
+3700,cfrna_kd_113,KD,KD subtype 4,KD,cfrna_kd_113,KD_KD subtype 4_UCSD,KD,cfrna_kd_113
+173024,cfrna_kd_59,KD,KD subtype 4,KD,cfrna_kd_59,KD_KD subtype 4_UCSD,KD,cfrna_kd_59
+3828,cfrna_kd_45,KD,KD subtype 4,KD,cfrna_kd_45,KD_KD subtype 4_UCSD,KD,cfrna_kd_45
+173030,cfrna_kd_118,KD,KD subtype 4,KD,cfrna_kd_118,KD_KD subtype 4_UCSD,KD,cfrna_kd_118
+3627,cfrna_kd_43,KD,KD subtype 4,KD,cfrna_kd_43,KD_KD subtype 4_UCSD,KD,cfrna_kd_43
+3364,cfrna_kd_48,KD,KD subtype 4,KD,cfrna_kd_48,KD_KD subtype 4_UCSD,KD,cfrna_kd_48
+CNH014,prevail_cu_cfrna_223,MISC,2,MISC,prevail_cu_cfrna_223,MISC_2_CNH,MISC,prevail_cu_cfrna_223
+CNH064,prevail_cu_cfrna_342,MISC,2,MISC,prevail_cu_cfrna_342,MISC_2_CNH,MISC,prevail_cu_cfrna_342
+CNH009,prevail_cu_cfrna_205,MISC,2,MISC,prevail_cu_cfrna_205,MISC_2_CNH,MISC,prevail_cu_cfrna_205
+NCOV3307CHOA,prevail_cu_cfrna_318,MISC,2,MISC,prevail_cu_cfrna_318,MISC_2_EMORY,MISC,prevail_cu_cfrna_318
+NCOV3273CHOA,prevail_cu_cfrna_308,MISC,2,MISC,prevail_cu_cfrna_308,MISC_2_EMORY,MISC,prevail_cu_cfrna_308
+NCOV3267CHOA,prevail_cu_cfrna_293,MISC,2,MISC,prevail_cu_cfrna_293,MISC_2_EMORY,MISC,prevail_cu_cfrna_293
+NCOV3292CHOA,prevail_cu_cfrna_82,MISC,2,MISC,prevail_cu_cfrna_82,MISC_2_EMORY,MISC,prevail_cu_cfrna_82
+NCOV3282CHOA,prevail_cu_cfrna_263,MISC,2,MISC,prevail_cu_cfrna_263,MISC_2_EMORY,MISC,prevail_cu_cfrna_263
+NCOV3281CHOA,prevail_cu_cfrna_304,MISC,2,MISC,prevail_cu_cfrna_304,MISC_2_EMORY,MISC,prevail_cu_cfrna_304
+NCOV3291CHOA,prevail_cu_cfrna_81,MISC,2,MISC,prevail_cu_cfrna_81,MISC_2_EMORY,MISC,prevail_cu_cfrna_81
+NCOV3324CHOA,prevail_cu_cfrna_309,MISC,2,MISC,prevail_cu_cfrna_309,MISC_2_EMORY,MISC,prevail_cu_cfrna_309
+NCOV3436CHOA,prevail_cu_cfrna_179,MISC,2,MISC,prevail_cu_cfrna_179,MISC_2_EMORY,MISC,prevail_cu_cfrna_179
+NCOV3283CHOA,prevail_cu_cfrna_305,MISC,2,MISC,prevail_cu_cfrna_305,MISC_2_EMORY,MISC,prevail_cu_cfrna_305
+NCOV3266CHOA,prevail_cu_cfrna_297,MISC,2,MISC,prevail_cu_cfrna_297,MISC_2_EMORY,MISC,prevail_cu_cfrna_297
+NCOV3303CHOA,prevail_cu_cfrna_307,MISC,2,MISC,prevail_cu_cfrna_307,MISC_2_EMORY,MISC,prevail_cu_cfrna_307
+NCOV3268CHOA,prevail_cu_cfrna_298,MISC,2,MISC,prevail_cu_cfrna_298,MISC_2_EMORY,MISC,prevail_cu_cfrna_298
+NCOV3298CHOA,prevail_cu_cfrna_260,MISC,2,MISC,prevail_cu_cfrna_260,MISC_2_EMORY,MISC,prevail_cu_cfrna_260
+NCOV3368CHOA,prevail_cu_cfrna_292,MISC,2,MISC,prevail_cu_cfrna_292,MISC_2_EMORY,MISC,prevail_cu_cfrna_292
+NCOV3244CHOA,prevail_cu_cfrna_315,MISC,2,MISC,prevail_cu_cfrna_315,MISC_2_EMORY,MISC,prevail_cu_cfrna_315
+NCOV3503CHOA,prevail_cu_cfrna_236,MISC,2,MISC,prevail_cu_cfrna_236,MISC_2_EMORY,MISC,prevail_cu_cfrna_236
+NCOV3276CHOA,prevail_cu_cfrna_300,MISC,2,MISC,prevail_cu_cfrna_300,MISC_2_EMORY,MISC,prevail_cu_cfrna_300
+NCOV3241CHOA,prevail_cu_cfrna_320,MISC,2,MISC,prevail_cu_cfrna_320,MISC_2_EMORY,MISC,prevail_cu_cfrna_320
+CNH008,prevail_cu_cfrna_219,MISC,3,MISC,prevail_cu_cfrna_219,MISC_3_CNH,MISC,prevail_cu_cfrna_219
+CNH018,prevail_cu_cfrna_221,MISC,3,MISC,prevail_cu_cfrna_221,MISC_3_CNH,MISC,prevail_cu_cfrna_221
+CNH025,prevail_cu_cfrna_203,MISC,3,MISC,prevail_cu_cfrna_203,MISC_3_CNH,MISC,prevail_cu_cfrna_203
+NCOV3374CHOA,prevail_cu_cfrna_296,MISC,3,MISC,prevail_cu_cfrna_296,MISC_3_EMORY,MISC,prevail_cu_cfrna_296
+NCOV3365CHOA,prevail_cu_cfrna_285,MISC,3,MISC,prevail_cu_cfrna_285,MISC_3_EMORY,MISC,prevail_cu_cfrna_285
+NCOV3499CHOA,prevail_cu_cfrna_235,MISC,3,MISC,prevail_cu_cfrna_235,MISC_3_EMORY,MISC,prevail_cu_cfrna_235
+NCOV3323CHOA,prevail_cu_cfrna_280,MISC,3,MISC,prevail_cu_cfrna_280,MISC_3_EMORY,MISC,prevail_cu_cfrna_280
+NCOV3309CHOA,prevail_cu_cfrna_303,MISC,3,MISC,prevail_cu_cfrna_303,MISC_3_EMORY,MISC,prevail_cu_cfrna_303
+NCOV3296CHOA,prevail_cu_cfrna_83,MISC,3,MISC,prevail_cu_cfrna_83,MISC_3_EMORY,MISC,prevail_cu_cfrna_83
+213111,cfrna_kd_144,MISC,lowest 60>EF≥55,MISC,cfrna_kd_144,MISC_lowest 60>EF≥55_UCSD,MISC,cfrna_kd_144
+213131,cfrna_kd_78,MISC,lowest 60>EF≥55,MISC,cfrna_kd_78,MISC_lowest 60>EF≥55_UCSD,MISC,cfrna_kd_78
+203093,cfrna_kd_142,MISC,lowest 60>EF≥55,MISC,cfrna_kd_142,MISC_lowest 60>EF≥55_UCSD,MISC,cfrna_kd_142
+213122,cfrna_kd_145,MISC,lowest 60>EF≥55,MISC,cfrna_kd_145,MISC_lowest 60>EF≥55_UCSD,MISC,cfrna_kd_145
+223023,cfrna_kd_82,MISC,lowest EF<55,MISC,cfrna_kd_82,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_82
+34CHM008,cfrna_kd_158,MISC,lowest EF<55,MISC,cfrna_kd_158,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_158
+37CHM007,cfrna_kd_159,MISC,lowest EF<55,MISC,cfrna_kd_159,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_159
+223003,cfrna_kd_162,MISC,lowest EF<55,MISC,cfrna_kd_162,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_162
+213139,cfrna_kd_79,MISC,lowest EF<55,MISC,cfrna_kd_79,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_79
+34CHM007,cfrna_kd_84,MISC,lowest EF<55,MISC,cfrna_kd_84,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_84
+213045,cfrna_kd_150,MISC,lowest EF<55,MISC,cfrna_kd_150,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_150
+223002,cfrna_kd_80,MISC,lowest EF<55,MISC,cfrna_kd_80,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_80
+223029,cfrna_kd_157,MISC,lowest EF<55,MISC,cfrna_kd_157,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_157
+213142,cfrna_kd_154,MISC,lowest EF<55,MISC,cfrna_kd_154,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_154
+213124,cfrna_kd_77,MISC,lowest EF<55,MISC,cfrna_kd_77,MISC_lowest EF<55_UCSD,MISC,cfrna_kd_77
+223027,cfrna_kd_83,MISC,lowest EF≥60,MISC,cfrna_kd_83,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_83
+213057,cfrna_kd_72,MISC,lowest EF≥60,MISC,cfrna_kd_72,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_72
+213056,cfrna_kd_166,MISC,lowest EF≥60,MISC,cfrna_kd_166,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_166
+203055,cfrna_kd_65,MISC,lowest EF≥60,MISC,cfrna_kd_65,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_65
+213054,cfrna_kd_71,MISC,lowest EF≥60,MISC,cfrna_kd_71,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_71
+213104,cfrna_kd_73,MISC,lowest EF≥60,MISC,cfrna_kd_73,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_73
+37CHM005,cfrna_kd_85,MISC,lowest EF≥60,MISC,cfrna_kd_85,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_85
+213061,cfrna_kd_171,MISC,lowest EF≥60,MISC,cfrna_kd_171,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_171
+40CHM001,cfrna_kd_172,MISC,lowest EF≥60,MISC,cfrna_kd_172,MISC_lowest EF≥60_UCSD,MISC,cfrna_kd_172
+CNH139,prevail_cu_cfrna_378,KD,NA,KD,prevail_cu_cfrna_378,KD_NA_CNH,KD,prevail_cu_cfrna_378

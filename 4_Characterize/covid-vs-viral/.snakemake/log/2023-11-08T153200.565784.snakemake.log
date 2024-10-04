@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+GFSu         1              1              1
+all          1              1              1
+total        2              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 15:32:00 2023]
+rule GFSu:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.rds, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.train.txt, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.test.txt, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.val.txt
+    jobid: 16
+    reason: Missing output files: output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.test.txt, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.val.txt, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.rds, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.train.txt
+    wildcards: sample=seed_2_sep
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 15:32:03 2023]
+Error in rule GFSu:
+    jobid: 16
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.rds, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.train.txt, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.test.txt, output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.val.txt
+
+RuleException:
+CalledProcessError in line 71 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmpd_5o3sg_.2_train-GFSu.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 71, in __rule_GFSu
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-08T153200.565784.snakemake.log

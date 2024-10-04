@@ -1,0 +1,216 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        1              1              1
+models                                    14              1              1
+total                                     16              1              1
+
+Select jobs to execute...
+
+[Tue May  7 21:04:21 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_val.602020.csv, ../data/counts_train_vst.csv, ../data/counts_test_vst.csv, ../data/counts_val_vst.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv
+    jobid: 1
+    reason: Missing output files: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+Finished job 1.
+1 of 16 steps (6%) done
+Select jobs to execute...
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.rds, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.train.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.test.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.val.txt
+    jobid: 6
+    reason: Missing output files: output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.train.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.test.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.val.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.rds; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/KNN/MISC<>KD.KNN.rds, output/MISC<>KD/KNN/MISC<>KD.KNN.train.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.test.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.val.txt
+    jobid: 7
+    reason: Missing output files: output/MISC<>KD/KNN/MISC<>KD.KNN.train.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.val.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.test.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.rds; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=KNN
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/NB/MISC<>KD.NB.rds, output/MISC<>KD/NB/MISC<>KD.NB.train.txt, output/MISC<>KD/NB/MISC<>KD.NB.test.txt, output/MISC<>KD/NB/MISC<>KD.NB.val.txt
+    jobid: 9
+    reason: Missing output files: output/MISC<>KD/NB/MISC<>KD.NB.rds, output/MISC<>KD/NB/MISC<>KD.NB.test.txt, output/MISC<>KD/NB/MISC<>KD.NB.train.txt, output/MISC<>KD/NB/MISC<>KD.NB.val.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=NB
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/PAM/MISC<>KD.PAM.rds, output/MISC<>KD/PAM/MISC<>KD.PAM.train.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.test.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.val.txt
+    jobid: 11
+    reason: Missing output files: output/MISC<>KD/PAM/MISC<>KD.PAM.val.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.train.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.rds, output/MISC<>KD/PAM/MISC<>KD.PAM.test.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=PAM
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/RPART/MISC<>KD.RPART.rds, output/MISC<>KD/RPART/MISC<>KD.RPART.train.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.test.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.val.txt
+    jobid: 13
+    reason: Missing output files: output/MISC<>KD/RPART/MISC<>KD.RPART.rds, output/MISC<>KD/RPART/MISC<>KD.RPART.val.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.test.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.train.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=RPART
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.rds, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.train.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.test.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.val.txt
+    jobid: 15
+    reason: Missing output files: output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.rds, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.train.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.val.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.test.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.rds, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.train.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.test.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.val.txt
+    jobid: 3
+    reason: Missing output files: output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.val.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.rds, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.train.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.test.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt
+    jobid: 5
+    reason: Missing output files: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.rds, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.train.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.test.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.val.txt
+    jobid: 14
+    reason: Missing output files: output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.test.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.rds, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.val.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.train.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=SVMLIN
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/LDA/MISC<>KD.LDA.rds, output/MISC<>KD/LDA/MISC<>KD.LDA.train.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.test.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.val.txt
+    jobid: 8
+    reason: Missing output files: output/MISC<>KD/LDA/MISC<>KD.LDA.test.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.val.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.train.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.rds; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=LDA
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/NNET/MISC<>KD.NNET.rds, output/MISC<>KD/NNET/MISC<>KD.NNET.train.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.test.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.val.txt
+    jobid: 10
+    reason: Missing output files: output/MISC<>KD/NNET/MISC<>KD.NNET.rds, output/MISC<>KD/NNET/MISC<>KD.NNET.train.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.test.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.val.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=NNET
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/RF/MISC<>KD.RF.rds, output/MISC<>KD/RF/MISC<>KD.RF.train.txt, output/MISC<>KD/RF/MISC<>KD.RF.test.txt, output/MISC<>KD/RF/MISC<>KD.RF.val.txt
+    jobid: 12
+    reason: Missing output files: output/MISC<>KD/RF/MISC<>KD.RF.val.txt, output/MISC<>KD/RF/MISC<>KD.RF.test.txt, output/MISC<>KD/RF/MISC<>KD.RF.rds, output/MISC<>KD/RF/MISC<>KD.RF.train.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=RF
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/C5/MISC<>KD.C5.rds, output/MISC<>KD/C5/MISC<>KD.C5.train.txt, output/MISC<>KD/C5/MISC<>KD.C5.test.txt, output/MISC<>KD/C5/MISC<>KD.C5.val.txt
+    jobid: 2
+    reason: Missing output files: output/MISC<>KD/C5/MISC<>KD.C5.rds, output/MISC<>KD/C5/MISC<>KD.C5.test.txt, output/MISC<>KD/C5/MISC<>KD.C5.val.txt, output/MISC<>KD/C5/MISC<>KD.C5.train.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=C5
+    resources: tmpdir=/tmp
+
+
+[Tue May  7 21:04:38 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/GLM/MISC<>KD.GLM.rds, output/MISC<>KD/GLM/MISC<>KD.GLM.train.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.test.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.val.txt
+    jobid: 4
+    reason: Missing output files: output/MISC<>KD/GLM/MISC<>KD.GLM.train.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.rds, output/MISC<>KD/GLM/MISC<>KD.GLM.test.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.val.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=GLM
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:04:48 2024]
+Finished job 8.
+2 of 16 steps (12%) done
+[Tue May  7 21:04:48 2024]
+Finished job 11.
+3 of 16 steps (19%) done
+[Tue May  7 21:04:48 2024]
+Finished job 13.
+4 of 16 steps (25%) done
+[Tue May  7 21:04:48 2024]
+Finished job 4.
+5 of 16 steps (31%) done
+[Tue May  7 21:04:51 2024]
+Finished job 2.
+6 of 16 steps (38%) done
+[Tue May  7 21:04:51 2024]
+Finished job 7.
+7 of 16 steps (44%) done
+[Tue May  7 21:05:11 2024]
+Finished job 10.
+8 of 16 steps (50%) done
+[Tue May  7 21:05:27 2024]
+Finished job 6.
+9 of 16 steps (56%) done
+[Tue May  7 21:05:31 2024]
+Finished job 5.
+10 of 16 steps (62%) done
+[Tue May  7 21:05:41 2024]
+Finished job 12.
+11 of 16 steps (69%) done
+[Tue May  7 21:05:42 2024]
+Finished job 9.
+12 of 16 steps (75%) done
+[Tue May  7 21:06:09 2024]
+Finished job 3.
+13 of 16 steps (81%) done
+[Tue May  7 21:07:44 2024]
+Finished job 14.
+14 of 16 steps (88%) done
+[Tue May  7 21:14:19 2024]
+Finished job 15.
+15 of 16 steps (94%) done
+Select jobs to execute...
+
+[Tue May  7 21:14:19 2024]
+localrule all:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv, output/MISC<>KD/C5/MISC<>KD.C5.rds, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.rds, output/MISC<>KD/GLM/MISC<>KD.GLM.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.rds, output/MISC<>KD/KNN/MISC<>KD.KNN.rds, output/MISC<>KD/LDA/MISC<>KD.LDA.rds, output/MISC<>KD/NB/MISC<>KD.NB.rds, output/MISC<>KD/NNET/MISC<>KD.NNET.rds, output/MISC<>KD/PAM/MISC<>KD.PAM.rds, output/MISC<>KD/RF/MISC<>KD.RF.rds, output/MISC<>KD/RPART/MISC<>KD.RPART.rds, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.rds, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.rds, output/MISC<>KD/C5/MISC<>KD.C5.train.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.train.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.train.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.train.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.train.txt, output/MISC<>KD/NB/MISC<>KD.NB.train.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.train.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.train.txt, output/MISC<>KD/RF/MISC<>KD.RF.train.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.train.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.train.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.train.txt, output/MISC<>KD/C5/MISC<>KD.C5.test.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.test.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.test.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.test.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.test.txt, output/MISC<>KD/NB/MISC<>KD.NB.test.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.test.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.test.txt, output/MISC<>KD/RF/MISC<>KD.RF.test.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.test.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.test.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.test.txt, output/MISC<>KD/C5/MISC<>KD.C5.val.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.val.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.val.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.val.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.val.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.val.txt, output/MISC<>KD/NB/MISC<>KD.NB.val.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.val.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.val.txt, output/MISC<>KD/RF/MISC<>KD.RF.val.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.val.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.val.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/MISC<>KD/LDA/MISC<>KD.LDA.val.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.train.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.rds, output/MISC<>KD/GLM/MISC<>KD.GLM.val.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.test.txt, output/MISC<>KD/NB/MISC<>KD.NB.rds, output/MISC<>KD/LDA/MISC<>KD.LDA.test.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.val.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.val.txt, output/MISC<>KD/KNN/MISC<>KD.KNN.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/RF/MISC<>KD.RF.rds, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/NNET/MISC<>KD.NNET.rds, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.test.txt, output/MISC<>KD/C5/MISC<>KD.C5.val.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.test.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.test.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.rds, output/MISC<>KD/NNET/MISC<>KD.NNET.train.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.train.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.test.txt, output/MISC<>KD/NNET/MISC<>KD.NNET.val.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.train.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.val.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.train.txt, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.rds, output/MISC<>KD/NB/MISC<>KD.NB.test.txt, output/MISC<>KD/SVMLIN/MISC<>KD.SVMLIN.val.txt, output/MISC<>KD/RF/MISC<>KD.RF.val.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.val.txt, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.rds, output/MISC<>KD/RF/MISC<>KD.RF.train.txt, output/MISC<>KD/PAM/MISC<>KD.PAM.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>KD/C5/MISC<>KD.C5.test.txt, output/MISC<>KD/NB/MISC<>KD.NB.train.txt, output/MISC<>KD/RF/MISC<>KD.RF.test.txt, output/MISC<>KD/LDA/MISC<>KD.LDA.rds, output/MISC<>KD/KNN/MISC<>KD.KNN.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLM/MISC<>KD.GLM.rds, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/PAM/MISC<>KD.PAM.train.txt, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.rds, output/MISC<>KD/NB/MISC<>KD.NB.val.txt, output/MISC<>KD/C5/MISC<>KD.C5.rds, output/MISC<>KD/PAM/MISC<>KD.PAM.val.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.rds, output/MISC<>KD/KNN/MISC<>KD.KNN.rds, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/EXTRATREES/MISC<>KD.EXTRATREES.train.txt, output/MISC<>KD/C5/MISC<>KD.C5.train.txt, output/MISC<>KD/GLMNETRidge/MISC<>KD.GLMNETRidge.train.txt, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv, output/MISC<>KD/SVMRAD/MISC<>KD.SVMRAD.val.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.test.txt, output/MISC<>KD/RPART/MISC<>KD.RPART.train.txt
+    resources: tmpdir=/tmp
+
+[Tue May  7 21:14:19 2024]
+Finished job 0.
+16 of 16 steps (100%) done
+Complete log: .snakemake/log/2024-05-07T210420.527789.snakemake.log

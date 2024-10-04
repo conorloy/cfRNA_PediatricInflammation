@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+GFSu         1              1              1
+all          1              1              1
+total        2              1              1
+
+Select jobs to execute...
+
+[Tue Nov 21 00:33:43 2023]
+rule GFSu:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    output: output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt
+    jobid: 16
+    reason: Missing output files: output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt
+    wildcards: sample=MISC
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule GFSu  in line 53 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+output/MISC/GFSu/GFSu_MISC.GFSu.rds
+output/MISC/GFSu/GFSu_MISC.GFSu.train.txt
+output/MISC/GFSu/GFSu_MISC.GFSu.test.txt
+output/MISC/GFSu/GFSu_MISC.GFSu.val.txt completed successfully, but some output files are missing. 16
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-21T003343.446672.snakemake.log

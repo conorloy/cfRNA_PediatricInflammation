@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        6              1              1
+models                                     6              1              1
+total                                     13              1              1
+
+Select jobs to execute...
+
+[Tue May  7 21:20:26 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv
+    jobid: 6
+    reason: Missing output files: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=viral_infection<>bacterial_infection
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Tue May  7 21:20:27 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 6
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 25 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmpdonbcvr3.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Complete log: .snakemake/log/2024-05-07T212026.428280.snakemake.log

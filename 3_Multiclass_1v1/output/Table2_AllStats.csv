@@ -1,0 +1,21 @@
+Comparison,Cohort,AUC,Sensitivity,Specificity
+KD vs bacterial infection,train,0.99,0.94,1
+KD vs bacterial infection,test,0.87,0.97,0.71
+KD vs viral infection,train,0.99,0.97,0.96
+KD vs viral infection,test,0.93,0.94,0.79
+MIS-C vs bacterial infection,train,1,0.98,1
+MIS-C vs bacterial infection,test,0.94,0.91,0.79
+MIS-C vs viral infection,train,1,1,0.99
+MIS-C vs viral infection,test,0.97,0.84,0.94
+MIS-C vs KD,train,1,0.98,1
+MIS-C vs KD,test,0.99,0.91,0.94
+viral infection vs bacterial infection,train,0.97,0.96,0.85
+viral infection vs bacterial infection,test,0.86,0.88,0.71
+KD vs All,train,NA,1,1
+KD vs All,test,NA,0.84,0.9
+MIS-C vs All,train,NA,1,1
+MIS-C vs All,test,NA,0.91,0.96
+bacterial_infection vs All,train,NA,1,1
+bacterial_infection vs All,test,NA,0.43,0.95
+viral_infection vs All,train,NA,1,1
+viral_infection vs All,test,NA,0.82,0.92

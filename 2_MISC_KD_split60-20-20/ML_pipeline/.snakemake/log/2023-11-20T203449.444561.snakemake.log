@@ -1,0 +1,3 @@
+SyntaxError in line 62 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+invalid syntax
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/Snakefile", line 49, in <module>

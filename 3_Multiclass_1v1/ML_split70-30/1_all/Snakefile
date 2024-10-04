@@ -1,0 +1,53 @@
+import pandas as pd
+from itertools import combinations
+
+
+##----------------------------------
+# LOAD IN CONFIG FILES
+
+configfile: "./config.yaml" 
+MODELS = config["MODELS"]
+OUTPUT = config["OUTPUT"]
+CONDITIONS = config["CONDITIONS"]
+
+CONDITION_PAIRS = ["<>".join(pair) for pair in combinations(CONDITIONS,2)]
+
+
+##----------------------------------
+# THREADS
+TRIM_THREADS = 10
+
+##----------------------------------
+# ALIGNMENT
+rule all:
+    input:
+        ## Feature selection results
+        expand(OUTPUT + '{condition_pair}/1_feature_selection/{condition_pair}.counts.train.VST.SIG.tsv', condition_pair = CONDITION_PAIRS),
+        expand(OUTPUT + '{condition_pair}/1_feature_selection/{condition_pair}.counts.test.VST.SIG.tsv', condition_pair = CONDITION_PAIRS),
+        expand(OUTPUT + '{condition_pair}/1_feature_selection/{condition_pair}.counts.val.VST.SIG.tsv', condition_pair = CONDITION_PAIRS),
+        expand(OUTPUT + '{condition_pair}/1_feature_selection/{condition_pair}.deseqResults.tsv', condition_pair = CONDITION_PAIRS),
+
+        ## Model outputs
+        expand(OUTPUT+'{condition_pair}/{model}/{condition_pair}.{model}.rds', condition_pair = CONDITION_PAIRS, model = MODELS),
+        expand(OUTPUT+'{condition_pair}/{model}/{condition_pair}.{model}.train.txt', condition_pair = CONDITION_PAIRS, model = MODELS),
+        expand(OUTPUT+'{condition_pair}/{model}/{condition_pair}.{model}.test.txt', condition_pair = CONDITION_PAIRS, model = MODELS),
+        expand(OUTPUT+'{condition_pair}/{model}/{condition_pair}.{model}.val.txt', condition_pair = CONDITION_PAIRS, model = MODELS) #,
+
+        ## GFSu outputs
+        # expand(OUTPUT+'{condition_pair}/GFSu/GFSu_{condition_pair}.GFSu.rds', condition_pair = CONDITION_PAIRS),
+        # expand(OUTPUT+'{condition_pair}/GFSu/GFSu_{condition_pair}.GFSu.train.txt', condition_pair = CONDITION_PAIRS),
+        # expand(OUTPUT+'{condition_pair}/GFSu/GFSu_{condition_pair}.GFSu.test.txt', condition_pair = CONDITION_PAIRS),
+        # expand(OUTPUT+'{condition_pair}/GFSu/GFSu_{condition_pair}.GFSu.val.txt', condition_pair = CONDITION_PAIRS)
+
+        # # aggregated outputs
+        # expand( OUTPUT + '{project}/{project}_feature_counts.tsv', project = PROJECTS),
+        # expand( OUTPUT + '{project}/{project}_biotypes.tsv', project = PROJECTS),
+        # expand( OUTPUT + '{project}/{project}_BP_celltypes.tsv', project = PROJECTS),
+        # expand( OUTPUT + '{project}/{project}_BP_celltypes.protein_coding.tsv', project = PROJECTS),
+        # expand( OUTPUT + '{project}/{project}_BP_celltypes.protein_coding.marker_genes.tsv', project = PROJECTS),
+        # expand( OUTPUT+'{project}/{project}_mapping_stats.tsv', project = PROJECTS)
+        
+
+##----------------------------------            
+# RULE FILES 
+include: 'workflow/rules/main.smk'

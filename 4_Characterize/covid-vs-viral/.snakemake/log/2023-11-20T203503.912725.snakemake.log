@@ -1,0 +1,4 @@
+SyntaxError:
+Not all output, log and benchmark files of rule feature_selection_and_normalization contain the same wildcards. This is crucial though, in order to avoid that two or more jobs write to the same file.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/Snakefile", line 49, in <module>
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 29, in <module>

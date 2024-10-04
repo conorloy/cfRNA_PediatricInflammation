@@ -1,0 +1,30 @@
+# MODELS: GLM
+MODELS: [GLMNETLasso]
+
+OUTPUT: output/
+
+## Samples to use ase comparison group
+CONDITIONS: [MISC, KD, viral_infection, bacterial_infection]
+
+## RELEVANT COLUMNS
+id_column: "cfrna_id"                                           
+group_column: "inflam_cat"       
+
+## Number of top differentially abundant genes to use
+NUM_MARKERS: 100 # 100
+
+## Path to occurance rds file
+OCCURANCE_RDS: ../../output/occur.rds
+
+## DATA PATHS
+meta_train_path: ../../../0_DATA/meta_data_train.7030.csv
+meta_test_path: ../../../0_DATA/meta_data_test.7030.csv
+meta_val_path: ../../../0_DATA/meta_data_test.7030.csv
+
+counts_train_path: ../../../0_DATA/counts_train.7030.csv
+counts_test_path: ../../../0_DATA/counts_test.7030.csv
+counts_val_path: ../../../0_DATA/counts_test.7030.csv
+
+counts_vst_train_path: ../../../0_DATA/counts_train_vst.7030.csv
+counts_vst_test_path: ../../../0_DATA/counts_test_vst.7030.csv
+counts_vst_val_path: ../../../0_DATA/counts_test_vst.7030.csv

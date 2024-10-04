@@ -1,0 +1,97 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+GFSu                                       4              1              1
+all                                        1              1              1
+feature_selection_and_normalization        4              1              1
+models                                    56              1              1
+total                                     65              1              1
+
+Select jobs to execute...
+
+[Wed Nov 29 09:08:35 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, output/KD/1_feature_selection/KD.deseqResults.tsv
+    jobid: 2
+    reason: Missing output files: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.deseqResults.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv; Set of input files has changed since last execution; Params have changed since last execution
+    wildcards: sample=KD
+    resources: tmpdir=/tmp
+
+[Wed Nov 29 09:08:35 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    jobid: 1
+    reason: Missing output files: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv; Set of input files has changed since last execution; Params have changed since last execution
+    wildcards: sample=MISC
+    resources: tmpdir=/tmp
+
+[Wed Nov 29 09:08:35 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv
+    jobid: 3
+    reason: Missing output files: output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv; Set of input files has changed since last execution; Params have changed since last execution
+    wildcards: sample=viral_infection
+    resources: tmpdir=/tmp
+
+[Wed Nov 29 09:08:35 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv
+    jobid: 4
+    reason: Missing output files: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv; Set of input files has changed since last execution; Params have changed since last execution
+    wildcards: sample=bacterial_infection
+    resources: tmpdir=/tmp
+
+[Wed Nov 29 09:08:55 2023]
+Error in rule feature_selection_and_normalization:
+    jobid: 4
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 26 of /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpz8terokv.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 26, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov 29 09:08:55 2023]
+Error in rule feature_selection_and_normalization:
+    jobid: 2
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, output/KD/1_feature_selection/KD.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 26 of /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpaa1h48ng.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 26, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov 29 09:08:55 2023]
+Error in rule feature_selection_and_normalization:
+    jobid: 1
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 26 of /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpryylewcz.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 26, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov 29 09:08:55 2023]
+Error in rule feature_selection_and_normalization:
+    jobid: 3
+    input: /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 26 of /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpmpn5667n.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/tmp_PAPER2_2023.11.29/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 26, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-29T090835.099906.snakemake.log

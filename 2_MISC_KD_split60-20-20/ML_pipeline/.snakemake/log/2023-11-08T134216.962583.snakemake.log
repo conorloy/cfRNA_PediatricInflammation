@@ -1,0 +1,75 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        3              1              1
+total         4              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 13:42:17 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.rds, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.train.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.test.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.val.txt
+    jobid: 15
+    reason: Missing output files: output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.rds
+    wildcards: sample=seed_1_sep, model=SVMLin
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:42:17 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.rds, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.train.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.test.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.val.txt
+    jobid: 29
+    reason: Missing output files: output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.rds
+    wildcards: sample=seed_2_sep, model=SVMLin
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:42:17 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.train.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.test.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.val.txt
+    jobid: 18
+    reason: Missing output files: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds
+    wildcards: sample=seed_2_sep, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:42:19 2023]
+Error in rule models:
+    jobid: 15
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, input/seed_1_sep/seed_1_sep.metadata.train.tsv, input/seed_1_sep/seed_1_sep.metadata.test.tsv, input/seed_1_sep/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.rds, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.train.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.test.txt, output/seed_1_sep/SVMLin/seed_1_sep.SVMLin.val.txt
+
+[Wed Nov  8 13:42:19 2023]
+Error in rule models:
+    jobid: 29
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.rds, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.train.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.test.txt, output/seed_2_sep/SVMLin/seed_2_sep.SVMLin.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmptod7hfv7.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmpyzttft7_.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov  8 13:42:19 2023]
+Error in rule models:
+    jobid: 18
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.train.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.test.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/.snakemake/scripts/tmpil1_amx_.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-08T134216.962583.snakemake.log

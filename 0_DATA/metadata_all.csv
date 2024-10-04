@@ -1,0 +1,371 @@
+PTID,sample_id,diagnosis,severity,inflam_cat,Xsample_id
+153000,cfrna_kd_202_trimmed,KD,KD subtype 3,KD,cfrna_kd_202_trimmed
+153002,cfrna_kd_128,KD,KD subtype 1,KD,cfrna_kd_128
+153027,cfrna_kd_121,KD,KD subtype 4,KD,cfrna_kd_121
+153034,cfrna_kd_47,KD,KD subtype 4,KD,cfrna_kd_47
+153036,cfrna_kd_207_trimmed,KD,KD subtype 2,KD,cfrna_kd_207_trimmed
+153047,cfrna_kd_218_trimmed,KD,KD subtype 2,KD,cfrna_kd_218_trimmed
+153060,cfrna_kd_129,KD,KD subtype 1,KD,cfrna_kd_129
+153065,cfrna_kd_222_trimmed,KD,KD subtype 3,KD,cfrna_kd_222_trimmed
+153079,cfrna_kd_55,KD,KD subtype 1,KD,cfrna_kd_55
+153086,cfrna_kd_212_trimmed,KD,KD subtype 3,KD,cfrna_kd_212_trimmed
+163014,cfrna_kd_130,KD,KD subtype 1,KD,cfrna_kd_130
+163045,cfrna_kd_56,KD,KD subtype 1,KD,cfrna_kd_56
+163048,cfrna_kd_203_trimmed,KD,KD subtype 3,KD,cfrna_kd_203_trimmed
+163054,cfrna_kd_57,KD,KD subtype 4,KD,cfrna_kd_57
+163056,cfrna_kd_208_trimmed,KD,KD subtype 2,KD,cfrna_kd_208_trimmed
+163058,cfrna_kd_235_trimmed,KD,KD subtype 3,KD,cfrna_kd_235_trimmed
+163070,cfrna_kd_131,KD,KD subtype 1,KD,cfrna_kd_131
+163082,cfrna_kd_193_trimmed,KD,KD subtype 3,KD,cfrna_kd_193_trimmed
+163085,cfrna_kd_229_trimmed,KD,KD subtype 2,KD,cfrna_kd_229_trimmed
+163100,cfrna_kd_213_trimmed,KD,KD subtype 3,KD,cfrna_kd_213_trimmed
+173017,cfrna_kd_117,KD,KD subtype 4,KD,cfrna_kd_117
+173020,cfrna_kd_58,KD,KD subtype 1,KD,cfrna_kd_58
+173024,cfrna_kd_59,KD,KD subtype 4,KD,cfrna_kd_59
+173025,cfrna_kd_132,KD,KD subtype 1,KD,cfrna_kd_132
+173028,cfrna_kd_122,KD,KD subtype 4,KD,cfrna_kd_122
+173030,cfrna_kd_118,KD,KD subtype 4,KD,cfrna_kd_118
+173048,cfrna_kd_60,KD,KD subtype 1,KD,cfrna_kd_60
+173063,cfrna_kd_123,KD,KD subtype 4,KD,cfrna_kd_123
+173070,cfrna_kd_231_trimmed,KD,KD subtype 2,KD,cfrna_kd_231_trimmed
+183003,cfrna_kd_133,KD,KD subtype 1,KD,cfrna_kd_133
+183043,cfrna_kd_183_trimmed,KD,KD subtype 3,KD,cfrna_kd_183_trimmed
+183063,cfrna_kd_61,KD,KD subtype 1,KD,cfrna_kd_61
+183084,cfrna_kd_134,KD,KD subtype 1,KD,cfrna_kd_134
+184019,cfrna_kd_94,FC,ALT high,viral_infection,cfrna_kd_94
+184023,cfrna_kd_10,FC,ALT normal,viral_infection,cfrna_kd_10
+4988,cfrna_kd_33,FC,ALT high,viral_infection,cfrna_kd_33
+184048,cfrna_kd_18,FC,ALT normal,viral_infection,cfrna_kd_18
+193000,cfrna_kd_62,KD,KD subtype 1,KD,cfrna_kd_62
+193004,cfrna_kd_137,KD,KD subtype 1,KD,cfrna_kd_137
+193006,cfrna_kd_223_trimmed,KD,KD subtype 3,KD,cfrna_kd_223_trimmed
+193007,cfrna_kd_138,KD,KD subtype 1,KD,cfrna_kd_138
+193032,cfrna_kd_189_trimmed,KD,KD subtype 2,KD,cfrna_kd_189_trimmed
+193086,cfrna_kd_139,KD,KD subtype 1,KD,cfrna_kd_139
+193100,cfrna_kd_140,KD,KD subtype 1,KD,cfrna_kd_140
+193124,cfrna_kd_230_trimmed,KD,KD subtype 2,KD,cfrna_kd_230_trimmed
+194021,cfrna_kd_9,FC,ALT normal,viral_infection,cfrna_kd_9
+203009,cfrna_kd_219_trimmed,KD,KD subtype 2,KD,cfrna_kd_219_trimmed
+203055,cfrna_kd_65,MISC,lowest EF≥60,MISC,cfrna_kd_65
+203063,cfrna_kd_66,MISC,lowest EF<55,MISC,cfrna_kd_66
+203090,cfrna_kd_141,MISC,lowest 60>EF≥55,MISC,cfrna_kd_141
+203093,cfrna_kd_142,MISC,lowest 60>EF≥55,MISC,cfrna_kd_142
+203094,cfrna_kd_147,MISC,lowest EF<55,MISC,cfrna_kd_147
+204112,cfrna_kd_105,FC,ALT high,viral_infection,cfrna_kd_105
+213002,cfrna_kd_143,MISC,lowest 60>EF≥55,MISC,cfrna_kd_143
+213028,cfrna_kd_164,MISC,lowest EF≥60,MISC,cfrna_kd_164
+213032,cfrna_kd_68,MISC,lowest EF<55,MISC,cfrna_kd_68
+213038,cfrna_kd_148,MISC,lowest EF<55,MISC,cfrna_kd_148
+213041,cfrna_kd_69,MISC,lowest EF≥60,MISC,cfrna_kd_69
+213045,cfrna_kd_150,MISC,lowest EF<55,MISC,cfrna_kd_150
+213049,cfrna_kd_70,MISC,lowest EF<55,MISC,cfrna_kd_70
+213053,cfrna_kd_165,MISC,lowest EF≥60,KD,cfrna_kd_165
+213054,cfrna_kd_71,MISC,lowest EF≥60,MISC,cfrna_kd_71
+213056,cfrna_kd_166,MISC,lowest EF≥60,MISC,cfrna_kd_166
+213057,cfrna_kd_72,MISC,lowest EF≥60,MISC,cfrna_kd_72
+213059,cfrna_kd_153,MISC,lowest EF<55,MISC,cfrna_kd_153
+213061,cfrna_kd_171,MISC,lowest EF≥60,MISC,cfrna_kd_171
+213104,cfrna_kd_73,MISC,lowest EF≥60,MISC,cfrna_kd_73
+213111,cfrna_kd_144,MISC,lowest 60>EF≥55,MISC,cfrna_kd_144
+213117,cfrna_kd_74,MISC,lowest 60>EF≥55,MISC,cfrna_kd_74
+213120,cfrna_kd_173,MISC,lowest EF≥60,MISC,cfrna_kd_173
+213122,cfrna_kd_145,MISC,lowest 60>EF≥55,MISC,cfrna_kd_145
+213124,cfrna_kd_77,MISC,lowest EF<55,MISC,cfrna_kd_77
+213131,cfrna_kd_78,MISC,lowest 60>EF≥55,MISC,cfrna_kd_78
+213139,cfrna_kd_79,MISC,lowest EF<55,MISC,cfrna_kd_79
+213142,cfrna_kd_154,MISC,lowest EF<55,MISC,cfrna_kd_154
+213149,cfrna_kd_198_trimmed,KD,KD subtype 2,KD,cfrna_kd_198_trimmed
+223002,cfrna_kd_80,MISC,lowest EF<55,MISC,cfrna_kd_80
+223003,cfrna_kd_162,MISC,lowest EF<55,MISC,cfrna_kd_162
+223006,cfrna_kd_81,MISC,lowest EF≥60,MISC,cfrna_kd_81
+223007,cfrna_kd_169,MISC,lowest EF≥60,MISC,cfrna_kd_169
+223020,cfrna_kd_146,MISC,lowest 60>EF≥55,MISC,cfrna_kd_146
+223023,cfrna_kd_82,MISC,lowest EF<55,MISC,cfrna_kd_82
+223027,cfrna_kd_83,MISC,lowest EF≥60,MISC,cfrna_kd_83
+223029,cfrna_kd_157,MISC,lowest EF<55,MISC,cfrna_kd_157
+3243,cfrna_kd_206_trimmed,KD,KD subtype 2,KD,cfrna_kd_206_trimmed
+3326,cfrna_kd_226_trimmed,KD,KD subtype 2,KD,cfrna_kd_226_trimmed
+3357,cfrna_kd_107,KD,KD subtype 4,KD,cfrna_kd_107
+3364,cfrna_kd_48,KD,KD subtype 4,KD,cfrna_kd_48
+3373,cfrna_kd_108,KD,KD subtype 4,KD,cfrna_kd_108
+3383,cfrna_kd_41,KD,KD subtype 4,KD,cfrna_kd_41
+33CHM011,cfrna_kd_170,MISC,lowest EF≥60,MISC,cfrna_kd_170
+3424,cfrna_kd_109,KD,KD subtype 4,KD,cfrna_kd_109
+3467,cfrna_kd_42,KD,KD subtype 4,KD,cfrna_kd_42
+34CHM007,cfrna_kd_84,MISC,lowest EF<55,MISC,cfrna_kd_84
+34CHM008,cfrna_kd_158,MISC,lowest EF<55,MISC,cfrna_kd_158
+3507,cfrna_kd_110,KD,KD subtype 4,KD,cfrna_kd_110
+3509,cfrna_kd_186_trimmed,KD,KD subtype 2,KD,cfrna_kd_186_trimmed
+3511,cfrna_kd_49,KD,KD subtype 1,KD,cfrna_kd_49
+3536,cfrna_kd_191_trimmed,KD,KD subtype 3,KD,cfrna_kd_191_trimmed
+3568,cfrna_kd_124,KD,KD subtype 1,KD,cfrna_kd_124
+3570,cfrna_kd_50,KD,KD subtype 1,KD,cfrna_kd_50
+3589,cfrna_kd_176_trimmed,KD,KD subtype 2,KD,cfrna_kd_176_trimmed
+3596,cfrna_kd_180_trimmed,KD,KD subtype 3,KD,cfrna_kd_180_trimmed
+3610,cfrna_kd_196_trimmed,KD,KD subtype 2,KD,cfrna_kd_196_trimmed
+3622,cfrna_kd_125,KD,KD subtype 1,KD,cfrna_kd_125
+3625,cfrna_kd_190_trimmed,KD,KD subtype 2,KD,cfrna_kd_190_trimmed
+3627,cfrna_kd_43,KD,KD subtype 4,KD,cfrna_kd_43
+3628,cfrna_kd_227_trimmed,KD,KD subtype 2,KD,cfrna_kd_227_trimmed
+3629,cfrna_kd_232_trimmed,KD,KD subtype 3,KD,cfrna_kd_232_trimmed
+3635,cfrna_kd_111,KD,KD subtype 4,KD,cfrna_kd_111
+3638,cfrna_kd_209_trimmed,KD,KD subtype 3,KD,cfrna_kd_209_trimmed
+3639,cfrna_kd_199_trimmed,KD,KD subtype 3,KD,cfrna_kd_199_trimmed
+3667,cfrna_kd_112,KD,KD subtype 4,KD,cfrna_kd_112
+3668,cfrna_kd_200_trimmed,KD,KD subtype 3,KD,cfrna_kd_200_trimmed
+3675,cfrna_kd_177_trimmed,KD,KD subtype 2,KD,cfrna_kd_177_trimmed
+3678,cfrna_kd_233_trimmed,KD,KD subtype 3,KD,cfrna_kd_233_trimmed
+3696,cfrna_kd_53,KD,KD subtype 1,KD,cfrna_kd_53
+3700,cfrna_kd_113,KD,KD subtype 4,KD,cfrna_kd_113
+3724,cfrna_kd_187_trimmed,KD,KD subtype 2,KD,cfrna_kd_187_trimmed
+3729,cfrna_kd_220_trimmed,KD,KD subtype 3,KD,cfrna_kd_220_trimmed
+3745,cfrna_kd_216_trimmed,KD,KD subtype 2,KD,cfrna_kd_216_trimmed
+3747,cfrna_kd_126,KD,KD subtype 1,KD,cfrna_kd_126
+3749,cfrna_kd_44,KD,KD subtype 4,KD,cfrna_kd_44
+3753,cfrna_kd_197_trimmed,KD,KD subtype 2,KD,cfrna_kd_197_trimmed
+3768,cfrna_kd_54,KD,KD subtype 1,KD,cfrna_kd_54
+3776,cfrna_kd_217_trimmed,KD,KD subtype 2,KD,cfrna_kd_217_trimmed
+3781,cfrna_kd_234_trimmed,KD,KD subtype 3,KD,cfrna_kd_234_trimmed
+3783,cfrna_kd_188_trimmed,KD,KD subtype 2,KD,cfrna_kd_188_trimmed
+3787,cfrna_kd_178_trimmed,KD,KD subtype 2,KD,cfrna_kd_178_trimmed
+3790,cfrna_kd_210_trimmed,KD,KD subtype 3,KD,cfrna_kd_210_trimmed
+37CHM005,cfrna_kd_85,MISC,lowest EF≥60,MISC,cfrna_kd_85
+37CHM007,cfrna_kd_159,MISC,lowest EF<55,MISC,cfrna_kd_159
+223009,cfrna_kd_86,MISC,lowest EF<55,MISC,cfrna_kd_86
+3802,cfrna_kd_192_trimmed,KD,KD subtype 3,KD,cfrna_kd_192_trimmed
+3815,cfrna_kd_201_trimmed,KD,KD subtype 3,KD,cfrna_kd_201_trimmed
+3821,cfrna_kd_114,KD,KD subtype 4,KD,cfrna_kd_114
+3828,cfrna_kd_45,KD,KD subtype 4,KD,cfrna_kd_45
+3833,cfrna_kd_179_trimmed,KD,KD subtype 2,KD,cfrna_kd_179_trimmed
+3836,cfrna_kd_115,KD,KD subtype 4,KD,cfrna_kd_115
+3847,cfrna_kd_127,KD,KD subtype 1,KD,cfrna_kd_127
+3848,cfrna_kd_228_trimmed,KD,KD subtype 2,KD,cfrna_kd_228_trimmed
+3861,cfrna_kd_181_trimmed,KD,KD subtype 3,KD,cfrna_kd_181_trimmed
+3868,cfrna_kd_221_trimmed,KD,KD subtype 3,KD,cfrna_kd_221_trimmed
+3901,cfrna_kd_211_trimmed,KD,KD subtype 3,KD,cfrna_kd_211_trimmed
+3938,cfrna_kd_182_trimmed,KD,KD subtype 3,KD,cfrna_kd_182_trimmed
+39CHM006,cfrna_kd_160,MISC,lowest EF<55,MISC,cfrna_kd_160
+40CHM001,cfrna_kd_172,MISC,lowest EF≥60,MISC,cfrna_kd_172
+4410,cfrna_kd_5,FC,ALT normal,viral_infection,cfrna_kd_5
+4417,cfrna_kd_97,FC,ALT high,viral_infection,cfrna_kd_97
+4424,cfrna_kd_95,FC,ALT high,viral_infection,cfrna_kd_95
+4430,cfrna_kd_29,FC,ALT normal,viral_infection,cfrna_kd_29
+4444,cfrna_kd_16,FC,ALT normal,viral_infection,cfrna_kd_16
+4445,cfrna_kd_4,FC,ALT normal,viral_infection,cfrna_kd_4
+4462,cfrna_kd_22,FC,ALT normal,viral_infection,cfrna_kd_22
+4470,cfrna_kd_100,FC,ALT high,viral_infection,cfrna_kd_100
+4475,cfrna_kd_2,FC,ALT normal,bacterial_infection,cfrna_kd_2
+4476,cfrna_kd_3,FC,ALT normal,viral_infection,cfrna_kd_3
+4523,cfrna_kd_102,FC,ALT high,viral_infection,cfrna_kd_102
+4537,cfrna_kd_28,FC,ALT normal,viral_infection,cfrna_kd_28
+4545,cfrna_kd_32,FC,ALT high,bacterial_infection,cfrna_kd_32
+4551,cfrna_kd_1,FC,ALT normal,viral_infection,cfrna_kd_1
+4567,cfrna_kd_101,FC,ALT high,viral_infection,cfrna_kd_101
+4628,cfrna_kd_34,FC,ALT high,viral_infection,cfrna_kd_34
+4638,cfrna_kd_8,FC,ALT normal,viral_infection,cfrna_kd_8
+4641,cfrna_kd_6,FC,ALT normal,viral_infection,cfrna_kd_6
+4661,cfrna_kd_25,FC,ALT normal,viral_infection,cfrna_kd_25
+4678,cfrna_kd_30,FC,ALT high,viral_infection,cfrna_kd_30
+4706,cfrna_kd_17,FC,ALT normal,viral_infection,cfrna_kd_17
+4709,cfrna_kd_14,FC,ALT normal,viral_infection,cfrna_kd_14
+4717,cfrna_kd_89,FC,ALT high,viral_infection,cfrna_kd_89
+4719,cfrna_kd_35,FC,ALT high,viral_infection,cfrna_kd_35
+4740,cfrna_kd_26,FC,ALT normal,bacterial_infection,cfrna_kd_26
+4752,cfrna_kd_20,FC,ALT normal,viral_infection,cfrna_kd_20
+4794,cfrna_kd_31,FC,ALT high,viral_infection,cfrna_kd_31
+4800,cfrna_kd_36,FC,ALT high,viral_infection,cfrna_kd_36
+4863,cfrna_kd_27,FC,ALT normal,viral_infection,cfrna_kd_27
+4867,cfrna_kd_38,FC,ALT high,viral_infection,cfrna_kd_38
+4873,cfrna_kd_92,FC,ALT high,bacterial_infection,cfrna_kd_92
+4912,cfrna_kd_15,FC,ALT normal,bacterial_infection,cfrna_kd_15
+4932,cfrna_kd_13,FC,ALT normal,viral_infection,cfrna_kd_13
+4949,cfrna_kd_98,FC,ALT high,viral_infection,cfrna_kd_98
+4952,cfrna_kd_19,FC,ALT normal,viral_infection,cfrna_kd_19
+4972,cfrna_kd_37,FC,ALT high,viral_infection,cfrna_kd_37
+CNH004,prevail_cu_cfrna_199,MISC,3,MISC,prevail_cu_cfrna_199
+CNH008,prevail_cu_cfrna_219,MISC,3,MISC,prevail_cu_cfrna_219
+CNH009,prevail_cu_cfrna_205,MISC,2,MISC,prevail_cu_cfrna_205
+CNH010,prevail_cu_cfrna_220,MISC,3,MISC,prevail_cu_cfrna_220
+CNH012,prevail_cu_cfrna_212,MISC,3,MISC,prevail_cu_cfrna_212
+CNH014,prevail_cu_cfrna_223,MISC,2,MISC,prevail_cu_cfrna_223
+CNH018,prevail_cu_cfrna_221,MISC,3,MISC,prevail_cu_cfrna_221
+CNH019,prevail_cu_cfrna_226,MISC,2,MISC,prevail_cu_cfrna_226
+CNH022,prevail_cu_cfrna_222,MISC,2,MISC,prevail_cu_cfrna_222
+CNH025,prevail_cu_cfrna_203,MISC,3,MISC,prevail_cu_cfrna_203
+CNH064,prevail_cu_cfrna_342,MISC,2,MISC,prevail_cu_cfrna_342
+CNH074,prevail_cu_cfrna_341,MISC,2,MISC,prevail_cu_cfrna_341
+CNH102,prevail_cu_cfrna_366,Inflam,NA,viral_infection,prevail_cu_cfrna_366
+CNH106,prevail_cu_cfrna_393,Inflam,NA,bacterial_infection,prevail_cu_cfrna_393
+CNH107,prevail_cu_cfrna_387,Inflam,NA,viral_infection,prevail_cu_cfrna_387
+CNH108,prevail_cu_cfrna_375,Inflam,NA,viral_infection,prevail_cu_cfrna_375
+CNH110,prevail_cu_cfrna_376,Inflam,NA,viral_infection,prevail_cu_cfrna_376
+CNH113,prevail_cu_cfrna_364,Inflam,NA,other,prevail_cu_cfrna_364
+CNH119,prevail_cu_cfrna_385,Inflam,NA,bacterial_infection,prevail_cu_cfrna_385
+CNH120,prevail_cu_cfrna_374,Inflam,NA,viral_infection,prevail_cu_cfrna_374
+CNH124,prevail_cu_cfrna_386,Inflam,NA,bacterial_infection,prevail_cu_cfrna_386
+CNH139,prevail_cu_cfrna_378,KD,NA,KD,prevail_cu_cfrna_378
+CNH141,prevail_cu_cfrna_391,Inflam,NA,other,prevail_cu_cfrna_391
+CNH143,prevail_cu_cfrna_392,Inflam,NA,bacterial_infection,prevail_cu_cfrna_392
+CNH147,prevail_cu_cfrna_390,Inflam,NA,other,prevail_cu_cfrna_390
+CNH148,prevail_cu_cfrna_379,Inflam,NA,bacterial_infection,prevail_cu_cfrna_379
+CNH149,prevail_cu_cfrna_380,Inflam,NA,other,prevail_cu_cfrna_380
+CNH150,prevail_cu_cfrna_381,Inflam,NA,bacterial_infection,prevail_cu_cfrna_381
+CNH151,prevail_cu_cfrna_382,Inflam,NA,other,prevail_cu_cfrna_382
+CNH154,prevail_cu_cfrna_377,Inflam,NA,bacterial_infection,prevail_cu_cfrna_377
+CNH156,prevail_cu_cfrna_370,Inflam,NA,other,prevail_cu_cfrna_370
+NCOV3227CHOA,prevail_cu_cfrna_252,COVID19,3,viral_infection,prevail_cu_cfrna_252
+NCOV3241CHOA,prevail_cu_cfrna_320,MISC,2,MISC,prevail_cu_cfrna_320
+NCOV3244CHOA,prevail_cu_cfrna_315,MISC,2,MISC,prevail_cu_cfrna_315
+NCOV3266CHOA,prevail_cu_cfrna_297,MISC,2,MISC,prevail_cu_cfrna_297
+NCOV3267CHOA,prevail_cu_cfrna_293,MISC,2,MISC,prevail_cu_cfrna_293
+NCOV3268CHOA,prevail_cu_cfrna_298,MISC,2,MISC,prevail_cu_cfrna_298
+NCOV3271CHOA,prevail_cu_cfrna_319,Inflam,NA,other,prevail_cu_cfrna_319
+NCOV3272CHOA,prevail_cu_cfrna_301,MISC,2,MISC,prevail_cu_cfrna_301
+NCOV3273CHOA,prevail_cu_cfrna_308,MISC,2,MISC,prevail_cu_cfrna_308
+NCOV3276CHOA,prevail_cu_cfrna_300,MISC,2,MISC,prevail_cu_cfrna_300
+NCOV3281CHOA,prevail_cu_cfrna_304,MISC,2,MISC,prevail_cu_cfrna_304
+NCOV3282CHOA,prevail_cu_cfrna_263,MISC,2,MISC,prevail_cu_cfrna_263
+NCOV3283CHOA,prevail_cu_cfrna_305,MISC,2,MISC,prevail_cu_cfrna_305
+NCOV3291CHOA,prevail_cu_cfrna_81,MISC,2,MISC,prevail_cu_cfrna_81
+NCOV3292CHOA,prevail_cu_cfrna_82,MISC,2,MISC,prevail_cu_cfrna_82
+NCOV3296CHOA,prevail_cu_cfrna_83,MISC,3,MISC,prevail_cu_cfrna_83
+NCOV3298CHOA,prevail_cu_cfrna_260,MISC,2,MISC,prevail_cu_cfrna_260
+NCOV3301CHOA,prevail_cu_cfrna_321,MISC,2,MISC,prevail_cu_cfrna_321
+NCOV3303CHOA,prevail_cu_cfrna_307,MISC,2,MISC,prevail_cu_cfrna_307
+NCOV3304CHOA,prevail_cu_cfrna_313,MISC,3,MISC,prevail_cu_cfrna_313
+NCOV3306CHOA,prevail_cu_cfrna_258,MISC,3,MISC,prevail_cu_cfrna_258
+NCOV3307CHOA,prevail_cu_cfrna_318,MISC,2,MISC,prevail_cu_cfrna_318
+NCOV3309CHOA,prevail_cu_cfrna_303,MISC,3,MISC,prevail_cu_cfrna_303
+NCOV3313CHOA,prevail_cu_cfrna_95,MISC,2,MISC,prevail_cu_cfrna_95
+NCOV3322CHOA,prevail_cu_cfrna_310,MISC,2,MISC,prevail_cu_cfrna_310
+NCOV3323CHOA,prevail_cu_cfrna_280,MISC,3,MISC,prevail_cu_cfrna_280
+NCOV3324CHOA,prevail_cu_cfrna_309,MISC,2,MISC,prevail_cu_cfrna_309
+NCOV3335CHOA,prevail_cu_cfrna_108,MISC,2,MISC,prevail_cu_cfrna_108
+NCOV3349CHOA,prevail_cu_cfrna_294,MISC,2,MISC,prevail_cu_cfrna_294
+NCOV3355CHOA,prevail_cu_cfrna_287,COVID19,3,viral_infection,prevail_cu_cfrna_287
+NCOV3359CHOA,prevail_cu_cfrna_282,MISC,3,MISC,prevail_cu_cfrna_282
+NCOV3362CHOA,prevail_cu_cfrna_284,COVID19,2,viral_infection,prevail_cu_cfrna_284
+NCOV3364CHOA,prevail_cu_cfrna_12,MISC,2,MISC,prevail_cu_cfrna_12
+NCOV3365CHOA,prevail_cu_cfrna_285,MISC,3,MISC,prevail_cu_cfrna_285
+NCOV3367CHOA,prevail_cu_cfrna_295,MISC,2,MISC,prevail_cu_cfrna_295
+NCOV3368CHOA,prevail_cu_cfrna_292,MISC,2,MISC,prevail_cu_cfrna_292
+NCOV3374CHOA,prevail_cu_cfrna_296,MISC,3,MISC,prevail_cu_cfrna_296
+NCOV3375CHOA,prevail_cu_cfrna_299,MISC,3,MISC,prevail_cu_cfrna_299
+NCOV3377CHOA,prevail_cu_cfrna_42,MISC,2,MISC,prevail_cu_cfrna_42
+NCOV3383CHOA,prevail_cu_cfrna_286,COVID19,3,viral_infection,prevail_cu_cfrna_286
+NCOV3385CHOA,prevail_cu_cfrna_145,COVID19,2,viral_infection,prevail_cu_cfrna_145
+NCOV3386CHOA,prevail_cu_cfrna_144,Inflam,NA,other,prevail_cu_cfrna_144
+NCOV3387CHOA,prevail_cu_cfrna_131,Healthy,NA,Healthy,prevail_cu_cfrna_131
+NCOV3389CHOA,prevail_cu_cfrna_109,COVID19,2,viral_infection,prevail_cu_cfrna_109
+NCOV3390CHOA,prevail_cu_cfrna_106,Inflam,NA,other,prevail_cu_cfrna_106
+NCOV3391CHOA,prevail_cu_cfrna_110,MISC,3,MISC,prevail_cu_cfrna_110
+NCOV3393CHOA,prevail_cu_cfrna_187,COVID19,2,viral_infection,prevail_cu_cfrna_187
+NCOV3403CHOA,prevail_cu_cfrna_166,Healthy,NA,Healthy,prevail_cu_cfrna_166
+NCOV3404CHOA,prevail_cu_cfrna_159,Healthy,NA,Healthy,prevail_cu_cfrna_159
+NCOV3405CHOA,prevail_cu_cfrna_167,Healthy,NA,Healthy,prevail_cu_cfrna_167
+NCOV3408CHOA,prevail_cu_cfrna_150,Healthy,NA,Healthy,prevail_cu_cfrna_150
+NCOV3409CHOA,prevail_cu_cfrna_169,Healthy,NA,Healthy,prevail_cu_cfrna_169
+NCOV3410CHOA,prevail_cu_cfrna_162,Healthy,NA,Healthy,prevail_cu_cfrna_162
+NCOV3412CHOA,prevail_cu_cfrna_151,Healthy,NA,Healthy,prevail_cu_cfrna_151
+NCOV3413CHOA,prevail_cu_cfrna_170,COVID19,2,viral_infection,prevail_cu_cfrna_170
+NCOV3414CHOA,prevail_cu_cfrna_148,Healthy,NA,Healthy,prevail_cu_cfrna_148
+NCOV3415CHOA,prevail_cu_cfrna_149,Healthy,NA,Healthy,prevail_cu_cfrna_149
+NCOV3416CHOA,prevail_cu_cfrna_164,Healthy,NA,Healthy,prevail_cu_cfrna_164
+NCOV3420CHOA,prevail_cu_cfrna_165,Healthy,NA,Healthy,prevail_cu_cfrna_165
+NCOV3421CHOA,prevail_cu_cfrna_152,COVID19,2,viral_infection,prevail_cu_cfrna_152
+NCOV3422CHOA,prevail_cu_cfrna_171,COVID19,2,viral_infection,prevail_cu_cfrna_171
+NCOV3430CHOA,prevail_cu_cfrna_174,COVID19,3,viral_infection,prevail_cu_cfrna_174
+NCOV3431CHOA,prevail_cu_cfrna_175,COVID19,3,viral_infection,prevail_cu_cfrna_175
+NCOV3434CHOA,prevail_cu_cfrna_177,COVID19,3,viral_infection,prevail_cu_cfrna_177
+NCOV3436CHOA,prevail_cu_cfrna_179,MISC,2,MISC,prevail_cu_cfrna_179
+NCOV3442CHOA,prevail_cu_cfrna_182,COVID19,2,viral_infection,prevail_cu_cfrna_182
+NCOV3444CHOA,prevail_cu_cfrna_183,COVID19,2,viral_infection,prevail_cu_cfrna_183
+NCOV3449CHOA,prevail_cu_cfrna_185,COVID19,3,viral_infection,prevail_cu_cfrna_185
+NCOV3459CHOA,prevail_cu_cfrna_191,MISC,2,MISC,prevail_cu_cfrna_191
+NCOV3461CHOA,prevail_cu_cfrna_192,COVID19,2,viral_infection,prevail_cu_cfrna_192
+NCOV3465CHOA,prevail_cu_cfrna_193,COVID19,3,viral_infection,prevail_cu_cfrna_193
+NCOV3466CHOA,prevail_cu_cfrna_194,COVID19,3,viral_infection,prevail_cu_cfrna_194
+NCOV3467CHOA,prevail_cu_cfrna_195,COVID19,2,viral_infection,prevail_cu_cfrna_195
+NCOV3468CHOA,prevail_cu_cfrna_196,COVID19,3,viral_infection,prevail_cu_cfrna_196
+NCOV3483CHOA,prevail_cu_cfrna_278,COVID19,2,viral_infection,prevail_cu_cfrna_278
+NCOV3492CHOA,prevail_cu_cfrna_271,MISC,2,MISC,prevail_cu_cfrna_271
+NCOV3495CHOA,prevail_cu_cfrna_270,MISC,2,MISC,prevail_cu_cfrna_270
+NCOV3499CHOA,prevail_cu_cfrna_235,MISC,3,MISC,prevail_cu_cfrna_235
+NCOV3502CHOA,prevail_cu_cfrna_269,MISC,2,MISC,prevail_cu_cfrna_269
+NCOV3503CHOA,prevail_cu_cfrna_236,MISC,2,MISC,prevail_cu_cfrna_236
+174002,cfrna_kd_317.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_317.trimmed
+184021,cfrna_kd_309.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_309.trimmed
+184040,cfrna_kd_283.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_283.trimmed
+194013,cfrna_kd_269.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_269.trimmed
+194030,cfrna_kd_266.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_266.trimmed
+194036,cfrna_kd_259.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_259.trimmed
+194045,cfrna_kd_300.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_300.trimmed
+194055,cfrna_kd_298.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_298.trimmed
+194063,cfrna_kd_240.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_240.trimmed
+204014,cfrna_kd_321.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_321.trimmed
+204025,cfrna_kd_274.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_274.trimmed
+204028,cfrna_kd_297.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_297.trimmed
+204030,cfrna_kd_262.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_262.trimmed
+204052,cfrna_kd_254.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_254.trimmed
+204053,cfrna_kd_305.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_305.trimmed
+204061,cfrna_kd_296.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_296.trimmed
+204100,cfrna_kd_322.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_322.trimmed
+224030,cfrna_kd_308.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_308.trimmed
+4177,cfrna_kd_242.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_242.trimmed
+4188,cfrna_kd_255.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_255.trimmed
+4200,cfrna_kd_295.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_295.trimmed
+4216,cfrna_kd_243.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_243.trimmed
+4258,cfrna_kd_244.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_244.trimmed
+4288,cfrna_kd_282.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_282.trimmed
+4292,cfrna_kd_311.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_311.trimmed
+4302,cfrna_kd_310.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_310.trimmed
+4347,cfrna_kd_294.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_294.trimmed
+4350,cfrna_kd_318.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_318.trimmed
+4358,cfrna_kd_245.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_245.trimmed
+4409,cfrna_kd_247.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_247.trimmed
+4413,cfrna_kd_257.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_257.trimmed
+4465,cfrna_kd_279.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_279.trimmed
+4467,cfrna_kd_258.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_258.trimmed
+4474,cfrna_kd_246.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_246.trimmed
+4503,cfrna_kd_325.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_325.trimmed
+4515,cfrna_kd_275.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_275.trimmed
+4522,cfrna_kd_319.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_319.trimmed
+4552,cfrna_kd_261.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_261.trimmed
+4561,cfrna_kd_238.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_238.trimmed
+4578,cfrna_kd_306.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_306.trimmed
+4595,cfrna_kd_239.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_239.trimmed
+184064,cfrna_kd_263.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_263.trimmed
+4657,cfrna_kd_307.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_307.trimmed
+4712,cfrna_kd_299.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_299.trimmed
+4729,cfrna_kd_276.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_276.trimmed
+4791,cfrna_kd_320.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_320.trimmed
+4813,cfrna_kd_278.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_278.trimmed
+4858,cfrna_kd_273.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_273.trimmed
+4872,cfrna_kd_260.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_260.trimmed
+4878,cfrna_kd_301.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_301.trimmed
+4923,cfrna_kd_277.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_277.trimmed
+4924,cfrna_kd_281.trimmed,bacterial_infection,bacterial_infection,bacterial_infection,cfrna_kd_281.trimmed
+4971,cfrna_kd_241.trimmed,viral_infection,adenovirus,viral_infection,cfrna_kd_241.trimmed
+4989,cfrna_kd_312.trimmed,viral_infection,viral_syndrome,viral_infection,cfrna_kd_312.trimmed
+SEP0156,cfrna_kd_256.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_256.trimmed
+SEP0216,cfrna_kd_314.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_314.trimmed
+SEP0250,cfrna_kd_292.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_292.trimmed
+SEP0313,cfrna_kd_313.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_313.trimmed
+SEP0315,cfrna_kd_250.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_250.trimmed
+SEP0368,cfrna_kd_251.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_251.trimmed
+SEP0549,cfrna_kd_293.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_293.trimmed
+SEP0581,cfrna_kd_285.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_285.trimmed
+SEP0597,cfrna_kd_286.trimmed,bacterial_infection,NA,bacterial_infection,cfrna_kd_286.trimmed
+NCOV3027CHOA,prevail_cu_cfrna_422.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_422.trimmed
+NCOV3033CHOA,prevail_cu_cfrna_413.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_413.trimmed
+NCOV3041CHOA,prevail_cu_cfrna_414.trimmed,KD,NA,KD,prevail_cu_cfrna_414.trimmed
+NCOV3042CHOA,prevail_cu_cfrna_417.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_417.trimmed
+NCOV3044CHOA,prevail_cu_cfrna_418.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_418.trimmed
+NCOV3050CHOA,prevail_cu_cfrna_415.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_415.trimmed
+NCOV3057CHOA,prevail_cu_cfrna_410.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_410.trimmed
+NCOV3063CHOA,prevail_cu_cfrna_412.trimmed,COVID19,2,viral_infection,prevail_cu_cfrna_412.trimmed
+NCOV3398CHOA,prevail_cu_cfrna_400.trimmed,Healthy,NA,Healthy,prevail_cu_cfrna_400.trimmed
+NCOV3399CHOA,prevail_cu_cfrna_424.trimmed,Healthy,NA,Healthy,prevail_cu_cfrna_424.trimmed
+NCOV3401CHOA,prevail_cu_cfrna_402.trimmed,Healthy,NA,Healthy,prevail_cu_cfrna_402.trimmed
+NCOV3407CHOA,prevail_cu_cfrna_403.trimmed,Healthy,NA,Healthy,prevail_cu_cfrna_403.trimmed
+NCOV3411CHOA,prevail_cu_cfrna_401.trimmed,Healthy,NA,Healthy,prevail_cu_cfrna_401.trimmed

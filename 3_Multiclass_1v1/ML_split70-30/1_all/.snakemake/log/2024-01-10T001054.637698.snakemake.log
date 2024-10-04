@@ -1,0 +1,136 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        6              1              1
+models                                     6              1              1
+total                                     13              1              1
+
+Select jobs to execute...
+
+[Wed Jan 10 00:10:54 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv
+    jobid: 6
+    reason: Code has changed since last execution
+    wildcards: condition_pair=viral_infection<>bacterial_infection
+    resources: tmpdir=/tmp
+
+[Wed Jan 10 00:10:54 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv
+    jobid: 1
+    reason: Code has changed since last execution
+    wildcards: condition_pair=MISC<>KD
+    resources: tmpdir=/tmp
+
+[Wed Jan 10 00:10:54 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.deseqResults.tsv
+    jobid: 3
+    reason: Code has changed since last execution
+    wildcards: condition_pair=MISC<>bacterial_infection
+    resources: tmpdir=/tmp
+
+[Wed Jan 10 00:10:54 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.deseqResults.tsv
+    jobid: 5
+    reason: Code has changed since last execution
+    wildcards: condition_pair=KD<>bacterial_infection
+    resources: tmpdir=/tmp
+
+[Wed Jan 10 00:10:54 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.deseqResults.tsv
+    jobid: 2
+    reason: Code has changed since last execution
+    wildcards: condition_pair=MISC<>viral_infection
+    resources: tmpdir=/tmp
+
+[Wed Jan 10 00:10:54 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.deseqResults.tsv
+    jobid: 4
+    reason: Code has changed since last execution
+    wildcards: condition_pair=KD<>viral_infection
+    resources: tmpdir=/tmp
+
+[Wed Jan 10 00:10:54 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 1
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv
+
+RuleException:
+FileNotFoundError in line 25 of /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk:
+[Errno 2] No such file or directory
+  File "/local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Terminating processes on user request, this might take some time.
+[Wed Jan 10 00:10:58 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 6
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 25 of /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/.snakemake/scripts/tmpt7aj8i4w.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Jan 10 00:10:58 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 5
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 25 of /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/.snakemake/scripts/tmp_399d10m.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Jan 10 00:10:58 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 4
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 25 of /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/.snakemake/scripts/tmpzfp5496y.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Jan 10 00:10:58 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 2
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 25 of /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/.snakemake/scripts/tmp529pvxer.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Jan 10 00:10:58 2024]
+Error in rule feature_selection_and_normalization:
+    jobid: 3
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 25 of /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/.snakemake/scripts/tmpaxmc0fv2.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/TMP__Multiclass_1v1_testAC/ML_split70-30/1_all/workflow/rules/main.smk", line 25, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Complete log: .snakemake/log/2024-01-10T001054.637698.snakemake.log

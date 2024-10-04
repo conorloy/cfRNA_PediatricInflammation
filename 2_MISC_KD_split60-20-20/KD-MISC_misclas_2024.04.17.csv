@@ -1,0 +1,5 @@
+,TubeID,set,diagnosis,classifier_pred
+1,39CHM006,Test,MISC,KD
+2,213053,Test,MISC,KD
+3,3570,Test,KD,MISC
+4,153079,Validation,KD,MISC

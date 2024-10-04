@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        1              1              1
+total         2              1              1
+
+Select jobs to execute...
+
+[Thu Jan 11 21:58:54 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.rds, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.train.txt, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.test.txt, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.val.txt
+    jobid: 3
+    reason: Missing output files: output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.train.txt, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.test.txt, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.rds, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.val.txt
+    wildcards: condition_pair=MISC<>KD, model=EXTRATRsEES
+    resources: tmpdir=/tmp
+
+[Thu Jan 11 21:58:56 2024]
+Error in rule models:
+    jobid: 3
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.602020.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_val.602020.csv
+    output: output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.rds, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.train.txt, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.test.txt, output/MISC<>KD/EXTRATRsEES/MISC<>KD.EXTRATRsEES.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/2_MISC_KD_split60-20-20/2_snake/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/2_MISC_KD_split60-20-20/2_snake/.snakemake/scripts/tmpw1_9fz7g.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/2_MISC_KD_split60-20-20/2_snake/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-11T215854.430167.snakemake.log

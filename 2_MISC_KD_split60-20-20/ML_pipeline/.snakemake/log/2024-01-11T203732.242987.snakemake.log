@@ -1,0 +1,8 @@
+Building DAG of jobs...
+MissingInputException in rule feature_selection_and_normalization  in line 1 of /local/workdir/cjl332/prevail/PAPER2/2_MISC_KD_split60-20-20/2_snake/workflow/rules/main.smk:
+Missing input files for rule feature_selection_and_normalization:
+    output: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv
+    wildcards: condition_pair=MISC<>KD
+    affected files:
+        /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.602020.csv
+        /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.602020.csv

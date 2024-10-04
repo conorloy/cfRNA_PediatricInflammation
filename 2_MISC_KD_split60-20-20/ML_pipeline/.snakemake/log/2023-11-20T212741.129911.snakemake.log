@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        1              1              1
+total         2              1              1
+
+Select jobs to execute...
+
+[Mon Nov 20 21:27:41 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+    jobid: 2
+    reason: Missing output files: output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt, output/MISC/LDA/MISC.LDA.rds
+    wildcards: sample=MISC, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:27:44 2023]
+Finished job 2.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:27:44 2023]
+localrule all:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv, output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.val.txt, output/MISC/LDA/MISC.LDA.rds
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:27:44 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2023-11-20T212741.129911.snakemake.log

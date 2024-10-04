@@ -1,0 +1,376 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+GFSu         99              1              1
+all           1              1              1
+models     1399              1              1
+total      1499              1              1
+
+Select jobs to execute...
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/GLM/seed_91_sep.GLM.rds, output/seed_91_sep/GLM/seed_91_sep.GLM.train.txt, output/seed_91_sep/GLM/seed_91_sep.GLM.test.txt, output/seed_91_sep/GLM/seed_91_sep.GLM.val.txt
+    jobid: 1363
+    reason: Missing output files: output/seed_91_sep/GLM/seed_91_sep.GLM.train.txt, output/seed_91_sep/GLM/seed_91_sep.GLM.test.txt, output/seed_91_sep/GLM/seed_91_sep.GLM.rds, output/seed_91_sep/GLM/seed_91_sep.GLM.val.txt
+    wildcards: sample=seed_91_sep, model=GLM
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.rds, output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.train.txt, output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.test.txt, output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.val.txt
+    jobid: 1365
+    reason: Missing output files: output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.rds, output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.test.txt, output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.val.txt, output/seed_91_sep/GLMNETRidge/seed_91_sep.GLMNETRidge.train.txt
+    wildcards: sample=seed_91_sep, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/LDA/seed_91_sep.LDA.rds, output/seed_91_sep/LDA/seed_91_sep.LDA.train.txt, output/seed_91_sep/LDA/seed_91_sep.LDA.test.txt, output/seed_91_sep/LDA/seed_91_sep.LDA.val.txt
+    jobid: 1367
+    reason: Missing output files: output/seed_91_sep/LDA/seed_91_sep.LDA.test.txt, output/seed_91_sep/LDA/seed_91_sep.LDA.train.txt, output/seed_91_sep/LDA/seed_91_sep.LDA.val.txt, output/seed_91_sep/LDA/seed_91_sep.LDA.rds
+    wildcards: sample=seed_91_sep, model=LDA
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/NNET/seed_91_sep.NNET.rds, output/seed_91_sep/NNET/seed_91_sep.NNET.train.txt, output/seed_91_sep/NNET/seed_91_sep.NNET.test.txt, output/seed_91_sep/NNET/seed_91_sep.NNET.val.txt
+    jobid: 1369
+    reason: Missing output files: output/seed_91_sep/NNET/seed_91_sep.NNET.val.txt, output/seed_91_sep/NNET/seed_91_sep.NNET.rds, output/seed_91_sep/NNET/seed_91_sep.NNET.train.txt, output/seed_91_sep/NNET/seed_91_sep.NNET.test.txt
+    wildcards: sample=seed_91_sep, model=NNET
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/RF/seed_91_sep.RF.rds, output/seed_91_sep/RF/seed_91_sep.RF.train.txt, output/seed_91_sep/RF/seed_91_sep.RF.test.txt, output/seed_91_sep/RF/seed_91_sep.RF.val.txt
+    jobid: 1371
+    reason: Missing output files: output/seed_91_sep/RF/seed_91_sep.RF.val.txt, output/seed_91_sep/RF/seed_91_sep.RF.train.txt, output/seed_91_sep/RF/seed_91_sep.RF.rds, output/seed_91_sep/RF/seed_91_sep.RF.test.txt
+    wildcards: sample=seed_91_sep, model=RF
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.rds, output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.train.txt, output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.test.txt, output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.val.txt
+    jobid: 1364
+    reason: Missing output files: output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.test.txt, output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.val.txt, output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.rds, output/seed_91_sep/GLMNETLasso/seed_91_sep.GLMNETLasso.train.txt
+    wildcards: sample=seed_91_sep, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/KNN/seed_91_sep.KNN.rds, output/seed_91_sep/KNN/seed_91_sep.KNN.train.txt, output/seed_91_sep/KNN/seed_91_sep.KNN.test.txt, output/seed_91_sep/KNN/seed_91_sep.KNN.val.txt
+    jobid: 1366
+    reason: Missing output files: output/seed_91_sep/KNN/seed_91_sep.KNN.val.txt, output/seed_91_sep/KNN/seed_91_sep.KNN.train.txt, output/seed_91_sep/KNN/seed_91_sep.KNN.rds, output/seed_91_sep/KNN/seed_91_sep.KNN.test.txt
+    wildcards: sample=seed_91_sep, model=KNN
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/NB/seed_91_sep.NB.rds, output/seed_91_sep/NB/seed_91_sep.NB.train.txt, output/seed_91_sep/NB/seed_91_sep.NB.test.txt, output/seed_91_sep/NB/seed_91_sep.NB.val.txt
+    jobid: 1368
+    reason: Missing output files: output/seed_91_sep/NB/seed_91_sep.NB.val.txt, output/seed_91_sep/NB/seed_91_sep.NB.test.txt, output/seed_91_sep/NB/seed_91_sep.NB.train.txt, output/seed_91_sep/NB/seed_91_sep.NB.rds
+    wildcards: sample=seed_91_sep, model=NB
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/PAM/seed_91_sep.PAM.rds, output/seed_91_sep/PAM/seed_91_sep.PAM.train.txt, output/seed_91_sep/PAM/seed_91_sep.PAM.test.txt, output/seed_91_sep/PAM/seed_91_sep.PAM.val.txt
+    jobid: 1370
+    reason: Missing output files: output/seed_91_sep/PAM/seed_91_sep.PAM.rds, output/seed_91_sep/PAM/seed_91_sep.PAM.train.txt, output/seed_91_sep/PAM/seed_91_sep.PAM.val.txt, output/seed_91_sep/PAM/seed_91_sep.PAM.test.txt
+    wildcards: sample=seed_91_sep, model=PAM
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:37 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/RPART/seed_91_sep.RPART.rds, output/seed_91_sep/RPART/seed_91_sep.RPART.train.txt, output/seed_91_sep/RPART/seed_91_sep.RPART.test.txt, output/seed_91_sep/RPART/seed_91_sep.RPART.val.txt
+    jobid: 1372
+    reason: Missing output files: output/seed_91_sep/RPART/seed_91_sep.RPART.test.txt, output/seed_91_sep/RPART/seed_91_sep.RPART.val.txt, output/seed_91_sep/RPART/seed_91_sep.RPART.rds, output/seed_91_sep/RPART/seed_91_sep.RPART.train.txt
+    wildcards: sample=seed_91_sep, model=RPART
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:41 2023]
+Finished job 1367.
+1 of 1499 steps (0.1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:41 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.rds, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.train.txt, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.test.txt, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.val.txt
+    jobid: 1373
+    reason: Missing output files: output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.rds, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.test.txt, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.train.txt, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.val.txt
+    wildcards: sample=seed_91_sep, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:41 2023]
+Finished job 1370.
+2 of 1499 steps (0.1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:41 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.rds, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.train.txt, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.test.txt, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.val.txt
+    jobid: 1374
+    reason: Missing output files: output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.val.txt, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.rds, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.test.txt, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.train.txt
+    wildcards: sample=seed_91_sep, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:42 2023]
+Finished job 1372.
+3 of 1499 steps (0.2%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:42 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/C5/seed_91_sep.C5.rds, output/seed_91_sep/C5/seed_91_sep.C5.train.txt, output/seed_91_sep/C5/seed_91_sep.C5.test.txt, output/seed_91_sep/C5/seed_91_sep.C5.val.txt
+    jobid: 1361
+    reason: Missing output files: output/seed_91_sep/C5/seed_91_sep.C5.rds, output/seed_91_sep/C5/seed_91_sep.C5.train.txt, output/seed_91_sep/C5/seed_91_sep.C5.val.txt, output/seed_91_sep/C5/seed_91_sep.C5.test.txt
+    wildcards: sample=seed_91_sep, model=C5
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:42 2023]
+Finished job 1363.
+4 of 1499 steps (0.3%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:42 2023]
+rule models:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.rds, output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.train.txt, output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.test.txt, output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.val.txt
+    jobid: 1362
+    reason: Missing output files: output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.rds, output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.test.txt, output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.train.txt, output/seed_91_sep/EXTRATREES/seed_91_sep.EXTRATREES.val.txt
+    wildcards: sample=seed_91_sep, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:47 2023]
+Finished job 1366.
+5 of 1499 steps (0.3%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:47 2023]
+rule GFSu:
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.rds, output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.train.txt, output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.test.txt, output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.val.txt
+    jobid: 1591
+    reason: Missing output files: output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.rds, output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.train.txt, output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.test.txt, output/seed_91_sep/GFSu/GFSu_seed_91_sep.GFSu.val.txt
+    wildcards: sample=seed_91_sep
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:49 2023]
+Finished job 1361.
+6 of 1499 steps (0.4%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:49 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/C5/seed_48_sep.C5.rds, output/seed_48_sep/C5/seed_48_sep.C5.train.txt, output/seed_48_sep/C5/seed_48_sep.C5.test.txt, output/seed_48_sep/C5/seed_48_sep.C5.val.txt
+    jobid: 759
+    reason: Missing output files: output/seed_48_sep/C5/seed_48_sep.C5.test.txt, output/seed_48_sep/C5/seed_48_sep.C5.val.txt, output/seed_48_sep/C5/seed_48_sep.C5.rds, output/seed_48_sep/C5/seed_48_sep.C5.train.txt
+    wildcards: sample=seed_48_sep, model=C5
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:57:56 2023]
+Finished job 759.
+7 of 1499 steps (0.5%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:57:56 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.rds, output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.train.txt, output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.test.txt, output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.val.txt
+    jobid: 760
+    reason: Missing output files: output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.rds, output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.test.txt, output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.val.txt, output/seed_48_sep/EXTRATREES/seed_48_sep.EXTRATREES.train.txt
+    wildcards: sample=seed_48_sep, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:58:00 2023]
+Finished job 1591.
+8 of 1499 steps (1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:58:00 2023]
+rule GFSu:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.rds, output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.train.txt, output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.test.txt, output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.val.txt
+    jobid: 1548
+    reason: Missing output files: output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.train.txt, output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.test.txt, output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.rds, output/seed_48_sep/GFSu/GFSu_seed_48_sep.GFSu.val.txt
+    wildcards: sample=seed_48_sep
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:58:14 2023]
+Finished job 1548.
+9 of 1499 steps (1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:58:14 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/GLM/seed_48_sep.GLM.rds, output/seed_48_sep/GLM/seed_48_sep.GLM.train.txt, output/seed_48_sep/GLM/seed_48_sep.GLM.test.txt, output/seed_48_sep/GLM/seed_48_sep.GLM.val.txt
+    jobid: 761
+    reason: Missing output files: output/seed_48_sep/GLM/seed_48_sep.GLM.val.txt, output/seed_48_sep/GLM/seed_48_sep.GLM.train.txt, output/seed_48_sep/GLM/seed_48_sep.GLM.test.txt, output/seed_48_sep/GLM/seed_48_sep.GLM.rds
+    wildcards: sample=seed_48_sep, model=GLM
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:58:19 2023]
+Finished job 1369.
+10 of 1499 steps (1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:58:19 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.rds, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.train.txt, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.test.txt, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.val.txt
+    jobid: 762
+    reason: Missing output files: output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.test.txt, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.train.txt, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.rds, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.val.txt
+    wildcards: sample=seed_48_sep, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:58:20 2023]
+Finished job 761.
+11 of 1499 steps (1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:58:20 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.rds, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.train.txt, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.test.txt, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.val.txt
+    jobid: 763
+    reason: Missing output files: output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.train.txt, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.rds, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.test.txt, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.val.txt
+    wildcards: sample=seed_48_sep, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:58:40 2023]
+Finished job 1365.
+12 of 1499 steps (1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:58:40 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/KNN/seed_48_sep.KNN.rds, output/seed_48_sep/KNN/seed_48_sep.KNN.train.txt, output/seed_48_sep/KNN/seed_48_sep.KNN.test.txt, output/seed_48_sep/KNN/seed_48_sep.KNN.val.txt
+    jobid: 764
+    reason: Missing output files: output/seed_48_sep/KNN/seed_48_sep.KNN.test.txt, output/seed_48_sep/KNN/seed_48_sep.KNN.rds, output/seed_48_sep/KNN/seed_48_sep.KNN.train.txt, output/seed_48_sep/KNN/seed_48_sep.KNN.val.txt
+    wildcards: sample=seed_48_sep, model=KNN
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 08:58:45 2023]
+Finished job 1364.
+13 of 1499 steps (1%) done
+Select jobs to execute...
+
+[Thu Nov  9 08:58:45 2023]
+rule models:
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/LDA/seed_48_sep.LDA.rds, output/seed_48_sep/LDA/seed_48_sep.LDA.train.txt, output/seed_48_sep/LDA/seed_48_sep.LDA.test.txt, output/seed_48_sep/LDA/seed_48_sep.LDA.val.txt
+    jobid: 765
+    reason: Missing output files: output/seed_48_sep/LDA/seed_48_sep.LDA.rds, output/seed_48_sep/LDA/seed_48_sep.LDA.test.txt, output/seed_48_sep/LDA/seed_48_sep.LDA.val.txt, output/seed_48_sep/LDA/seed_48_sep.LDA.train.txt
+    wildcards: sample=seed_48_sep, model=LDA
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 1371
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/RF/seed_91_sep.RF.rds, output/seed_91_sep/RF/seed_91_sep.RF.train.txt, output/seed_91_sep/RF/seed_91_sep.RF.test.txt, output/seed_91_sep/RF/seed_91_sep.RF.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpekw9ktmy.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 765
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/LDA/seed_48_sep.LDA.rds, output/seed_48_sep/LDA/seed_48_sep.LDA.train.txt, output/seed_48_sep/LDA/seed_48_sep.LDA.test.txt, output/seed_48_sep/LDA/seed_48_sep.LDA.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpql62x2c0.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 1373
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.rds, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.train.txt, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.test.txt, output/seed_91_sep/SVMLIN/seed_91_sep.SVMLIN.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpufl2racm.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 764
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/KNN/seed_48_sep.KNN.rds, output/seed_48_sep/KNN/seed_48_sep.KNN.train.txt, output/seed_48_sep/KNN/seed_48_sep.KNN.test.txt, output/seed_48_sep/KNN/seed_48_sep.KNN.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpilm73thn.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Nov  9 08:58:48 2023]
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 1374
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.rds, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.train.txt, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.test.txt, output/seed_91_sep/SVMRAD/seed_91_sep.SVMRAD.val.txt
+
+Error in rule models:
+    jobid: 762
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.rds, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.train.txt, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.test.txt, output/seed_48_sep/GLMNETLasso/seed_48_sep.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpb2yty2fu.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 1368
+    input: output/seed_91_sep/1_feature_selection/seed_91_sep.counts.train.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.test.VST.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.counts.val.VST.tsv, input/seed_91_sep/seed_91_sep.metadata.train.tsv, input/seed_91_sep/seed_91_sep.metadata.test.tsv, input/seed_91_sep/seed_91_sep.metadata.val.tsv, output/seed_91_sep/1_feature_selection/seed_91_sep.deseqResults.tsv
+    output: output/seed_91_sep/NB/seed_91_sep.NB.rds, output/seed_91_sep/NB/seed_91_sep.NB.train.txt, output/seed_91_sep/NB/seed_91_sep.NB.test.txt, output/seed_91_sep/NB/seed_91_sep.NB.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpu4lz0wcs.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Thu Nov  9 08:58:48 2023]
+Error in rule models:
+    jobid: 763
+    input: output/seed_48_sep/1_feature_selection/seed_48_sep.counts.train.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.test.VST.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.counts.val.VST.tsv, input/seed_48_sep/seed_48_sep.metadata.train.tsv, input/seed_48_sep/seed_48_sep.metadata.test.tsv, input/seed_48_sep/seed_48_sep.metadata.val.tsv, output/seed_48_sep/1_feature_selection/seed_48_sep.deseqResults.tsv
+    output: output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.rds, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.train.txt, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.test.txt, output/seed_48_sep/GLMNETRidge/seed_48_sep.GLMNETRidge.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpnu4cb9hi.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpl06d70z_.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Cancelling snakemake on user request.

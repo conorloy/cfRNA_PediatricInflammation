@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        1              1              1
+models                                     1              1              1
+total                                      3              1              1
+
+Select jobs to execute...
+
+[Mon Nov 20 21:45:23 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    jobid: 1
+    reason: Missing output files: output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    wildcards: sample=MISC
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:45:43 2023]
+Error in rule feature_selection_and_normalization:
+    jobid: 1
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+
+RuleException:
+CalledProcessError in line 26 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmphor0bew4.1_feature-selection.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 26, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-20T214522.962046.snakemake.log

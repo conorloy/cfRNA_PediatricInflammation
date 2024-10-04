@@ -1,0 +1,50 @@
+Building DAG of jobs...
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/0_input/seed_1_sep.counts.train.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/0_input/seed_1_sep.counts.test.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/0_input/seed_1_sep.counts.val.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/0_input/seed_1_sep.metadata.train.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/0_input/seed_1_sep.metadata.test.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/0_input/seed_1_sep.metadata.val.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Relative file path './output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv' starts with './'. This is redundant and strongly discouraged. It can also lead to inconsistent results of the file-matching approach used by Snakemake. You can simply omit the './' for relative file paths.
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        1              1              1
+total                                      2              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 11:59:00 2023]
+rule feature_selection_and_normalization:
+    input: ./output/seed_1_sep/0_input/seed_1_sep.counts.train.tsv, ./output/seed_1_sep/0_input/seed_1_sep.counts.test.tsv, ./output/seed_1_sep/0_input/seed_1_sep.counts.val.tsv, ./output/seed_1_sep/0_input/seed_1_sep.metadata.train.tsv, ./output/seed_1_sep/0_input/seed_1_sep.metadata.test.tsv, ./output/seed_1_sep/0_input/seed_1_sep.metadata.val.tsv
+    output: ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    jobid: 1
+    reason: Missing output files: ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv
+    wildcards: sample=seed_1_sep
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 11:59:00 2023]
+Error in rule feature_selection_and_normalization:
+    jobid: 1
+    input: ./output/seed_1_sep/0_input/seed_1_sep.counts.train.tsv, ./output/seed_1_sep/0_input/seed_1_sep.counts.test.tsv, ./output/seed_1_sep/0_input/seed_1_sep.counts.val.tsv, ./output/seed_1_sep/0_input/seed_1_sep.metadata.train.tsv, ./output/seed_1_sep/0_input/seed_1_sep.metadata.test.tsv, ./output/seed_1_sep/0_input/seed_1_sep.metadata.val.tsv
+    output: ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, ./output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+
+RuleException:
+ValueError in line 19 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/tmp.smk:
+Unsupported script: Expecting either Python (.py), R (.R), RMarkdown (.Rmd) or Julia (.jl) script.
+  File "/local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/tmp.smk", line 19, in __rule_feature_selection_and_normalization
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-08T115900.569794.snakemake.log

@@ -1,0 +1,12 @@
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules GFSu and models are ambiguous for the file output/seed_1_sep/GFSu/seed_1_sep.GFSu.rds.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	GFSu: sample=seed_1_sep
+	models: model=GFSu,sample=seed_1_sep
+Expected input files:
+	GFSu: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv input/seed_1_sep/seed_1_sep.metadata.train.tsv input/seed_1_sep/seed_1_sep.metadata.test.tsv input/seed_1_sep/seed_1_sep.metadata.val.tsv output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+	models: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv input/seed_1_sep/seed_1_sep.metadata.train.tsv input/seed_1_sep/seed_1_sep.metadata.test.tsv input/seed_1_sep/seed_1_sep.metadata.val.tsv output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsvExpected output files:
+	GFSu: output/seed_1_sep/GFSu/seed_1_sep.GFSu.rds output/seed_1_sep/GFSu/seed_1_sep.GFSu.train.txt output/seed_1_sep/GFSu/seed_1_sep.GFSu.test.txt output/seed_1_sep/GFSu/seed_1_sep.GFSu.val.txt
+	models: output/seed_1_sep/GFSu/seed_1_sep.GFSu.rds output/seed_1_sep/GFSu/seed_1_sep.GFSu.train.txt output/seed_1_sep/GFSu/seed_1_sep.GFSu.test.txt output/seed_1_sep/GFSu/seed_1_sep.GFSu.val.txt

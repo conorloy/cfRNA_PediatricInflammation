@@ -1,0 +1,115 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+GFSu         5              1              1
+all          1              1              1
+total        6              1              1
+
+Select jobs to execute...
+
+[Tue Nov 21 00:14:53 2023]
+rule GFSu:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    output: output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt
+    jobid: 76
+    reason: Missing output files: output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt, output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt
+    wildcards: sample=MISC
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:14:53 2023]
+rule GFSu:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/KD/1_feature_selection/KD.deseqResults.tsv
+    output: output/KD/GFSu/GFSu_KD.GFSu.rds, output/KD/GFSu/GFSu_KD.GFSu.train.txt, output/KD/GFSu/GFSu_KD.GFSu.test.txt, output/KD/GFSu/GFSu_KD.GFSu.val.txt
+    jobid: 77
+    reason: Missing output files: output/KD/GFSu/GFSu_KD.GFSu.rds, output/KD/GFSu/GFSu_KD.GFSu.train.txt, output/KD/GFSu/GFSu_KD.GFSu.val.txt, output/KD/GFSu/GFSu_KD.GFSu.test.txt
+    wildcards: sample=KD
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:14:53 2023]
+rule GFSu:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/COVID19/1_feature_selection/COVID19.deseqResults.tsv
+    output: output/COVID19/GFSu/GFSu_COVID19.GFSu.rds, output/COVID19/GFSu/GFSu_COVID19.GFSu.train.txt, output/COVID19/GFSu/GFSu_COVID19.GFSu.test.txt, output/COVID19/GFSu/GFSu_COVID19.GFSu.val.txt
+    jobid: 79
+    reason: Missing output files: output/COVID19/GFSu/GFSu_COVID19.GFSu.rds, output/COVID19/GFSu/GFSu_COVID19.GFSu.test.txt, output/COVID19/GFSu/GFSu_COVID19.GFSu.train.txt, output/COVID19/GFSu/GFSu_COVID19.GFSu.val.txt
+    wildcards: sample=COVID19
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:14:53 2023]
+rule GFSu:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv
+    output: output/viral_infection/GFSu/GFSu_viral_infection.GFSu.rds, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.train.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.test.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.val.txt
+    jobid: 78
+    reason: Missing output files: output/viral_infection/GFSu/GFSu_viral_infection.GFSu.train.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.test.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.val.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.rds
+    wildcards: sample=viral_infection
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:14:53 2023]
+rule GFSu:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv
+    output: output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.rds, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.train.txt, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.test.txt, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.val.txt
+    jobid: 80
+    reason: Missing output files: output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.val.txt, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.train.txt, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.rds, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.test.txt
+    wildcards: sample=bacterial_infection
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:14:56 2023]
+Error in rule GFSu:
+    jobid: 78
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv
+    output: output/viral_infection/GFSu/GFSu_viral_infection.GFSu.rds, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.train.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.test.txt, output/viral_infection/GFSu/GFSu_viral_infection.GFSu.val.txt
+
+RuleException:
+CalledProcessError in line 74 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpxtzib3jj.2_train-GFSu.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 74, in __rule_GFSu
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Tue Nov 21 00:14:56 2023]
+Error in rule GFSu:
+    jobid: 76
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    output: output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt
+
+RuleException:
+CalledProcessError in line 74 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpjfj3ojdq.2_train-GFSu.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 74, in __rule_GFSu
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Tue Nov 21 00:14:56 2023]
+Error in rule GFSu:
+    jobid: 77
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/KD/1_feature_selection/KD.deseqResults.tsv
+    output: output/KD/GFSu/GFSu_KD.GFSu.rds, output/KD/GFSu/GFSu_KD.GFSu.train.txt, output/KD/GFSu/GFSu_KD.GFSu.test.txt, output/KD/GFSu/GFSu_KD.GFSu.val.txt
+
+RuleException:
+CalledProcessError in line 74 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmprla_ub2z.2_train-GFSu.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 74, in __rule_GFSu
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Tue Nov 21 00:14:56 2023]
+Error in rule GFSu:
+    jobid: 80
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv
+    output: output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.rds, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.train.txt, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.test.txt, output/bacterial_infection/GFSu/GFSu_bacterial_infection.GFSu.val.txt
+
+RuleException:
+CalledProcessError in line 74 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpqjxcdkxe.2_train-GFSu.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 74, in __rule_GFSu
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Tue Nov 21 00:14:56 2023]
+Error in rule GFSu:
+    jobid: 79
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/COVID19/1_feature_selection/COVID19.deseqResults.tsv
+    output: output/COVID19/GFSu/GFSu_COVID19.GFSu.rds, output/COVID19/GFSu/GFSu_COVID19.GFSu.train.txt, output/COVID19/GFSu/GFSu_COVID19.GFSu.test.txt, output/COVID19/GFSu/GFSu_COVID19.GFSu.val.txt
+
+RuleException:
+CalledProcessError in line 74 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmprkl918mi.2_train-GFSu.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 74, in __rule_GFSu
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-21T001453.487849.snakemake.log

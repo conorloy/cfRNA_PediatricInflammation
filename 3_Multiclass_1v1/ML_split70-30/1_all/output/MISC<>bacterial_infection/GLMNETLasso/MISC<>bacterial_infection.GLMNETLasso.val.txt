@@ -1,0 +1,21 @@
+value
+auc	0.935267857142857
+youden	N/A
+Sensitivity	0.90625
+Specificity	0.785714285714286
+Pos Pred Value	0.90625
+Neg Pred Value	0.785714285714286
+Precision	0.90625
+Recall	0.90625
+F1	0.90625
+Prevalence	0.695652173913043
+Detection Rate	0.630434782608696
+Detection Prevalence	0.695652173913043
+Balanced Accuracy	0.845982142857143
+Accuracy	0.869565217391304
+Kappa	0.691964285714286
+AccuracyLower	0.737434983812373
+AccuracyUpper	0.95059265342629
+AccuracyNull	0.695652173913043
+AccuracyPValue	0.00534969527314179
+McnemarPValue	1

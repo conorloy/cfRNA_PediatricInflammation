@@ -1,0 +1,198 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models       13              1              1
+total        14              1              1
+
+Select jobs to execute...
+
+[Mon Jan  8 13:36:56 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt
+    jobid: 6
+    reason: Missing output files: output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:36:56 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt
+    jobid: 7
+    reason: Missing output files: output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:36:56 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt
+    jobid: 9
+    reason: Missing output files: output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=NB
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:36:56 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt
+    jobid: 11
+    reason: Missing output files: output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:36:56 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.rds, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.train.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.test.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.val.txt
+    jobid: 13
+    reason: Missing output files: output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.val.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.rds, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.test.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.train.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=RPART
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:36:59 2024]
+Finished job 11.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:36:59 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.rds, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.train.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.test.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.val.txt
+    jobid: 15
+    reason: Missing output files: output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.train.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.val.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.test.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.rds
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:00 2024]
+Finished job 13.
+2 of 14 steps (14%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:00 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.rds, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.train.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.test.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.val.txt
+    jobid: 3
+    reason: Missing output files: output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.train.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.rds, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.val.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.test.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:02 2024]
+Finished job 7.
+3 of 14 steps (21%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:02 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt
+    jobid: 2
+    reason: Missing output files: output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:05 2024]
+Finished job 2.
+4 of 14 steps (29%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:05 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt
+    jobid: 8
+    reason: Missing output files: output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:08 2024]
+Finished job 8.
+5 of 14 steps (36%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:08 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt
+    jobid: 12
+    reason: Missing output files: output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:20 2024]
+Finished job 9.
+6 of 14 steps (43%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:20 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt
+    jobid: 4
+    reason: Missing output files: output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=GLM
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:23 2024]
+Finished job 4.
+7 of 14 steps (50%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:23 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt
+    jobid: 14
+    reason: Missing output files: output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:31 2024]
+Finished job 3.
+8 of 14 steps (57%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:37:31 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt
+    jobid: 10
+    reason: Missing output files: output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:37:35 2024]
+Finished job 12.
+9 of 14 steps (64%) done
+[Mon Jan  8 13:37:40 2024]
+Finished job 6.
+10 of 14 steps (71%) done
+[Mon Jan  8 13:37:47 2024]
+Finished job 10.
+11 of 14 steps (79%) done
+[Mon Jan  8 13:39:02 2024]
+Finished job 14.
+12 of 14 steps (86%) done
+[Mon Jan  8 13:42:02 2024]
+Finished job 15.
+13 of 14 steps (93%) done
+Select jobs to execute...
+
+[Mon Jan  8 13:42:02 2024]
+localrule all:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.rds, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.train.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.train.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.test.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.val.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.val.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.rds, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.test.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.test.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.test.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.val.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.val.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.val.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.rds, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.test.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.rds, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.train.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.val.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.train.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.val.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.train.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.rds, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.train.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.val.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.val.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.val.txt, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.rds, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.rds, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.train.txt, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.test.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.rds, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.train.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.test.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.rds, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.train.txt, output/viral_infection<>bacterial_infection/KNN/viral_infection<>bacterial_infection.KNN.val.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.train.txt, output/viral_infection<>bacterial_infection/SVMRAD/viral_infection<>bacterial_infection.SVMRAD.train.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.val.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.test.txt, output/viral_infection<>bacterial_infection/LDA/viral_infection<>bacterial_infection.LDA.train.txt, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.val.txt, output/viral_infection<>bacterial_infection/C5/viral_infection<>bacterial_infection.C5.test.txt, output/viral_infection<>bacterial_infection/RPART/viral_infection<>bacterial_infection.RPART.rds, output/viral_infection<>bacterial_infection/GLMNETRidge/viral_infection<>bacterial_infection.GLMNETRidge.train.txt, output/viral_infection<>bacterial_infection/NNET/viral_infection<>bacterial_infection.NNET.rds, output/viral_infection<>bacterial_infection/EXTRATREES/viral_infection<>bacterial_infection.EXTRATREES.val.txt, output/viral_infection<>bacterial_infection/PAM/viral_infection<>bacterial_infection.PAM.val.txt, output/viral_infection<>bacterial_infection/RF/viral_infection<>bacterial_infection.RF.test.txt, output/viral_infection<>bacterial_infection/NB/viral_infection<>bacterial_infection.NB.test.txt, output/viral_infection<>bacterial_infection/SVMLIN/viral_infection<>bacterial_infection.SVMLIN.rds, output/viral_infection<>bacterial_infection/GLM/viral_infection<>bacterial_infection.GLM.test.txt
+    resources: tmpdir=/tmp
+
+[Mon Jan  8 13:42:02 2024]
+Finished job 0.
+14 of 14 steps (100%) done
+Complete log: .snakemake/log/2024-01-08T133656.378314.snakemake.log

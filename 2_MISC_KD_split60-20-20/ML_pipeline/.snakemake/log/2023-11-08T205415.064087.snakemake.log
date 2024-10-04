@@ -1,0 +1,75 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        3              1              1
+total         4              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 20:54:18 2023]
+rule models:
+    input: output/seed_80_sep/1_feature_selection/seed_80_sep.counts.train.VST.tsv, output/seed_80_sep/1_feature_selection/seed_80_sep.counts.test.VST.tsv, output/seed_80_sep/1_feature_selection/seed_80_sep.counts.val.VST.tsv, input/seed_80_sep/seed_80_sep.metadata.train.tsv, input/seed_80_sep/seed_80_sep.metadata.test.tsv, input/seed_80_sep/seed_80_sep.metadata.val.tsv, output/seed_80_sep/1_feature_selection/seed_80_sep.deseqResults.tsv
+    output: output/seed_80_sep/NB/seed_80_sep.NB.rds, output/seed_80_sep/NB/seed_80_sep.NB.train.txt, output/seed_80_sep/NB/seed_80_sep.NB.test.txt, output/seed_80_sep/NB/seed_80_sep.NB.val.txt
+    jobid: 1214
+    reason: Missing output files: output/seed_80_sep/NB/seed_80_sep.NB.val.txt, output/seed_80_sep/NB/seed_80_sep.NB.train.txt, output/seed_80_sep/NB/seed_80_sep.NB.rds, output/seed_80_sep/NB/seed_80_sep.NB.test.txt
+    wildcards: sample=seed_80_sep, model=NB
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 20:54:18 2023]
+rule models:
+    input: output/seed_100_sep/1_feature_selection/seed_100_sep.counts.train.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.test.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.val.VST.tsv, input/seed_100_sep/seed_100_sep.metadata.train.tsv, input/seed_100_sep/seed_100_sep.metadata.test.tsv, input/seed_100_sep/seed_100_sep.metadata.val.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.deseqResults.tsv
+    output: output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.rds, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.train.txt, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.test.txt, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.val.txt
+    jobid: 1491
+    reason: Missing output files: output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.train.txt, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.test.txt, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.rds, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.val.txt
+    wildcards: sample=seed_100_sep, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 20:54:18 2023]
+rule models:
+    input: output/seed_38_sep/1_feature_selection/seed_38_sep.counts.train.VST.tsv, output/seed_38_sep/1_feature_selection/seed_38_sep.counts.test.VST.tsv, output/seed_38_sep/1_feature_selection/seed_38_sep.counts.val.VST.tsv, input/seed_38_sep/seed_38_sep.metadata.train.tsv, input/seed_38_sep/seed_38_sep.metadata.test.tsv, input/seed_38_sep/seed_38_sep.metadata.val.tsv, output/seed_38_sep/1_feature_selection/seed_38_sep.deseqResults.tsv
+    output: output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.rds, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.train.txt, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.test.txt, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.val.txt
+    jobid: 632
+    reason: Missing output files: output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.test.txt, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.train.txt, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.rds, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.val.txt
+    wildcards: sample=seed_38_sep, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 20:54:41 2023]
+Error in rule models:
+    jobid: 1214
+    input: output/seed_80_sep/1_feature_selection/seed_80_sep.counts.train.VST.tsv, output/seed_80_sep/1_feature_selection/seed_80_sep.counts.test.VST.tsv, output/seed_80_sep/1_feature_selection/seed_80_sep.counts.val.VST.tsv, input/seed_80_sep/seed_80_sep.metadata.train.tsv, input/seed_80_sep/seed_80_sep.metadata.test.tsv, input/seed_80_sep/seed_80_sep.metadata.val.tsv, output/seed_80_sep/1_feature_selection/seed_80_sep.deseqResults.tsv
+    output: output/seed_80_sep/NB/seed_80_sep.NB.rds, output/seed_80_sep/NB/seed_80_sep.NB.train.txt, output/seed_80_sep/NB/seed_80_sep.NB.test.txt, output/seed_80_sep/NB/seed_80_sep.NB.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpyvbtg6ug.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov  8 20:55:00 2023]
+Error in rule models:
+    jobid: 1491
+    input: output/seed_100_sep/1_feature_selection/seed_100_sep.counts.train.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.test.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.val.VST.tsv, input/seed_100_sep/seed_100_sep.metadata.train.tsv, input/seed_100_sep/seed_100_sep.metadata.test.tsv, input/seed_100_sep/seed_100_sep.metadata.val.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.deseqResults.tsv
+    output: output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.rds, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.train.txt, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.test.txt, output/seed_100_sep/GLMNETRidge/seed_100_sep.GLMNETRidge.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmp8m5ghuw3.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Wed Nov  8 20:59:35 2023]
+Error in rule models:
+    jobid: 632
+    input: output/seed_38_sep/1_feature_selection/seed_38_sep.counts.train.VST.tsv, output/seed_38_sep/1_feature_selection/seed_38_sep.counts.test.VST.tsv, output/seed_38_sep/1_feature_selection/seed_38_sep.counts.val.VST.tsv, input/seed_38_sep/seed_38_sep.metadata.train.tsv, input/seed_38_sep/seed_38_sep.metadata.test.tsv, input/seed_38_sep/seed_38_sep.metadata.val.tsv, output/seed_38_sep/1_feature_selection/seed_38_sep.deseqResults.tsv
+    output: output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.rds, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.train.txt, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.test.txt, output/seed_38_sep/SVMRAD/seed_38_sep.SVMRAD.val.txt
+
+RuleException:
+CalledProcessError in line 47 of /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/.snakemake/scripts/tmpe6ngci0l.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/tb-cfrna/SEED_SELECTION/1_all/workflow/rules/main.smk", line 47, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-08T205415.064087.snakemake.log

@@ -1,0 +1,10 @@
+Building DAG of jobs...
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+GFSu                                       4              1              1
+all                                        1              1              1
+feature_selection_and_normalization        4              1              1
+models                                    56              1              1
+total                                     65              1              1
+

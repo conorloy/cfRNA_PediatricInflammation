@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        1              1              1
+total         2              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 13:52:01 2023]
+rule models:
+    input: output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, input/seed_2_sep/seed_2_sep.metadata.train.tsv, input/seed_2_sep/seed_2_sep.metadata.test.tsv, input/seed_2_sep/seed_2_sep.metadata.val.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv
+    output: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.train.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.test.txt, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.val.txt
+    jobid: 18
+    reason: Missing output files: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds
+    wildcards: sample=seed_2_sep, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:52:14 2023]
+Finished job 18.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Wed Nov  8 13:52:14 2023]
+localrule all:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.counts.val.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv, output/seed_2_sep/1_feature_selection/seed_2_sep.deseqResults.tsv, output/seed_1_sep/C5/seed_1_sep.C5.rds, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.rds, output/seed_1_sep/GLM/seed_1_sep.GLM.rds, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.rds, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.rds, output/seed_1_sep/KNN/seed_1_sep.KNN.rds, output/seed_1_sep/LDA/seed_1_sep.LDA.rds, output/seed_1_sep/NB/seed_1_sep.NB.rds, output/seed_1_sep/NNET/seed_1_sep.NNET.rds, output/seed_1_sep/PAM/seed_1_sep.PAM.rds, output/seed_1_sep/RF/seed_1_sep.RF.rds, output/seed_1_sep/RPART/seed_1_sep.RPART.rds, output/seed_1_sep/SVMLIN/seed_1_sep.SVMLIN.rds, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.rds, output/seed_2_sep/C5/seed_2_sep.C5.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/GLM/seed_2_sep.GLM.rds, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.rds, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.rds, output/seed_2_sep/KNN/seed_2_sep.KNN.rds, output/seed_2_sep/LDA/seed_2_sep.LDA.rds, output/seed_2_sep/NB/seed_2_sep.NB.rds, output/seed_2_sep/NNET/seed_2_sep.NNET.rds, output/seed_2_sep/PAM/seed_2_sep.PAM.rds, output/seed_2_sep/RF/seed_2_sep.RF.rds, output/seed_2_sep/RPART/seed_2_sep.RPART.rds, output/seed_2_sep/SVMLIN/seed_2_sep.SVMLIN.rds, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.rds, output/seed_1_sep/C5/seed_1_sep.C5.rds, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.rds, output/seed_1_sep/GLM/seed_1_sep.GLM.rds, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.rds, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.rds, output/seed_1_sep/KNN/seed_1_sep.KNN.rds, output/seed_1_sep/LDA/seed_1_sep.LDA.rds, output/seed_1_sep/NB/seed_1_sep.NB.rds, output/seed_1_sep/NNET/seed_1_sep.NNET.rds, output/seed_1_sep/PAM/seed_1_sep.PAM.rds, output/seed_1_sep/RF/seed_1_sep.RF.rds, output/seed_1_sep/RPART/seed_1_sep.RPART.rds, output/seed_1_sep/SVMLIN/seed_1_sep.SVMLIN.rds, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.rds, output/seed_2_sep/C5/seed_2_sep.C5.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/GLM/seed_2_sep.GLM.rds, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.rds, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.rds, output/seed_2_sep/KNN/seed_2_sep.KNN.rds, output/seed_2_sep/LDA/seed_2_sep.LDA.rds, output/seed_2_sep/NB/seed_2_sep.NB.rds, output/seed_2_sep/NNET/seed_2_sep.NNET.rds, output/seed_2_sep/PAM/seed_2_sep.PAM.rds, output/seed_2_sep/RF/seed_2_sep.RF.rds, output/seed_2_sep/RPART/seed_2_sep.RPART.rds, output/seed_2_sep/SVMLIN/seed_2_sep.SVMLIN.rds, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.rds, output/seed_1_sep/C5/seed_1_sep.C5.rds, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.rds, output/seed_1_sep/GLM/seed_1_sep.GLM.rds, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.rds, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.rds, output/seed_1_sep/KNN/seed_1_sep.KNN.rds, output/seed_1_sep/LDA/seed_1_sep.LDA.rds, output/seed_1_sep/NB/seed_1_sep.NB.rds, output/seed_1_sep/NNET/seed_1_sep.NNET.rds, output/seed_1_sep/PAM/seed_1_sep.PAM.rds, output/seed_1_sep/RF/seed_1_sep.RF.rds, output/seed_1_sep/RPART/seed_1_sep.RPART.rds, output/seed_1_sep/SVMLIN/seed_1_sep.SVMLIN.rds, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.rds, output/seed_2_sep/C5/seed_2_sep.C5.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/GLM/seed_2_sep.GLM.rds, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.rds, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.rds, output/seed_2_sep/KNN/seed_2_sep.KNN.rds, output/seed_2_sep/LDA/seed_2_sep.LDA.rds, output/seed_2_sep/NB/seed_2_sep.NB.rds, output/seed_2_sep/NNET/seed_2_sep.NNET.rds, output/seed_2_sep/PAM/seed_2_sep.PAM.rds, output/seed_2_sep/RF/seed_2_sep.RF.rds, output/seed_2_sep/RPART/seed_2_sep.RPART.rds, output/seed_2_sep/SVMLIN/seed_2_sep.SVMLIN.rds, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.rds, output/seed_1_sep/C5/seed_1_sep.C5.rds, output/seed_1_sep/EXTRATREES/seed_1_sep.EXTRATREES.rds, output/seed_1_sep/GLM/seed_1_sep.GLM.rds, output/seed_1_sep/GLMNETLasso/seed_1_sep.GLMNETLasso.rds, output/seed_1_sep/GLMNETRidge/seed_1_sep.GLMNETRidge.rds, output/seed_1_sep/KNN/seed_1_sep.KNN.rds, output/seed_1_sep/LDA/seed_1_sep.LDA.rds, output/seed_1_sep/NB/seed_1_sep.NB.rds, output/seed_1_sep/NNET/seed_1_sep.NNET.rds, output/seed_1_sep/PAM/seed_1_sep.PAM.rds, output/seed_1_sep/RF/seed_1_sep.RF.rds, output/seed_1_sep/RPART/seed_1_sep.RPART.rds, output/seed_1_sep/SVMLIN/seed_1_sep.SVMLIN.rds, output/seed_1_sep/SVMRAD/seed_1_sep.SVMRAD.rds, output/seed_2_sep/C5/seed_2_sep.C5.rds, output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds, output/seed_2_sep/GLM/seed_2_sep.GLM.rds, output/seed_2_sep/GLMNETLasso/seed_2_sep.GLMNETLasso.rds, output/seed_2_sep/GLMNETRidge/seed_2_sep.GLMNETRidge.rds, output/seed_2_sep/KNN/seed_2_sep.KNN.rds, output/seed_2_sep/LDA/seed_2_sep.LDA.rds, output/seed_2_sep/NB/seed_2_sep.NB.rds, output/seed_2_sep/NNET/seed_2_sep.NNET.rds, output/seed_2_sep/PAM/seed_2_sep.PAM.rds, output/seed_2_sep/RF/seed_2_sep.RF.rds, output/seed_2_sep/RPART/seed_2_sep.RPART.rds, output/seed_2_sep/SVMLIN/seed_2_sep.SVMLIN.rds, output/seed_2_sep/SVMRAD/seed_2_sep.SVMRAD.rds
+    jobid: 0
+    reason: Input files updated by another job: output/seed_2_sep/EXTRATREES/seed_2_sep.EXTRATREES.rds
+    resources: tmpdir=/tmp
+
+[Wed Nov  8 13:52:14 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2023-11-08T135201.132221.snakemake.log

@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        1              1              1
+total         2              1              1
+
+Select jobs to execute...
+
+[Wed Nov  8 13:01:04 2023]
+rule models:
+    input: output/seed_1_sep/1_feature_selection/seed_1_sep.counts.train.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.test.VST.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.counts.val.VST.tsv, output/seed_1_sep/0_input/seed_1_sep.metadata.train.tsv, output/seed_1_sep/0_input/seed_1_sep.metadata.test.tsv, output/seed_1_sep/0_input/seed_1_sep.metadata.val.tsv, output/seed_1_sep/1_feature_selection/seed_1_sep.deseqResults.tsv
+    output: output/seed_1_sep/GLM/seed_1_sep.GLM.rds, output/seed_1_sep/GLM/seed_1_sep.GLM.train.txt, output/seed_1_sep/GLM/seed_1_sep.GLM.test.txt, output/seed_1_sep/GLM/seed_1_sep.GLM.val.txt
+    jobid: 2
+    reason: Missing output files: output/seed_1_sep/GLM/seed_1_sep.GLM.rds
+    wildcards: sample=seed_1_sep, model=GLM
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule models  in line 25 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/tmp.smk:
+Job Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+output/seed_1_sep/GLM/seed_1_sep.GLM.test.txt
+output/seed_1_sep/GLM/seed_1_sep.GLM.val.txt completed successfully, but some output files are missing. 2
+Removing output files of failed job models since they might be corrupted:
+output/seed_1_sep/GLM/seed_1_sep.GLM.rds, output/seed_1_sep/GLM/seed_1_sep.GLM.train.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-08T130103.755124.snakemake.log

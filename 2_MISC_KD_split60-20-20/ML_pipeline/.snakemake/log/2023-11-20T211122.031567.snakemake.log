@@ -1,0 +1,219 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models       13              1              1
+total        14              1              1
+
+Select jobs to execute...
+
+[Mon Nov 20 21:11:22 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt
+    jobid: 6
+    reason: Missing output files: output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt
+    wildcards: sample=MISC, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:22 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/KNN/MISC.KNN.rds, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/KNN/MISC.KNN.test.txt, output/MISC/KNN/MISC.KNN.val.txt
+    jobid: 7
+    reason: Missing output files: output/MISC/KNN/MISC.KNN.val.txt, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/KNN/MISC.KNN.test.txt, output/MISC/KNN/MISC.KNN.rds
+    wildcards: sample=MISC, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:22 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NB/MISC.NB.rds, output/MISC/NB/MISC.NB.train.txt, output/MISC/NB/MISC.NB.test.txt, output/MISC/NB/MISC.NB.val.txt
+    jobid: 9
+    reason: Missing output files: output/MISC/NB/MISC.NB.val.txt, output/MISC/NB/MISC.NB.rds, output/MISC/NB/MISC.NB.train.txt, output/MISC/NB/MISC.NB.test.txt
+    wildcards: sample=MISC, model=NB
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:22 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/PAM/MISC.PAM.rds, output/MISC/PAM/MISC.PAM.train.txt, output/MISC/PAM/MISC.PAM.test.txt, output/MISC/PAM/MISC.PAM.val.txt
+    jobid: 11
+    reason: Missing output files: output/MISC/PAM/MISC.PAM.rds, output/MISC/PAM/MISC.PAM.test.txt, output/MISC/PAM/MISC.PAM.train.txt, output/MISC/PAM/MISC.PAM.val.txt
+    wildcards: sample=MISC, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:22 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/RPART/MISC.RPART.rds, output/MISC/RPART/MISC.RPART.train.txt, output/MISC/RPART/MISC.RPART.test.txt, output/MISC/RPART/MISC.RPART.val.txt
+    jobid: 13
+    reason: Missing output files: output/MISC/RPART/MISC.RPART.val.txt, output/MISC/RPART/MISC.RPART.train.txt, output/MISC/RPART/MISC.RPART.rds, output/MISC/RPART/MISC.RPART.test.txt
+    wildcards: sample=MISC, model=RPART
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:25 2023]
+Finished job 11.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:11:25 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt
+    jobid: 15
+    reason: Missing output files: output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.val.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt
+    wildcards: sample=MISC, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:26 2023]
+Finished job 13.
+2 of 14 steps (14%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:11:26 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt
+    jobid: 3
+    reason: Missing output files: output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt
+    wildcards: sample=MISC, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:11:30 2023]
+Finished job 7.
+3 of 14 steps (21%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:11:30 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/GLMNETLasso/MISC.GLMNETLasso.rds, output/MISC/GLMNETLasso/MISC.GLMNETLasso.train.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.test.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.val.txt
+    jobid: 5
+    reason: Missing output files: output/MISC/GLMNETLasso/MISC.GLMNETLasso.test.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.rds, output/MISC/GLMNETLasso/MISC.GLMNETLasso.val.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.train.txt
+    wildcards: sample=MISC, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:12:06 2023]
+Finished job 6.
+4 of 14 steps (29%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:12:06 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+    jobid: 8
+    reason: Missing output files: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+    wildcards: sample=MISC, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:12:09 2023]
+Error in rule models:
+    jobid: 8
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpk0a29b_6.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Select jobs to execute...
+
+[Mon Nov 20 21:12:09 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/RF/MISC.RF.rds, output/MISC/RF/MISC.RF.train.txt, output/MISC/RF/MISC.RF.test.txt, output/MISC/RF/MISC.RF.val.txt
+    jobid: 12
+    reason: Missing output files: output/MISC/RF/MISC.RF.rds, output/MISC/RF/MISC.RF.train.txt, output/MISC/RF/MISC.RF.val.txt, output/MISC/RF/MISC.RF.test.txt
+    wildcards: sample=MISC, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:12:18 2023]
+Finished job 5.
+5 of 14 steps (36%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:12:18 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt
+    jobid: 14
+    reason: Missing output files: output/MISC/SVMLIN/MISC.SVMLIN.val.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt
+    wildcards: sample=MISC, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:12:26 2023]
+Finished job 9.
+6 of 14 steps (43%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:12:26 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/C5/MISC.C5.rds, output/MISC/C5/MISC.C5.train.txt, output/MISC/C5/MISC.C5.test.txt, output/MISC/C5/MISC.C5.val.txt
+    jobid: 2
+    reason: Missing output files: output/MISC/C5/MISC.C5.rds, output/MISC/C5/MISC.C5.test.txt, output/MISC/C5/MISC.C5.train.txt, output/MISC/C5/MISC.C5.val.txt
+    wildcards: sample=MISC, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:12:32 2023]
+Finished job 3.
+7 of 14 steps (50%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:12:32 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.val.txt
+    jobid: 10
+    reason: Missing output files: output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.val.txt, output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.train.txt
+    wildcards: sample=MISC, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:12:32 2023]
+Finished job 2.
+8 of 14 steps (57%) done
+[Mon Nov 20 21:12:55 2023]
+Error in rule models:
+    jobid: 10
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpuabhx38w.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Mon Nov 20 21:13:51 2023]
+Finished job 12.
+9 of 14 steps (64%) done
+[Mon Nov 20 21:15:46 2023]
+Error in rule models:
+    jobid: 14
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpi66y35pi.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Terminating processes on user request, this might take some time.
+[Mon Nov 20 21:17:09 2023]
+Error in rule models:
+    jobid: 15
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpduusbklw.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Complete log: .snakemake/log/2023-11-20T211122.031567.snakemake.log

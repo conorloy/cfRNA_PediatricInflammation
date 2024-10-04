@@ -1,0 +1,12 @@
+Building DAG of jobs...
+MissingInputException in rule all  in line 19 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/Snakefile:
+Missing input files for rule all:
+    affected files:
+        output/seed_1_sep/GFSu/GFSu_seed_1_sep.GFSu.val.txt
+        output/seed_1_sep/GFSu/GFSu_seed_1_sep.GFSu.rds
+        output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.train.txt
+        output/seed_1_sep/GFSu/GFSu_seed_1_sep.GFSu.test.txt
+        output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.rds
+        output/seed_1_sep/GFSu/GFSu_seed_1_sep.GFSu.train.txt
+        output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.test.txt
+        output/seed_2_sep/GFSu/GFSu_seed_2_sep.GFSu.val.txt

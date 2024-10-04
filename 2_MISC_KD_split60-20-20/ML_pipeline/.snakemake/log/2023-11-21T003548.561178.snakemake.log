@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+GFSu         1              1              1
+all          1              1              1
+total        2              1              1
+
+Select jobs to execute...
+
+[Tue Nov 21 00:35:48 2023]
+rule GFSu:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, output/MISC/1_feature_selection/MISC.deseqResults.tsv
+    output: output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt
+    jobid: 16
+    reason: Missing output files: output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt
+    wildcards: sample=MISC
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:35:55 2023]
+Finished job 16.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Tue Nov 21 00:35:55 2023]
+localrule all:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv, output/MISC/C5/MISC.C5.rds, output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/MISC/GLM/MISC.GLM.rds, output/MISC/GLMNETLasso/MISC.GLMNETLasso.rds, output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/MISC/KNN/MISC.KNN.rds, output/MISC/LDA/MISC.LDA.rds, output/MISC/NB/MISC.NB.rds, output/MISC/NNET/MISC.NNET.rds, output/MISC/PAM/MISC.PAM.rds, output/MISC/RF/MISC.RF.rds, output/MISC/RPART/MISC.RPART.rds, output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/C5/MISC.C5.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.train.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/NB/MISC.NB.train.txt, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/PAM/MISC.PAM.train.txt, output/MISC/RF/MISC.RF.train.txt, output/MISC/RPART/MISC.RPART.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/C5/MISC.C5.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/MISC/GLM/MISC.GLM.test.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/KNN/MISC.KNN.test.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/NB/MISC.NB.test.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/PAM/MISC.PAM.test.txt, output/MISC/RF/MISC.RF.test.txt, output/MISC/RPART/MISC.RPART.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/C5/MISC.C5.val.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt, output/MISC/GLM/MISC.GLM.val.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.val.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt, output/MISC/KNN/MISC.KNN.val.txt, output/MISC/LDA/MISC.LDA.val.txt, output/MISC/NB/MISC.NB.val.txt, output/MISC/NNET/MISC.NNET.val.txt, output/MISC/PAM/MISC.PAM.val.txt, output/MISC/RF/MISC.RF.val.txt, output/MISC/RPART/MISC.RPART.val.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt, output/MISC/GFSu/GFSu_MISC.GFSu.rds, output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/MISC/GFSu/GFSu_MISC.GFSu.train.txt, output/MISC/GFSu/GFSu_MISC.GFSu.val.txt, output/MISC/GFSu/GFSu_MISC.GFSu.test.txt, output/MISC/GFSu/GFSu_MISC.GFSu.rds
+    resources: tmpdir=/tmp
+
+[Tue Nov 21 00:35:55 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2023-11-21T003548.561178.snakemake.log

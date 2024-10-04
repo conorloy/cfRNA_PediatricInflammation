@@ -1,0 +1,184 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        6              1              1
+models                                     6              1              1
+total                                     13              1              1
+
+Select jobs to execute...
+
+[Fri Jan  5 16:33:15 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv
+    jobid: 6
+    reason: Missing output files: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: condition_pair=viral_infection<>bacterial_infection
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:15 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv
+    jobid: 1
+    reason: Missing output files: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:15 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.deseqResults.tsv
+    jobid: 3
+    reason: Missing output files: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.deseqResults.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>bacterial_infection
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:15 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.deseqResults.tsv
+    jobid: 5
+    reason: Missing output files: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.deseqResults.tsv
+    wildcards: condition_pair=KD<>bacterial_infection
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:15 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.deseqResults.tsv
+    jobid: 2
+    reason: Missing output files: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.deseqResults.tsv
+    wildcards: condition_pair=MISC<>viral_infection
+    resources: tmpdir=/tmp
+
+
+[Fri Jan  5 16:33:15 2024]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.deseqResults.tsv
+    jobid: 4
+    reason: Missing output files: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.deseqResults.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=KD<>viral_infection
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:50 2024]
+Finished job 1.
+1 of 13 steps (8%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:33:50 2024]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt
+    jobid: 7
+    reason: Missing output files: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt; Input files updated by another job: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>KD, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:50 2024]
+Finished job 6.
+2 of 13 steps (15%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:33:50 2024]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 12
+    reason: Missing output files: output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds; Input files updated by another job: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:50 2024]
+Finished job 2.
+3 of 13 steps (23%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:33:50 2024]
+rule models:
+    input: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt
+    jobid: 8
+    reason: Missing output files: output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt; Input files updated by another job: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>viral_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:50 2024]
+Finished job 5.
+4 of 13 steps (31%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:33:50 2024]
+rule models:
+    input: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 11
+    reason: Missing output files: output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds; Input files updated by another job: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=KD<>bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:50 2024]
+Finished job 4.
+5 of 13 steps (38%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:33:50 2024]
+rule models:
+    input: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt
+    jobid: 10
+    reason: Missing output files: output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt; Input files updated by another job: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv
+    wildcards: condition_pair=KD<>viral_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:33:50 2024]
+Finished job 3.
+6 of 13 steps (46%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:33:50 2024]
+rule models:
+    input: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 9
+    reason: Missing output files: output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt; Input files updated by another job: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: condition_pair=MISC<>bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:34:41 2024]
+Finished job 7.
+7 of 13 steps (54%) done
+[Fri Jan  5 16:34:42 2024]
+Finished job 11.
+8 of 13 steps (62%) done
+[Fri Jan  5 16:34:43 2024]
+Finished job 9.
+9 of 13 steps (69%) done
+[Fri Jan  5 16:34:44 2024]
+Finished job 8.
+10 of 13 steps (77%) done
+[Fri Jan  5 16:34:45 2024]
+Finished job 12.
+11 of 13 steps (85%) done
+[Fri Jan  5 16:34:45 2024]
+Finished job 10.
+12 of 13 steps (92%) done
+Select jobs to execute...
+
+[Fri Jan  5 16:34:45 2024]
+localrule all:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.deseqResults.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.deseqResults.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.deseqResults.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.deseqResults.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.deseqResults.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.deseqResults.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.deseqResults.tsv, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.deseqResults.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.deseqResults.tsv, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.deseqResults.tsv
+    resources: tmpdir=/tmp
+
+[Fri Jan  5 16:34:45 2024]
+Finished job 0.
+13 of 13 steps (100%) done
+Complete log: .snakemake/log/2024-01-05T163315.394121.snakemake.log

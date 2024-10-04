@@ -1,0 +1,95 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        4              1              1
+total         5              1              1
+
+Select jobs to execute...
+
+[Mon Nov 20 21:17:13 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt
+    jobid: 14
+    reason: Missing output files: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt
+    wildcards: sample=MISC, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:17:13 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt
+    jobid: 15
+    reason: Missing output files: output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt
+    wildcards: sample=MISC, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:17:13 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+    jobid: 8
+    reason: Missing output files: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.val.txt
+    wildcards: sample=MISC, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:17:13 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.val.txt
+    jobid: 10
+    reason: Missing output files: output/MISC/NNET/MISC.NNET.val.txt, output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.train.txt
+    wildcards: sample=MISC, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:17:16 2023]
+Error in rule models:
+    jobid: 8
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpsum09u5v.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Mon Nov 20 21:17:34 2023]
+Error in rule models:
+    jobid: 10
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmplte5smg0.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Terminating processes on user request, this might take some time.
+[Mon Nov 20 21:19:32 2023]
+Error in rule models:
+    jobid: 14
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpyylgl53x.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Mon Nov 20 21:19:32 2023]
+Error in rule models:
+    jobid: 15
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmps43xhzop.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Complete log: .snakemake/log/2023-11-20T211712.829394.snakemake.log

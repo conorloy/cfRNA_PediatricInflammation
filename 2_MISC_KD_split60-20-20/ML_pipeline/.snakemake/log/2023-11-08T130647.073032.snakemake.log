@@ -1,0 +1,12 @@
+Building DAG of jobs...
+MissingInputException in rule feature_selection_and_normalization  in line 1 of /local/workdir/cjl332/tb-cfrna/snakemake_pipeline/workflow/rules/tmp.smk:
+Missing input files for rule feature_selection_and_normalization:
+    output: output/seed_1_sep, seed_2_sep/1_feature_selection/seed_1_sep, seed_2_sep.counts.train.VST.tsv, output/seed_1_sep, seed_2_sep/1_feature_selection/seed_1_sep, seed_2_sep.counts.test.VST.tsv, output/seed_1_sep, seed_2_sep/1_feature_selection/seed_1_sep, seed_2_sep.counts.val.VST.tsv, output/seed_1_sep, seed_2_sep/1_feature_selection/seed_1_sep, seed_2_sep.deseqResults.tsv
+    wildcards: sample=seed_1_sep, seed_2_sep
+    affected files:
+        output/seed_1_sep, seed_2_sep/0_input/seed_1_sep, seed_2_sep.counts.test.tsv
+        output/seed_1_sep, seed_2_sep/0_input/seed_1_sep, seed_2_sep.metadata.train.tsv
+        output/seed_1_sep, seed_2_sep/0_input/seed_1_sep, seed_2_sep.counts.val.tsv
+        output/seed_1_sep, seed_2_sep/0_input/seed_1_sep, seed_2_sep.metadata.test.tsv
+        output/seed_1_sep, seed_2_sep/0_input/seed_1_sep, seed_2_sep.counts.train.tsv
+        output/seed_1_sep, seed_2_sep/0_input/seed_1_sep, seed_2_sep.metadata.val.tsv

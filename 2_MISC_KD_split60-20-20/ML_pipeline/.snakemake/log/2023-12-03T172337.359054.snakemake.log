@@ -1,0 +1,135 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 15
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        6              1              1
+total         7              1              1
+
+Select jobs to execute...
+
+[Sun Dec  3 17:23:37 2023]
+rule models:
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt
+    jobid: 7
+    reason: Missing output files: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt
+    wildcards: condition_pair=MISC<>KD, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Sun Dec  3 17:23:37 2023]
+rule models:
+    input: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 9
+    reason: Missing output files: output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt
+    wildcards: condition_pair=MISC<>bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Sun Dec  3 17:23:37 2023]
+rule models:
+    input: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 11
+    reason: Missing output files: output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt
+    wildcards: condition_pair=KD<>bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Sun Dec  3 17:23:37 2023]
+rule models:
+    input: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt
+    jobid: 8
+    reason: Missing output files: output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt
+    wildcards: condition_pair=MISC<>viral_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Sun Dec  3 17:23:37 2023]
+rule models:
+    input: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt
+    jobid: 10
+    reason: Missing output files: output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt
+    wildcards: condition_pair=KD<>viral_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Sun Dec  3 17:23:37 2023]
+rule models:
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt
+    jobid: 12
+    reason: Missing output files: output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds
+    wildcards: condition_pair=viral_infection<>bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Sun Dec  3 17:24:23 2023]
+Error in rule models:
+    jobid: 7
+    input: output/MISC<>KD/1_feature_selection/MISC<>KD.counts.train.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.test.VST.SIG.tsv, output/MISC<>KD/1_feature_selection/MISC<>KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.rds, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.train.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.test.txt, output/MISC<>KD/GLMNETLasso/MISC<>KD.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmp3mnvp0xi.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Sun Dec  3 17:24:23 2023]
+Error in rule models:
+    jobid: 11
+    input: output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.train.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.test.VST.SIG.tsv, output/KD<>bacterial_infection/1_feature_selection/KD<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.rds, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.train.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.test.txt, output/KD<>bacterial_infection/GLMNETLasso/KD<>bacterial_infection.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmp0y3kovu0.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Sun Dec  3 17:24:23 2023]
+Error in rule models:
+    jobid: 8
+    input: output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.train.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.test.VST.SIG.tsv, output/MISC<>viral_infection/1_feature_selection/MISC<>viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.rds, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.train.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.test.txt, output/MISC<>viral_infection/GLMNETLasso/MISC<>viral_infection.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmpwlmkhtfl.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Sun Dec  3 17:24:24 2023]
+Error in rule models:
+    jobid: 9
+    input: output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.train.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.test.VST.SIG.tsv, output/MISC<>bacterial_infection/1_feature_selection/MISC<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.rds, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.train.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.test.txt, output/MISC<>bacterial_infection/GLMNETLasso/MISC<>bacterial_infection.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmpfdt6i4dv.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Sun Dec  3 17:24:24 2023]
+Error in rule models:
+    jobid: 12
+    input: output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.train.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.test.VST.SIG.tsv, output/viral_infection<>bacterial_infection/1_feature_selection/viral_infection<>bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.rds, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.train.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.test.txt, output/viral_infection<>bacterial_infection/GLMNETLasso/viral_infection<>bacterial_infection.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmp86hl01_1.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+[Sun Dec  3 17:24:25 2023]
+Error in rule models:
+    jobid: 10
+    input: output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.train.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.test.VST.SIG.tsv, output/KD<>viral_infection/1_feature_selection/KD<>viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.rds, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.train.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.test.txt, output/KD<>viral_infection/GLMNETLasso/KD<>viral_infection.GLMNETLasso.val.txt
+
+RuleException:
+CalledProcessError in line 49 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/.snakemake/scripts/tmpf_v96__v.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass_1v1/ML_split70-30/1_all/workflow/rules/main.smk", line 49, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-03T172337.359054.snakemake.log

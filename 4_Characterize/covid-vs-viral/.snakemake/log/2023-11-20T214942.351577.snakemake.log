@@ -1,0 +1,1012 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                    count    min threads    max threads
+-----------------------------------  -------  -------------  -------------
+all                                        1              1              1
+feature_selection_and_normalization        4              1              1
+models                                    69              1              1
+total                                     74              1              1
+
+Select jobs to execute...
+
+[Mon Nov 20 21:49:42 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/C5/MISC.C5.rds, output/MISC/C5/MISC.C5.train.txt, output/MISC/C5/MISC.C5.test.txt, output/MISC/C5/MISC.C5.val.txt
+    jobid: 6
+    reason: Missing output files: output/MISC/C5/MISC.C5.train.txt, output/MISC/C5/MISC.C5.test.txt, output/MISC/C5/MISC.C5.rds, output/MISC/C5/MISC.C5.val.txt
+    wildcards: sample=MISC, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt
+    jobid: 7
+    reason: Missing output files: output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt
+    wildcards: sample=MISC, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/KNN/MISC.KNN.rds, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/KNN/MISC.KNN.test.txt, output/MISC/KNN/MISC.KNN.val.txt
+    jobid: 11
+    reason: Missing output files: output/MISC/KNN/MISC.KNN.test.txt, output/MISC/KNN/MISC.KNN.rds, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/KNN/MISC.KNN.val.txt
+    wildcards: sample=MISC, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NB/MISC.NB.rds, output/MISC/NB/MISC.NB.train.txt, output/MISC/NB/MISC.NB.test.txt, output/MISC/NB/MISC.NB.val.txt
+    jobid: 13
+    reason: Missing output files: output/MISC/NB/MISC.NB.test.txt, output/MISC/NB/MISC.NB.val.txt, output/MISC/NB/MISC.NB.rds, output/MISC/NB/MISC.NB.train.txt
+    wildcards: sample=MISC, model=NB
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv
+    jobid: 3
+    reason: Missing output files: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/PAM/MISC.PAM.rds, output/MISC/PAM/MISC.PAM.train.txt, output/MISC/PAM/MISC.PAM.test.txt, output/MISC/PAM/MISC.PAM.val.txt
+    jobid: 15
+    reason: Missing output files: output/MISC/PAM/MISC.PAM.rds, output/MISC/PAM/MISC.PAM.test.txt, output/MISC/PAM/MISC.PAM.train.txt, output/MISC/PAM/MISC.PAM.val.txt
+    wildcards: sample=MISC, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/RPART/MISC.RPART.rds, output/MISC/RPART/MISC.RPART.train.txt, output/MISC/RPART/MISC.RPART.test.txt, output/MISC/RPART/MISC.RPART.val.txt
+    jobid: 17
+    reason: Missing output files: output/MISC/RPART/MISC.RPART.rds, output/MISC/RPART/MISC.RPART.test.txt, output/MISC/RPART/MISC.RPART.val.txt, output/MISC/RPART/MISC.RPART.train.txt
+    wildcards: sample=MISC, model=RPART
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:42 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, output/KD/1_feature_selection/KD.deseqResults.tsv
+    jobid: 2
+    reason: Missing output files: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, output/KD/1_feature_selection/KD.deseqResults.tsv
+    wildcards: sample=KD
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv
+    jobid: 5
+    reason: Missing output files: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt
+    jobid: 19
+    reason: Missing output files: output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt, output/MISC/SVMRAD/MISC.SVMRAD.rds, output/MISC/SVMRAD/MISC.SVMRAD.test.txt
+    wildcards: sample=MISC, model=SVMRAD
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/GLM/MISC.GLM.rds, output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLM/MISC.GLM.test.txt, output/MISC/GLM/MISC.GLM.val.txt
+    jobid: 8
+    reason: Missing output files: output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLM/MISC.GLM.rds, output/MISC/GLM/MISC.GLM.val.txt, output/MISC/GLM/MISC.GLM.test.txt
+    wildcards: sample=MISC, model=GLM
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt
+    jobid: 10
+    reason: Missing output files: output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt
+    wildcards: sample=MISC, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.val.txt
+    jobid: 12
+    reason: Missing output files: output/MISC/LDA/MISC.LDA.test.txt, output/MISC/LDA/MISC.LDA.rds, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/LDA/MISC.LDA.val.txt
+    wildcards: sample=MISC, model=LDA
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/NNET/MISC.NNET.rds, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.val.txt
+    jobid: 14
+    reason: Missing output files: output/MISC/NNET/MISC.NNET.val.txt, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/NNET/MISC.NNET.rds
+    wildcards: sample=MISC, model=NNET
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule feature_selection_and_normalization:
+    input: /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_train_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/counts_test_vst.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.deseqResults.tsv
+    jobid: 4
+    reason: Missing output files: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.deseqResults.tsv
+    wildcards: sample=COVID19
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/RF/MISC.RF.rds, output/MISC/RF/MISC.RF.train.txt, output/MISC/RF/MISC.RF.test.txt, output/MISC/RF/MISC.RF.val.txt
+    jobid: 16
+    reason: Missing output files: output/MISC/RF/MISC.RF.rds, output/MISC/RF/MISC.RF.test.txt, output/MISC/RF/MISC.RF.train.txt, output/MISC/RF/MISC.RF.val.txt
+    wildcards: sample=MISC, model=RF
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:49:43 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt
+    jobid: 18
+    reason: Missing output files: output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt
+    wildcards: sample=MISC, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:49:46 2023]
+Finished job 15.
+1 of 74 steps (1%) done
+[Mon Nov 20 21:49:46 2023]
+Finished job 12.
+2 of 74 steps (3%) done
+[Mon Nov 20 21:49:46 2023]
+Finished job 17.
+3 of 74 steps (4%) done
+[Mon Nov 20 21:49:47 2023]
+Finished job 8.
+4 of 74 steps (5%) done
+[Mon Nov 20 21:49:48 2023]
+Finished job 6.
+5 of 74 steps (7%) done
+[Mon Nov 20 21:49:51 2023]
+Finished job 11.
+6 of 74 steps (8%) done
+[Mon Nov 20 21:50:07 2023]
+Finished job 14.
+7 of 74 steps (9%) done
+[Mon Nov 20 21:50:13 2023]
+Finished job 5.
+8 of 74 steps (11%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/C5/bacterial_infection.C5.rds, output/bacterial_infection/C5/bacterial_infection.C5.train.txt, output/bacterial_infection/C5/bacterial_infection.C5.test.txt, output/bacterial_infection/C5/bacterial_infection.C5.val.txt
+    jobid: 62
+    reason: Missing output files: output/bacterial_infection/C5/bacterial_infection.C5.test.txt, output/bacterial_infection/C5/bacterial_infection.C5.val.txt, output/bacterial_infection/C5/bacterial_infection.C5.rds, output/bacterial_infection/C5/bacterial_infection.C5.train.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.rds, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.train.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.test.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.val.txt
+    jobid: 63
+    reason: Missing output files: output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.test.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.train.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.rds, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.rds, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.train.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.test.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.val.txt
+    jobid: 65
+    reason: Missing output files: output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.test.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.val.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.rds, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.train.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/KNN/bacterial_infection.KNN.rds, output/bacterial_infection/KNN/bacterial_infection.KNN.train.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.test.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.val.txt
+    jobid: 67
+    reason: Missing output files: output/bacterial_infection/KNN/bacterial_infection.KNN.train.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.rds, output/bacterial_infection/KNN/bacterial_infection.KNN.test.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=KNN
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/NB/bacterial_infection.NB.rds, output/bacterial_infection/NB/bacterial_infection.NB.train.txt, output/bacterial_infection/NB/bacterial_infection.NB.test.txt, output/bacterial_infection/NB/bacterial_infection.NB.val.txt
+    jobid: 69
+    reason: Missing output files: output/bacterial_infection/NB/bacterial_infection.NB.test.txt, output/bacterial_infection/NB/bacterial_infection.NB.train.txt, output/bacterial_infection/NB/bacterial_infection.NB.rds, output/bacterial_infection/NB/bacterial_infection.NB.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=NB
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/PAM/bacterial_infection.PAM.rds, output/bacterial_infection/PAM/bacterial_infection.PAM.train.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.test.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.val.txt
+    jobid: 71
+    reason: Missing output files: output/bacterial_infection/PAM/bacterial_infection.PAM.rds, output/bacterial_infection/PAM/bacterial_infection.PAM.train.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.test.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=PAM
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/RPART/bacterial_infection.RPART.rds, output/bacterial_infection/RPART/bacterial_infection.RPART.train.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.test.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.val.txt
+    jobid: 73
+    reason: Missing output files: output/bacterial_infection/RPART/bacterial_infection.RPART.rds, output/bacterial_infection/RPART/bacterial_infection.RPART.train.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.test.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=RPART
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.rds, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.train.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.test.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.val.txt
+    jobid: 75
+    reason: Missing output files: output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.train.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.val.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.rds, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.test.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=SVMRAD
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/GLM/bacterial_infection.GLM.rds, output/bacterial_infection/GLM/bacterial_infection.GLM.train.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.test.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.val.txt
+    jobid: 64
+    reason: Missing output files: output/bacterial_infection/GLM/bacterial_infection.GLM.rds, output/bacterial_infection/GLM/bacterial_infection.GLM.train.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.test.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=GLM
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.rds, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.train.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.test.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.val.txt
+    jobid: 66
+    reason: Missing output files: output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.test.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.train.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.rds, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+
+[Mon Nov 20 21:50:13 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/LDA/bacterial_infection.LDA.rds, output/bacterial_infection/LDA/bacterial_infection.LDA.train.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.test.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.val.txt
+    jobid: 68
+    reason: Missing output files: output/bacterial_infection/LDA/bacterial_infection.LDA.rds, output/bacterial_infection/LDA/bacterial_infection.LDA.val.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.train.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.test.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:14 2023]
+Finished job 4.
+9 of 74 steps (12%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:14 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.rds, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.train.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.test.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.val.txt
+    jobid: 74
+    reason: Missing output files: output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.rds, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.val.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.train.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.test.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:15 2023]
+Finished job 3.
+10 of 74 steps (14%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:15 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/RF/bacterial_infection.RF.rds, output/bacterial_infection/RF/bacterial_infection.RF.train.txt, output/bacterial_infection/RF/bacterial_infection.RF.test.txt, output/bacterial_infection/RF/bacterial_infection.RF.val.txt
+    jobid: 72
+    reason: Missing output files: output/bacterial_infection/RF/bacterial_infection.RF.val.txt, output/bacterial_infection/RF/bacterial_infection.RF.rds, output/bacterial_infection/RF/bacterial_infection.RF.test.txt, output/bacterial_infection/RF/bacterial_infection.RF.train.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:16 2023]
+Finished job 2.
+11 of 74 steps (15%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:16 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/NNET/KD.NNET.rds, output/KD/NNET/KD.NNET.train.txt, output/KD/NNET/KD.NNET.test.txt, output/KD/NNET/KD.NNET.val.txt
+    jobid: 28
+    reason: Missing output files: output/KD/NNET/KD.NNET.val.txt, output/KD/NNET/KD.NNET.rds, output/KD/NNET/KD.NNET.train.txt, output/KD/NNET/KD.NNET.test.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:17 2023]
+Finished job 68.
+12 of 74 steps (16%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:17 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/EXTRATREES/KD.EXTRATREES.rds, output/KD/EXTRATREES/KD.EXTRATREES.train.txt, output/KD/EXTRATREES/KD.EXTRATREES.test.txt, output/KD/EXTRATREES/KD.EXTRATREES.val.txt
+    jobid: 21
+    reason: Missing output files: output/KD/EXTRATREES/KD.EXTRATREES.val.txt, output/KD/EXTRATREES/KD.EXTRATREES.rds, output/KD/EXTRATREES/KD.EXTRATREES.train.txt, output/KD/EXTRATREES/KD.EXTRATREES.test.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:17 2023]
+Finished job 71.
+13 of 74 steps (18%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:17 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/PAM/KD.PAM.rds, output/KD/PAM/KD.PAM.train.txt, output/KD/PAM/KD.PAM.test.txt, output/KD/PAM/KD.PAM.val.txt
+    jobid: 29
+    reason: Missing output files: output/KD/PAM/KD.PAM.rds, output/KD/PAM/KD.PAM.train.txt, output/KD/PAM/KD.PAM.val.txt, output/KD/PAM/KD.PAM.test.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:17 2023]
+Finished job 73.
+14 of 74 steps (19%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:17 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/GLM/KD.GLM.rds, output/KD/GLM/KD.GLM.train.txt, output/KD/GLM/KD.GLM.test.txt, output/KD/GLM/KD.GLM.val.txt
+    jobid: 22
+    reason: Missing output files: output/KD/GLM/KD.GLM.val.txt, output/KD/GLM/KD.GLM.rds, output/KD/GLM/KD.GLM.train.txt, output/KD/GLM/KD.GLM.test.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=GLM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:19 2023]
+Finished job 64.
+15 of 74 steps (20%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:19 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/RF/KD.RF.rds, output/KD/RF/KD.RF.train.txt, output/KD/RF/KD.RF.test.txt, output/KD/RF/KD.RF.val.txt
+    jobid: 30
+    reason: Missing output files: output/KD/RF/KD.RF.train.txt, output/KD/RF/KD.RF.test.txt, output/KD/RF/KD.RF.val.txt, output/KD/RF/KD.RF.rds; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:19 2023]
+Finished job 62.
+16 of 74 steps (22%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:19 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/GLMNETLasso/KD.GLMNETLasso.rds, output/KD/GLMNETLasso/KD.GLMNETLasso.train.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.test.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.val.txt
+    jobid: 23
+    reason: Missing output files: output/KD/GLMNETLasso/KD.GLMNETLasso.rds, output/KD/GLMNETLasso/KD.GLMNETLasso.train.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.val.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.test.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:21 2023]
+Finished job 29.
+17 of 74 steps (23%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:21 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/RPART/KD.RPART.rds, output/KD/RPART/KD.RPART.train.txt, output/KD/RPART/KD.RPART.test.txt, output/KD/RPART/KD.RPART.val.txt
+    jobid: 31
+    reason: Missing output files: output/KD/RPART/KD.RPART.test.txt, output/KD/RPART/KD.RPART.train.txt, output/KD/RPART/KD.RPART.rds, output/KD/RPART/KD.RPART.val.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=RPART
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:23 2023]
+Finished job 22.
+18 of 74 steps (24%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:23 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/GLMNETRidge/KD.GLMNETRidge.rds, output/KD/GLMNETRidge/KD.GLMNETRidge.train.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.test.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.val.txt
+    jobid: 24
+    reason: Missing output files: output/KD/GLMNETRidge/KD.GLMNETRidge.test.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.train.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.rds, output/KD/GLMNETRidge/KD.GLMNETRidge.val.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:24 2023]
+Finished job 67.
+19 of 74 steps (26%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:24 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/SVMLIN/KD.SVMLIN.rds, output/KD/SVMLIN/KD.SVMLIN.train.txt, output/KD/SVMLIN/KD.SVMLIN.test.txt, output/KD/SVMLIN/KD.SVMLIN.val.txt
+    jobid: 32
+    reason: Missing output files: output/KD/SVMLIN/KD.SVMLIN.test.txt, output/KD/SVMLIN/KD.SVMLIN.train.txt, output/KD/SVMLIN/KD.SVMLIN.rds, output/KD/SVMLIN/KD.SVMLIN.val.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:26 2023]
+Finished job 31.
+20 of 74 steps (27%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:26 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/KNN/KD.KNN.rds, output/KD/KNN/KD.KNN.train.txt, output/KD/KNN/KD.KNN.test.txt, output/KD/KNN/KD.KNN.val.txt
+    jobid: 25
+    reason: Missing output files: output/KD/KNN/KD.KNN.test.txt, output/KD/KNN/KD.KNN.train.txt, output/KD/KNN/KD.KNN.val.txt, output/KD/KNN/KD.KNN.rds; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:29 2023]
+Finished job 10.
+21 of 74 steps (28%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:29 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/SVMRAD/KD.SVMRAD.rds, output/KD/SVMRAD/KD.SVMRAD.train.txt, output/KD/SVMRAD/KD.SVMRAD.test.txt, output/KD/SVMRAD/KD.SVMRAD.val.txt
+    jobid: 33
+    reason: Missing output files: output/KD/SVMRAD/KD.SVMRAD.train.txt, output/KD/SVMRAD/KD.SVMRAD.rds, output/KD/SVMRAD/KD.SVMRAD.test.txt, output/KD/SVMRAD/KD.SVMRAD.val.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:36 2023]
+Finished job 25.
+22 of 74 steps (30%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:36 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/LDA/KD.LDA.rds, output/KD/LDA/KD.LDA.train.txt, output/KD/LDA/KD.LDA.test.txt, output/KD/LDA/KD.LDA.val.txt
+    jobid: 26
+    reason: Missing output files: output/KD/LDA/KD.LDA.train.txt, output/KD/LDA/KD.LDA.rds, output/KD/LDA/KD.LDA.val.txt, output/KD/LDA/KD.LDA.test.txt; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:40 2023]
+Finished job 26.
+23 of 74 steps (31%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:40 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/C5/KD.C5.rds, output/KD/C5/KD.C5.train.txt, output/KD/C5/KD.C5.test.txt, output/KD/C5/KD.C5.val.txt
+    jobid: 20
+    reason: Missing output files: output/KD/C5/KD.C5.train.txt, output/KD/C5/KD.C5.test.txt, output/KD/C5/KD.C5.val.txt, output/KD/C5/KD.C5.rds; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:44 2023]
+Finished job 28.
+24 of 74 steps (32%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:44 2023]
+rule models:
+    input: output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/KD/NB/KD.NB.rds, output/KD/NB/KD.NB.train.txt, output/KD/NB/KD.NB.test.txt, output/KD/NB/KD.NB.val.txt
+    jobid: 27
+    reason: Missing output files: output/KD/NB/KD.NB.train.txt, output/KD/NB/KD.NB.val.txt, output/KD/NB/KD.NB.test.txt, output/KD/NB/KD.NB.rds; Input files updated by another job: output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv
+    wildcards: sample=KD, model=NB
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:46 2023]
+Finished job 20.
+25 of 74 steps (34%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:46 2023]
+rule models:
+    input: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/bacterial_infection/NNET/bacterial_infection.NNET.rds, output/bacterial_infection/NNET/bacterial_infection.NNET.train.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.test.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.val.txt
+    jobid: 70
+    reason: Missing output files: output/bacterial_infection/NNET/bacterial_infection.NNET.rds, output/bacterial_infection/NNET/bacterial_infection.NNET.train.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.test.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.val.txt; Input files updated by another job: output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv
+    wildcards: sample=bacterial_infection, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:51 2023]
+Finished job 13.
+26 of 74 steps (35%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:51 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/EXTRATREES/COVID19.EXTRATREES.rds, output/COVID19/EXTRATREES/COVID19.EXTRATREES.train.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.test.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.val.txt
+    jobid: 49
+    reason: Missing output files: output/COVID19/EXTRATREES/COVID19.EXTRATREES.train.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.val.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.test.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.rds; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:55 2023]
+Finished job 7.
+27 of 74 steps (36%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:55 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/PAM/COVID19.PAM.rds, output/COVID19/PAM/COVID19.PAM.train.txt, output/COVID19/PAM/COVID19.PAM.test.txt, output/COVID19/PAM/COVID19.PAM.val.txt
+    jobid: 57
+    reason: Missing output files: output/COVID19/PAM/COVID19.PAM.val.txt, output/COVID19/PAM/COVID19.PAM.rds, output/COVID19/PAM/COVID19.PAM.train.txt, output/COVID19/PAM/COVID19.PAM.test.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:50:59 2023]
+Finished job 57.
+28 of 74 steps (38%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:50:59 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/GLM/COVID19.GLM.rds, output/COVID19/GLM/COVID19.GLM.train.txt, output/COVID19/GLM/COVID19.GLM.test.txt, output/COVID19/GLM/COVID19.GLM.val.txt
+    jobid: 50
+    reason: Missing output files: output/COVID19/GLM/COVID19.GLM.rds, output/COVID19/GLM/COVID19.GLM.val.txt, output/COVID19/GLM/COVID19.GLM.test.txt, output/COVID19/GLM/COVID19.GLM.train.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=GLM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:04 2023]
+Finished job 66.
+29 of 74 steps (39%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:04 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/RF/COVID19.RF.rds, output/COVID19/RF/COVID19.RF.train.txt, output/COVID19/RF/COVID19.RF.test.txt, output/COVID19/RF/COVID19.RF.val.txt
+    jobid: 58
+    reason: Missing output files: output/COVID19/RF/COVID19.RF.rds, output/COVID19/RF/COVID19.RF.val.txt, output/COVID19/RF/COVID19.RF.train.txt, output/COVID19/RF/COVID19.RF.test.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:04 2023]
+Finished job 50.
+30 of 74 steps (41%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:04 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.rds, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.train.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.test.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.val.txt
+    jobid: 51
+    reason: Missing output files: output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.train.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.rds, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.val.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.test.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:08 2023]
+Finished job 65.
+31 of 74 steps (42%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:08 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/RPART/COVID19.RPART.rds, output/COVID19/RPART/COVID19.RPART.train.txt, output/COVID19/RPART/COVID19.RPART.test.txt, output/COVID19/RPART/COVID19.RPART.val.txt
+    jobid: 59
+    reason: Missing output files: output/COVID19/RPART/COVID19.RPART.rds, output/COVID19/RPART/COVID19.RPART.train.txt, output/COVID19/RPART/COVID19.RPART.test.txt, output/COVID19/RPART/COVID19.RPART.val.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=RPART
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:13 2023]
+Finished job 59.
+32 of 74 steps (43%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:13 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.rds, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.train.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.test.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.val.txt
+    jobid: 52
+    reason: Missing output files: output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.train.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.val.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.rds, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.test.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:13 2023]
+Finished job 24.
+33 of 74 steps (45%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:13 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/SVMLIN/COVID19.SVMLIN.rds, output/COVID19/SVMLIN/COVID19.SVMLIN.train.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.test.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.val.txt
+    jobid: 60
+    reason: Missing output files: output/COVID19/SVMLIN/COVID19.SVMLIN.test.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.train.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.rds, output/COVID19/SVMLIN/COVID19.SVMLIN.val.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:14 2023]
+Finished job 23.
+34 of 74 steps (46%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:14 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/NNET/COVID19.NNET.rds, output/COVID19/NNET/COVID19.NNET.train.txt, output/COVID19/NNET/COVID19.NNET.test.txt, output/COVID19/NNET/COVID19.NNET.val.txt
+    jobid: 56
+    reason: Missing output files: output/COVID19/NNET/COVID19.NNET.test.txt, output/COVID19/NNET/COVID19.NNET.rds, output/COVID19/NNET/COVID19.NNET.train.txt, output/COVID19/NNET/COVID19.NNET.val.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:15 2023]
+Finished job 70.
+35 of 74 steps (47%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:15 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/KNN/COVID19.KNN.rds, output/COVID19/KNN/COVID19.KNN.train.txt, output/COVID19/KNN/COVID19.KNN.test.txt, output/COVID19/KNN/COVID19.KNN.val.txt
+    jobid: 53
+    reason: Missing output files: output/COVID19/KNN/COVID19.KNN.test.txt, output/COVID19/KNN/COVID19.KNN.rds, output/COVID19/KNN/COVID19.KNN.train.txt, output/COVID19/KNN/COVID19.KNN.val.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:21 2023]
+Finished job 72.
+36 of 74 steps (49%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:21 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/C5/COVID19.C5.rds, output/COVID19/C5/COVID19.C5.train.txt, output/COVID19/C5/COVID19.C5.test.txt, output/COVID19/C5/COVID19.C5.val.txt
+    jobid: 48
+    reason: Missing output files: output/COVID19/C5/COVID19.C5.rds, output/COVID19/C5/COVID19.C5.test.txt, output/COVID19/C5/COVID19.C5.val.txt, output/COVID19/C5/COVID19.C5.train.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:23 2023]
+Finished job 63.
+37 of 74 steps (50%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:23 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/NB/COVID19.NB.rds, output/COVID19/NB/COVID19.NB.train.txt, output/COVID19/NB/COVID19.NB.test.txt, output/COVID19/NB/COVID19.NB.val.txt
+    jobid: 55
+    reason: Missing output files: output/COVID19/NB/COVID19.NB.rds, output/COVID19/NB/COVID19.NB.train.txt, output/COVID19/NB/COVID19.NB.test.txt, output/COVID19/NB/COVID19.NB.val.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=NB
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:25 2023]
+Finished job 53.
+38 of 74 steps (51%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:25 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/SVMRAD/COVID19.SVMRAD.rds, output/COVID19/SVMRAD/COVID19.SVMRAD.train.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.test.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.val.txt
+    jobid: 61
+    reason: Missing output files: output/COVID19/SVMRAD/COVID19.SVMRAD.rds, output/COVID19/SVMRAD/COVID19.SVMRAD.val.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.train.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.test.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:25 2023]
+Finished job 69.
+39 of 74 steps (53%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:25 2023]
+rule models:
+    input: output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/COVID19/LDA/COVID19.LDA.rds, output/COVID19/LDA/COVID19.LDA.train.txt, output/COVID19/LDA/COVID19.LDA.test.txt, output/COVID19/LDA/COVID19.LDA.val.txt
+    jobid: 54
+    reason: Missing output files: output/COVID19/LDA/COVID19.LDA.rds, output/COVID19/LDA/COVID19.LDA.train.txt, output/COVID19/LDA/COVID19.LDA.val.txt, output/COVID19/LDA/COVID19.LDA.test.txt; Input files updated by another job: output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv
+    wildcards: sample=COVID19, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:27 2023]
+Finished job 48.
+40 of 74 steps (54%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:27 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/C5/viral_infection.C5.rds, output/viral_infection/C5/viral_infection.C5.train.txt, output/viral_infection/C5/viral_infection.C5.test.txt, output/viral_infection/C5/viral_infection.C5.val.txt
+    jobid: 34
+    reason: Missing output files: output/viral_infection/C5/viral_infection.C5.test.txt, output/viral_infection/C5/viral_infection.C5.val.txt, output/viral_infection/C5/viral_infection.C5.train.txt, output/viral_infection/C5/viral_infection.C5.rds; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=C5
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:29 2023]
+Finished job 54.
+41 of 74 steps (55%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:29 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.rds, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.train.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.test.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.val.txt
+    jobid: 35
+    reason: Missing output files: output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.rds, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.test.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.val.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.train.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=EXTRATREES
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:32 2023]
+Finished job 21.
+42 of 74 steps (57%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:32 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.rds, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.train.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.test.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.val.txt
+    jobid: 37
+    reason: Missing output files: output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.rds, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.val.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.train.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.test.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=GLMNETLasso
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:32 2023]
+Finished job 16.
+43 of 74 steps (58%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:32 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/KNN/viral_infection.KNN.rds, output/viral_infection/KNN/viral_infection.KNN.train.txt, output/viral_infection/KNN/viral_infection.KNN.test.txt, output/viral_infection/KNN/viral_infection.KNN.val.txt
+    jobid: 39
+    reason: Missing output files: output/viral_infection/KNN/viral_infection.KNN.train.txt, output/viral_infection/KNN/viral_infection.KNN.test.txt, output/viral_infection/KNN/viral_infection.KNN.rds, output/viral_infection/KNN/viral_infection.KNN.val.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=KNN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:33 2023]
+Finished job 34.
+44 of 74 steps (59%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:33 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/NB/viral_infection.NB.rds, output/viral_infection/NB/viral_infection.NB.train.txt, output/viral_infection/NB/viral_infection.NB.test.txt, output/viral_infection/NB/viral_infection.NB.val.txt
+    jobid: 41
+    reason: Missing output files: output/viral_infection/NB/viral_infection.NB.train.txt, output/viral_infection/NB/viral_infection.NB.rds, output/viral_infection/NB/viral_infection.NB.test.txt, output/viral_infection/NB/viral_infection.NB.val.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=NB
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:42 2023]
+Finished job 39.
+45 of 74 steps (61%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:42 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/PAM/viral_infection.PAM.rds, output/viral_infection/PAM/viral_infection.PAM.train.txt, output/viral_infection/PAM/viral_infection.PAM.test.txt, output/viral_infection/PAM/viral_infection.PAM.val.txt
+    jobid: 43
+    reason: Missing output files: output/viral_infection/PAM/viral_infection.PAM.test.txt, output/viral_infection/PAM/viral_infection.PAM.train.txt, output/viral_infection/PAM/viral_infection.PAM.val.txt, output/viral_infection/PAM/viral_infection.PAM.rds; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=PAM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:43 2023]
+Finished job 56.
+46 of 74 steps (62%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:43 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/RPART/viral_infection.RPART.rds, output/viral_infection/RPART/viral_infection.RPART.train.txt, output/viral_infection/RPART/viral_infection.RPART.test.txt, output/viral_infection/RPART/viral_infection.RPART.val.txt
+    jobid: 45
+    reason: Missing output files: output/viral_infection/RPART/viral_infection.RPART.val.txt, output/viral_infection/RPART/viral_infection.RPART.train.txt, output/viral_infection/RPART/viral_infection.RPART.test.txt, output/viral_infection/RPART/viral_infection.RPART.rds; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=RPART
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:46 2023]
+Finished job 43.
+47 of 74 steps (64%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:46 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/SVMRAD/viral_infection.SVMRAD.rds, output/viral_infection/SVMRAD/viral_infection.SVMRAD.train.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.test.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.val.txt
+    jobid: 47
+    reason: Missing output files: output/viral_infection/SVMRAD/viral_infection.SVMRAD.rds, output/viral_infection/SVMRAD/viral_infection.SVMRAD.train.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.val.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.test.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=SVMRAD
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:48 2023]
+Finished job 45.
+48 of 74 steps (65%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:48 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/GLM/viral_infection.GLM.rds, output/viral_infection/GLM/viral_infection.GLM.train.txt, output/viral_infection/GLM/viral_infection.GLM.test.txt, output/viral_infection/GLM/viral_infection.GLM.val.txt
+    jobid: 36
+    reason: Missing output files: output/viral_infection/GLM/viral_infection.GLM.train.txt, output/viral_infection/GLM/viral_infection.GLM.test.txt, output/viral_infection/GLM/viral_infection.GLM.val.txt, output/viral_infection/GLM/viral_infection.GLM.rds; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=GLM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:53 2023]
+Finished job 36.
+49 of 74 steps (66%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:53 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.rds, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.train.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.test.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.val.txt
+    jobid: 38
+    reason: Missing output files: output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.test.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.train.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.val.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.rds; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=GLMNETRidge
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:55 2023]
+Finished job 27.
+50 of 74 steps (68%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:55 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/LDA/viral_infection.LDA.rds, output/viral_infection/LDA/viral_infection.LDA.train.txt, output/viral_infection/LDA/viral_infection.LDA.test.txt, output/viral_infection/LDA/viral_infection.LDA.val.txt
+    jobid: 40
+    reason: Missing output files: output/viral_infection/LDA/viral_infection.LDA.test.txt, output/viral_infection/LDA/viral_infection.LDA.train.txt, output/viral_infection/LDA/viral_infection.LDA.rds, output/viral_infection/LDA/viral_infection.LDA.val.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=LDA
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:58 2023]
+Finished job 40.
+51 of 74 steps (69%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:58 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/NNET/viral_infection.NNET.rds, output/viral_infection/NNET/viral_infection.NNET.train.txt, output/viral_infection/NNET/viral_infection.NNET.test.txt, output/viral_infection/NNET/viral_infection.NNET.val.txt
+    jobid: 42
+    reason: Missing output files: output/viral_infection/NNET/viral_infection.NNET.train.txt, output/viral_infection/NNET/viral_infection.NNET.test.txt, output/viral_infection/NNET/viral_infection.NNET.val.txt, output/viral_infection/NNET/viral_infection.NNET.rds; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=NNET
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:51:58 2023]
+Finished job 51.
+52 of 74 steps (70%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:51:58 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/RF/viral_infection.RF.rds, output/viral_infection/RF/viral_infection.RF.train.txt, output/viral_infection/RF/viral_infection.RF.test.txt, output/viral_infection/RF/viral_infection.RF.val.txt
+    jobid: 44
+    reason: Missing output files: output/viral_infection/RF/viral_infection.RF.rds, output/viral_infection/RF/viral_infection.RF.val.txt, output/viral_infection/RF/viral_infection.RF.train.txt, output/viral_infection/RF/viral_infection.RF.test.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=RF
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:52:00 2023]
+Finished job 49.
+53 of 74 steps (72%) done
+Select jobs to execute...
+
+[Mon Nov 20 21:52:00 2023]
+rule models:
+    input: output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/viral_infection/SVMLIN/viral_infection.SVMLIN.rds, output/viral_infection/SVMLIN/viral_infection.SVMLIN.train.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.test.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.val.txt
+    jobid: 46
+    reason: Missing output files: output/viral_infection/SVMLIN/viral_infection.SVMLIN.val.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.test.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.rds, output/viral_infection/SVMLIN/viral_infection.SVMLIN.train.txt; Input files updated by another job: output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv
+    wildcards: sample=viral_infection, model=SVMLIN
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:52:02 2023]
+Finished job 52.
+54 of 74 steps (73%) done
+[Mon Nov 20 21:52:03 2023]
+Finished job 30.
+55 of 74 steps (74%) done
+[Mon Nov 20 21:52:15 2023]
+Finished job 58.
+56 of 74 steps (76%) done
+[Mon Nov 20 21:52:25 2023]
+Finished job 42.
+57 of 74 steps (77%) done
+[Mon Nov 20 21:52:25 2023]
+Finished job 37.
+58 of 74 steps (78%) done
+[Mon Nov 20 21:52:30 2023]
+Finished job 55.
+59 of 74 steps (80%) done
+[Mon Nov 20 21:52:36 2023]
+Finished job 35.
+60 of 74 steps (81%) done
+[Mon Nov 20 21:52:39 2023]
+Finished job 38.
+61 of 74 steps (82%) done
+[Mon Nov 20 21:52:39 2023]
+Finished job 41.
+62 of 74 steps (84%) done
+[Mon Nov 20 21:53:08 2023]
+Finished job 44.
+63 of 74 steps (85%) done
+[Mon Nov 20 21:53:25 2023]
+Finished job 18.
+64 of 74 steps (86%) done
+[Mon Nov 20 21:53:37 2023]
+Finished job 74.
+65 of 74 steps (88%) done
+[Mon Nov 20 21:53:59 2023]
+Finished job 32.
+66 of 74 steps (89%) done
+[Mon Nov 20 21:54:31 2023]
+Finished job 60.
+67 of 74 steps (91%) done
+[Mon Nov 20 21:55:10 2023]
+Finished job 46.
+68 of 74 steps (92%) done
+[Mon Nov 20 22:00:56 2023]
+Finished job 19.
+69 of 74 steps (93%) done
+[Mon Nov 20 22:01:15 2023]
+Finished job 75.
+70 of 74 steps (95%) done
+[Mon Nov 20 22:01:59 2023]
+Finished job 33.
+71 of 74 steps (96%) done
+[Mon Nov 20 22:02:17 2023]
+Finished job 61.
+72 of 74 steps (97%) done
+[Mon Nov 20 22:02:18 2023]
+Finished job 47.
+73 of 74 steps (99%) done
+Select jobs to execute...
+
+[Mon Nov 20 22:02:18 2023]
+localrule all:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.deseqResults.tsv, output/KD/1_feature_selection/KD.deseqResults.tsv, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv, output/COVID19/1_feature_selection/COVID19.deseqResults.tsv, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv, output/MISC/C5/MISC.C5.rds, output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/MISC/GLM/MISC.GLM.rds, output/MISC/GLMNETLasso/MISC.GLMNETLasso.rds, output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/MISC/KNN/MISC.KNN.rds, output/MISC/LDA/MISC.LDA.rds, output/MISC/NB/MISC.NB.rds, output/MISC/NNET/MISC.NNET.rds, output/MISC/PAM/MISC.PAM.rds, output/MISC/RF/MISC.RF.rds, output/MISC/RPART/MISC.RPART.rds, output/MISC/SVMLIN/MISC.SVMLIN.rds, output/MISC/SVMRAD/MISC.SVMRAD.rds, output/KD/C5/KD.C5.rds, output/KD/EXTRATREES/KD.EXTRATREES.rds, output/KD/GLM/KD.GLM.rds, output/KD/GLMNETLasso/KD.GLMNETLasso.rds, output/KD/GLMNETRidge/KD.GLMNETRidge.rds, output/KD/KNN/KD.KNN.rds, output/KD/LDA/KD.LDA.rds, output/KD/NB/KD.NB.rds, output/KD/NNET/KD.NNET.rds, output/KD/PAM/KD.PAM.rds, output/KD/RF/KD.RF.rds, output/KD/RPART/KD.RPART.rds, output/KD/SVMLIN/KD.SVMLIN.rds, output/KD/SVMRAD/KD.SVMRAD.rds, output/viral_infection/C5/viral_infection.C5.rds, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.rds, output/viral_infection/GLM/viral_infection.GLM.rds, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.rds, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.rds, output/viral_infection/KNN/viral_infection.KNN.rds, output/viral_infection/LDA/viral_infection.LDA.rds, output/viral_infection/NB/viral_infection.NB.rds, output/viral_infection/NNET/viral_infection.NNET.rds, output/viral_infection/PAM/viral_infection.PAM.rds, output/viral_infection/RF/viral_infection.RF.rds, output/viral_infection/RPART/viral_infection.RPART.rds, output/viral_infection/SVMLIN/viral_infection.SVMLIN.rds, output/viral_infection/SVMRAD/viral_infection.SVMRAD.rds, output/COVID19/C5/COVID19.C5.rds, output/COVID19/EXTRATREES/COVID19.EXTRATREES.rds, output/COVID19/GLM/COVID19.GLM.rds, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.rds, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.rds, output/COVID19/KNN/COVID19.KNN.rds, output/COVID19/LDA/COVID19.LDA.rds, output/COVID19/NB/COVID19.NB.rds, output/COVID19/NNET/COVID19.NNET.rds, output/COVID19/PAM/COVID19.PAM.rds, output/COVID19/RF/COVID19.RF.rds, output/COVID19/RPART/COVID19.RPART.rds, output/COVID19/SVMLIN/COVID19.SVMLIN.rds, output/COVID19/SVMRAD/COVID19.SVMRAD.rds, output/bacterial_infection/C5/bacterial_infection.C5.rds, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.rds, output/bacterial_infection/GLM/bacterial_infection.GLM.rds, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.rds, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.rds, output/bacterial_infection/KNN/bacterial_infection.KNN.rds, output/bacterial_infection/LDA/bacterial_infection.LDA.rds, output/bacterial_infection/NB/bacterial_infection.NB.rds, output/bacterial_infection/NNET/bacterial_infection.NNET.rds, output/bacterial_infection/PAM/bacterial_infection.PAM.rds, output/bacterial_infection/RF/bacterial_infection.RF.rds, output/bacterial_infection/RPART/bacterial_infection.RPART.rds, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.rds, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.rds, output/MISC/C5/MISC.C5.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.train.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/LDA/MISC.LDA.train.txt, output/MISC/NB/MISC.NB.train.txt, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/PAM/MISC.PAM.train.txt, output/MISC/RF/MISC.RF.train.txt, output/MISC/RPART/MISC.RPART.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/KD/C5/KD.C5.train.txt, output/KD/EXTRATREES/KD.EXTRATREES.train.txt, output/KD/GLM/KD.GLM.train.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.train.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.train.txt, output/KD/KNN/KD.KNN.train.txt, output/KD/LDA/KD.LDA.train.txt, output/KD/NB/KD.NB.train.txt, output/KD/NNET/KD.NNET.train.txt, output/KD/PAM/KD.PAM.train.txt, output/KD/RF/KD.RF.train.txt, output/KD/RPART/KD.RPART.train.txt, output/KD/SVMLIN/KD.SVMLIN.train.txt, output/KD/SVMRAD/KD.SVMRAD.train.txt, output/viral_infection/C5/viral_infection.C5.train.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.train.txt, output/viral_infection/GLM/viral_infection.GLM.train.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.train.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.train.txt, output/viral_infection/KNN/viral_infection.KNN.train.txt, output/viral_infection/LDA/viral_infection.LDA.train.txt, output/viral_infection/NB/viral_infection.NB.train.txt, output/viral_infection/NNET/viral_infection.NNET.train.txt, output/viral_infection/PAM/viral_infection.PAM.train.txt, output/viral_infection/RF/viral_infection.RF.train.txt, output/viral_infection/RPART/viral_infection.RPART.train.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.train.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.train.txt, output/COVID19/C5/COVID19.C5.train.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.train.txt, output/COVID19/GLM/COVID19.GLM.train.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.train.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.train.txt, output/COVID19/KNN/COVID19.KNN.train.txt, output/COVID19/LDA/COVID19.LDA.train.txt, output/COVID19/NB/COVID19.NB.train.txt, output/COVID19/NNET/COVID19.NNET.train.txt, output/COVID19/PAM/COVID19.PAM.train.txt, output/COVID19/RF/COVID19.RF.train.txt, output/COVID19/RPART/COVID19.RPART.train.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.train.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.train.txt, output/bacterial_infection/C5/bacterial_infection.C5.train.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.train.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.train.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.train.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.train.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.train.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.train.txt, output/bacterial_infection/NB/bacterial_infection.NB.train.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.train.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.train.txt, output/bacterial_infection/RF/bacterial_infection.RF.train.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.train.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.train.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.train.txt, output/MISC/C5/MISC.C5.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/MISC/GLM/MISC.GLM.test.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/KNN/MISC.KNN.test.txt, output/MISC/LDA/MISC.LDA.test.txt, output/MISC/NB/MISC.NB.test.txt, output/MISC/NNET/MISC.NNET.test.txt, output/MISC/PAM/MISC.PAM.test.txt, output/MISC/RF/MISC.RF.test.txt, output/MISC/RPART/MISC.RPART.test.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/KD/C5/KD.C5.test.txt, output/KD/EXTRATREES/KD.EXTRATREES.test.txt, output/KD/GLM/KD.GLM.test.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.test.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.test.txt, output/KD/KNN/KD.KNN.test.txt, output/KD/LDA/KD.LDA.test.txt, output/KD/NB/KD.NB.test.txt, output/KD/NNET/KD.NNET.test.txt, output/KD/PAM/KD.PAM.test.txt, output/KD/RF/KD.RF.test.txt, output/KD/RPART/KD.RPART.test.txt, output/KD/SVMLIN/KD.SVMLIN.test.txt, output/KD/SVMRAD/KD.SVMRAD.test.txt, output/viral_infection/C5/viral_infection.C5.test.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.test.txt, output/viral_infection/GLM/viral_infection.GLM.test.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.test.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.test.txt, output/viral_infection/KNN/viral_infection.KNN.test.txt, output/viral_infection/LDA/viral_infection.LDA.test.txt, output/viral_infection/NB/viral_infection.NB.test.txt, output/viral_infection/NNET/viral_infection.NNET.test.txt, output/viral_infection/PAM/viral_infection.PAM.test.txt, output/viral_infection/RF/viral_infection.RF.test.txt, output/viral_infection/RPART/viral_infection.RPART.test.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.test.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.test.txt, output/COVID19/C5/COVID19.C5.test.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.test.txt, output/COVID19/GLM/COVID19.GLM.test.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.test.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.test.txt, output/COVID19/KNN/COVID19.KNN.test.txt, output/COVID19/LDA/COVID19.LDA.test.txt, output/COVID19/NB/COVID19.NB.test.txt, output/COVID19/NNET/COVID19.NNET.test.txt, output/COVID19/PAM/COVID19.PAM.test.txt, output/COVID19/RF/COVID19.RF.test.txt, output/COVID19/RPART/COVID19.RPART.test.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.test.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.test.txt, output/bacterial_infection/C5/bacterial_infection.C5.test.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.test.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.test.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.test.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.test.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.test.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.test.txt, output/bacterial_infection/NB/bacterial_infection.NB.test.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.test.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.test.txt, output/bacterial_infection/RF/bacterial_infection.RF.test.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.test.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.test.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.test.txt, output/MISC/C5/MISC.C5.val.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt, output/MISC/GLM/MISC.GLM.val.txt, output/MISC/GLMNETLasso/MISC.GLMNETLasso.val.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt, output/MISC/KNN/MISC.KNN.val.txt, output/MISC/LDA/MISC.LDA.val.txt, output/MISC/NB/MISC.NB.val.txt, output/MISC/NNET/MISC.NNET.val.txt, output/MISC/PAM/MISC.PAM.val.txt, output/MISC/RF/MISC.RF.val.txt, output/MISC/RPART/MISC.RPART.val.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt, output/KD/C5/KD.C5.val.txt, output/KD/EXTRATREES/KD.EXTRATREES.val.txt, output/KD/GLM/KD.GLM.val.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.val.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.val.txt, output/KD/KNN/KD.KNN.val.txt, output/KD/LDA/KD.LDA.val.txt, output/KD/NB/KD.NB.val.txt, output/KD/NNET/KD.NNET.val.txt, output/KD/PAM/KD.PAM.val.txt, output/KD/RF/KD.RF.val.txt, output/KD/RPART/KD.RPART.val.txt, output/KD/SVMLIN/KD.SVMLIN.val.txt, output/KD/SVMRAD/KD.SVMRAD.val.txt, output/viral_infection/C5/viral_infection.C5.val.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.val.txt, output/viral_infection/GLM/viral_infection.GLM.val.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.val.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.val.txt, output/viral_infection/KNN/viral_infection.KNN.val.txt, output/viral_infection/LDA/viral_infection.LDA.val.txt, output/viral_infection/NB/viral_infection.NB.val.txt, output/viral_infection/NNET/viral_infection.NNET.val.txt, output/viral_infection/PAM/viral_infection.PAM.val.txt, output/viral_infection/RF/viral_infection.RF.val.txt, output/viral_infection/RPART/viral_infection.RPART.val.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.val.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.val.txt, output/COVID19/C5/COVID19.C5.val.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.val.txt, output/COVID19/GLM/COVID19.GLM.val.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.val.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.val.txt, output/COVID19/KNN/COVID19.KNN.val.txt, output/COVID19/LDA/COVID19.LDA.val.txt, output/COVID19/NB/COVID19.NB.val.txt, output/COVID19/NNET/COVID19.NNET.val.txt, output/COVID19/PAM/COVID19.PAM.val.txt, output/COVID19/RF/COVID19.RF.val.txt, output/COVID19/RPART/COVID19.RPART.val.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.val.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.val.txt, output/bacterial_infection/C5/bacterial_infection.C5.val.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.val.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.val.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.val.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.val.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.val.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.val.txt, output/bacterial_infection/NB/bacterial_infection.NB.val.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.val.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.val.txt, output/bacterial_infection/RF/bacterial_infection.RF.val.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.val.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.val.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/KD/1_feature_selection/KD.deseqResults.tsv, output/KD/SVMRAD/KD.SVMRAD.val.txt, output/viral_infection/RF/viral_infection.RF.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.train.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.rds, output/COVID19/PAM/COVID19.PAM.train.txt, output/MISC/KNN/MISC.KNN.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.val.txt, output/MISC/SVMLIN/MISC.SVMLIN.rds, output/KD/LDA/KD.LDA.val.txt, output/COVID19/1_feature_selection/COVID19.counts.test.VST.SIG.tsv, output/COVID19/C5/COVID19.C5.test.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.val.txt, output/MISC/PAM/MISC.PAM.train.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.train.txt, output/COVID19/RF/COVID19.RF.test.txt, output/COVID19/RPART/COVID19.RPART.test.txt, output/COVID19/PAM/COVID19.PAM.rds, output/viral_infection/LDA/viral_infection.LDA.rds, output/MISC/PAM/MISC.PAM.rds, output/KD/GLMNETLasso/KD.GLMNETLasso.train.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.train.txt, output/KD/NNET/KD.NNET.rds, output/viral_infection/RPART/viral_infection.RPART.rds, output/KD/NB/KD.NB.train.txt, output/viral_infection/NB/viral_infection.NB.test.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.test.txt, output/MISC/NNET/MISC.NNET.rds, output/bacterial_infection/GLM/bacterial_infection.GLM.test.txt, output/KD/C5/KD.C5.train.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.rds, output/COVID19/NNET/COVID19.NNET.test.txt, output/COVID19/LDA/COVID19.LDA.val.txt, output/MISC/LDA/MISC.LDA.train.txt, output/viral_infection/GLM/viral_infection.GLM.val.txt, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.rds, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.val.txt, output/KD/SVMRAD/KD.SVMRAD.rds, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.rds, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.rds, output/bacterial_infection/LDA/bacterial_infection.LDA.test.txt, output/viral_infection/PAM/viral_infection.PAM.train.txt, output/KD/1_feature_selection/KD.counts.val.VST.SIG.tsv, output/MISC/EXTRATREES/MISC.EXTRATREES.test.txt, output/viral_infection/C5/viral_infection.C5.train.txt, output/KD/PAM/KD.PAM.test.txt, output/KD/SVMRAD/KD.SVMRAD.test.txt, output/viral_infection/RPART/viral_infection.RPART.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.val.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.val.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.test.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.test.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.val.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.train.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.rds, output/COVID19/RPART/COVID19.RPART.train.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.rds, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.test.txt, output/bacterial_infection/RF/bacterial_infection.RF.val.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.rds, output/COVID19/GLM/COVID19.GLM.train.txt, output/bacterial_infection/C5/bacterial_infection.C5.val.txt, output/viral_infection/SVMLIN/viral_infection.SVMLIN.val.txt, output/MISC/KNN/MISC.KNN.test.txt, output/KD/C5/KD.C5.rds, output/MISC/RPART/MISC.RPART.rds, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.train.txt, output/COVID19/NNET/COVID19.NNET.rds, output/MISC/NB/MISC.NB.val.txt, output/MISC/C5/MISC.C5.train.txt, output/KD/LDA/KD.LDA.train.txt, output/KD/SVMRAD/KD.SVMRAD.train.txt, output/MISC/LDA/MISC.LDA.rds, output/KD/GLMNETRidge/KD.GLMNETRidge.val.txt, output/MISC/RF/MISC.RF.train.txt, output/viral_infection/NB/viral_infection.NB.rds, output/COVID19/LDA/COVID19.LDA.train.txt, output/KD/C5/KD.C5.val.txt, output/bacterial_infection/LDA/bacterial_infection.LDA.val.txt, output/MISC/GLM/MISC.GLM.rds, output/KD/SVMLIN/KD.SVMLIN.test.txt, output/viral_infection/NNET/viral_infection.NNET.train.txt, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.test.VST.SIG.tsv, output/MISC/NB/MISC.NB.train.txt, output/COVID19/KNN/COVID19.KNN.val.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.train.txt, output/COVID19/LDA/COVID19.LDA.rds, output/COVID19/RPART/COVID19.RPART.rds, output/viral_infection/SVMLIN/viral_infection.SVMLIN.rds, output/bacterial_infection/KNN/bacterial_infection.KNN.test.txt, output/viral_infection/SVMRAD/viral_infection.SVMRAD.val.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.test.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.rds, output/bacterial_infection/PAM/bacterial_infection.PAM.val.txt, output/COVID19/GLM/COVID19.GLM.val.txt, output/viral_infection/LDA/viral_infection.LDA.test.txt, output/KD/RF/KD.RF.rds, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.test.txt, output/COVID19/C5/COVID19.C5.rds, output/viral_infection/SVMLIN/viral_infection.SVMLIN.test.txt, output/KD/RPART/KD.RPART.train.txt, output/MISC/PAM/MISC.PAM.val.txt, output/bacterial_infection/RF/bacterial_infection.RF.train.txt, output/COVID19/NNET/COVID19.NNET.val.txt, output/COVID19/NB/COVID19.NB.rds, output/viral_infection/RPART/viral_infection.RPART.val.txt, output/viral_infection/GLM/viral_infection.GLM.test.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.val.txt, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.val.VST.SIG.tsv, output/COVID19/KNN/COVID19.KNN.train.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.train.txt, output/KD/GLM/KD.GLM.test.txt, output/KD/PAM/KD.PAM.val.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.rds, output/KD/RPART/KD.RPART.test.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.val.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.val.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.train.txt, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.train.txt, output/COVID19/1_feature_selection/COVID19.deseqResults.tsv, output/MISC/RF/MISC.RF.val.txt, output/viral_infection/NB/viral_infection.NB.val.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.train.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.test.txt, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.val.txt, output/viral_infection/RF/viral_infection.RF.val.txt, output/viral_infection/RF/viral_infection.RF.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.test.txt, output/KD/1_feature_selection/KD.counts.test.VST.SIG.tsv, output/viral_infection/KNN/viral_infection.KNN.test.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.train.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.train.txt, output/bacterial_infection/RPART/bacterial_infection.RPART.val.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.rds, output/KD/SVMLIN/KD.SVMLIN.val.txt, output/MISC/LDA/MISC.LDA.val.txt, output/viral_infection/1_feature_selection/viral_infection.counts.test.VST.SIG.tsv, output/viral_infection/GLM/viral_infection.GLM.train.txt, output/KD/LDA/KD.LDA.rds, output/bacterial_infection/GLMNETRidge/bacterial_infection.GLMNETRidge.rds, output/viral_infection/SVMRAD/viral_infection.SVMRAD.test.txt, output/MISC/NNET/MISC.NNET.val.txt, output/COVID19/NB/COVID19.NB.val.txt, output/bacterial_infection/NB/bacterial_infection.NB.train.txt, output/MISC/NB/MISC.NB.test.txt, output/KD/GLMNETLasso/KD.GLMNETLasso.val.txt, output/bacterial_infection/1_feature_selection/bacterial_infection.counts.train.VST.SIG.tsv, output/bacterial_infection/LDA/bacterial_infection.LDA.rds, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.rds, output/KD/GLMNETLasso/KD.GLMNETLasso.test.txt, output/bacterial_infection/C5/bacterial_infection.C5.test.txt, output/KD/RF/KD.RF.train.txt, output/MISC/SVMRAD/MISC.SVMRAD.rds, output/bacterial_infection/GLM/bacterial_infection.GLM.val.txt, output/KD/GLM/KD.GLM.train.txt, output/viral_infection/RF/viral_infection.RF.rds, output/MISC/RPART/MISC.RPART.val.txt, output/KD/PAM/KD.PAM.train.txt, output/bacterial_infection/1_feature_selection/bacterial_infection.deseqResults.tsv, output/COVID19/NB/COVID19.NB.test.txt, output/MISC/C5/MISC.C5.val.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.rds, output/MISC/GLM/MISC.GLM.train.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.rds, output/KD/NNET/KD.NNET.train.txt, output/COVID19/PAM/COVID19.PAM.test.txt, output/bacterial_infection/RF/bacterial_infection.RF.test.txt, output/KD/SVMLIN/KD.SVMLIN.train.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.val.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.test.txt, output/MISC/LDA/MISC.LDA.test.txt, output/KD/NNET/KD.NNET.test.txt, output/KD/GLM/KD.GLM.val.txt, output/viral_infection/C5/viral_infection.C5.val.txt, output/COVID19/RF/COVID19.RF.val.txt, output/bacterial_infection/NNET/bacterial_infection.NNET.test.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.train.txt, output/MISC/RPART/MISC.RPART.test.txt, output/COVID19/SVMLIN/COVID19.SVMLIN.train.txt, output/KD/KNN/KD.KNN.rds, output/MISC/NB/MISC.NB.rds, output/viral_infection/SVMLIN/viral_infection.SVMLIN.train.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.val.txt, output/MISC/SVMRAD/MISC.SVMRAD.train.txt, output/COVID19/PAM/COVID19.PAM.val.txt, output/MISC/C5/MISC.C5.rds, output/COVID19/GLMNETLasso/COVID19.GLMNETLasso.test.txt, output/MISC/SVMRAD/MISC.SVMRAD.val.txt, output/MISC/GLM/MISC.GLM.test.txt, output/KD/LDA/KD.LDA.test.txt, output/COVID19/KNN/COVID19.KNN.test.txt, output/viral_infection/1_feature_selection/viral_infection.deseqResults.tsv, output/KD/RF/KD.RF.val.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.rds, output/bacterial_infection/RF/bacterial_infection.RF.rds, output/MISC/RF/MISC.RF.test.txt, output/KD/SVMLIN/KD.SVMLIN.rds, output/COVID19/GLM/COVID19.GLM.rds, output/KD/1_feature_selection/KD.counts.train.VST.SIG.tsv, output/viral_infection/PAM/viral_infection.PAM.test.txt, output/viral_infection/KNN/viral_infection.KNN.val.txt, output/viral_infection/NNET/viral_infection.NNET.test.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.val.txt, output/COVID19/NB/COVID19.NB.train.txt, output/KD/EXTRATREES/KD.EXTRATREES.rds, output/KD/EXTRATREES/KD.EXTRATREES.train.txt, output/KD/NB/KD.NB.test.txt, output/viral_infection/KNN/viral_infection.KNN.train.txt, output/viral_infection/EXTRATREES/viral_infection.EXTRATREES.test.txt, output/COVID19/1_feature_selection/COVID19.counts.val.VST.SIG.tsv, output/bacterial_infection/EXTRATREES/bacterial_infection.EXTRATREES.train.txt, output/viral_infection/KNN/viral_infection.KNN.rds, output/bacterial_infection/NNET/bacterial_infection.NNET.train.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.test.txt, output/bacterial_infection/SVMRAD/bacterial_infection.SVMRAD.test.txt, output/viral_infection/GLM/viral_infection.GLM.rds, output/viral_infection/NB/viral_infection.NB.train.txt, output/KD/KNN/KD.KNN.train.txt, output/COVID19/C5/COVID19.C5.val.txt, output/MISC/RPART/MISC.RPART.train.txt, output/KD/GLMNETRidge/KD.GLMNETRidge.rds, output/bacterial_infection/C5/bacterial_infection.C5.rds, output/COVID19/1_feature_selection/COVID19.counts.train.VST.SIG.tsv, output/COVID19/SVMLIN/COVID19.SVMLIN.rds, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.rds, output/MISC/NNET/MISC.NNET.train.txt, output/MISC/SVMLIN/MISC.SVMLIN.test.txt, output/COVID19/KNN/COVID19.KNN.rds, output/KD/KNN/KD.KNN.val.txt, output/bacterial_infection/NB/bacterial_infection.NB.val.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.test.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.test.txt, output/KD/NNET/KD.NNET.val.txt, output/viral_infection/LDA/viral_infection.LDA.val.txt, output/viral_infection/1_feature_selection/viral_infection.counts.train.VST.SIG.tsv, output/COVID19/RPART/COVID19.RPART.val.txt, output/COVID19/EXTRATREES/COVID19.EXTRATREES.val.txt, output/KD/RPART/KD.RPART.val.txt, output/MISC/PAM/MISC.PAM.test.txt, output/KD/PAM/KD.PAM.rds, output/bacterial_infection/NNET/bacterial_infection.NNET.val.txt, output/COVID19/RF/COVID19.RF.train.txt, output/viral_infection/C5/viral_infection.C5.rds, output/bacterial_infection/RPART/bacterial_infection.RPART.rds, output/MISC/NNET/MISC.NNET.test.txt, output/COVID19/RF/COVID19.RF.rds, output/KD/RF/KD.RF.test.txt, output/bacterial_infection/GLM/bacterial_infection.GLM.rds, output/KD/RPART/KD.RPART.rds, output/KD/NB/KD.NB.rds, output/KD/EXTRATREES/KD.EXTRATREES.test.txt, output/MISC/GLMNETRidge/MISC.GLMNETRidge.test.txt, output/MISC/EXTRATREES/MISC.EXTRATREES.train.txt, output/COVID19/GLM/COVID19.GLM.test.txt, output/viral_infection/GLMNETRidge/viral_infection.GLMNETRidge.rds, output/bacterial_infection/NB/bacterial_infection.NB.test.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.val.txt, output/MISC/C5/MISC.C5.test.txt, output/MISC/GLM/MISC.GLM.val.txt, output/bacterial_infection/C5/bacterial_infection.C5.train.txt, output/MISC/RF/MISC.RF.rds, output/MISC/SVMLIN/MISC.SVMLIN.train.txt, output/viral_infection/PAM/viral_infection.PAM.val.txt, output/viral_infection/NNET/viral_infection.NNET.val.txt, output/viral_infection/C5/viral_infection.C5.test.txt, output/KD/EXTRATREES/KD.EXTRATREES.val.txt, output/bacterial_infection/NB/bacterial_infection.NB.rds, output/COVID19/C5/COVID19.C5.train.txt, output/MISC/KNN/MISC.KNN.val.txt, output/bacterial_infection/GLMNETLasso/bacterial_infection.GLMNETLasso.test.txt, output/KD/GLM/KD.GLM.rds, output/MISC/KNN/MISC.KNN.rds, output/COVID19/NNET/COVID19.NNET.train.txt, output/bacterial_infection/SVMLIN/bacterial_infection.SVMLIN.train.txt, output/viral_infection/PAM/viral_infection.PAM.rds, output/viral_infection/SVMRAD/viral_infection.SVMRAD.train.txt, output/COVID19/SVMRAD/COVID19.SVMRAD.test.txt, output/bacterial_infection/KNN/bacterial_infection.KNN.val.txt, output/KD/C5/KD.C5.test.txt, output/COVID19/GLMNETRidge/COVID19.GLMNETRidge.rds, output/COVID19/SVMLIN/COVID19.SVMLIN.val.txt, output/viral_infection/RPART/viral_infection.RPART.train.txt, output/viral_infection/LDA/viral_infection.LDA.train.txt, output/bacterial_infection/PAM/bacterial_infection.PAM.train.txt, output/viral_infection/GLMNETLasso/viral_infection.GLMNETLasso.train.txt, output/KD/NB/KD.NB.val.txt, output/COVID19/LDA/COVID19.LDA.test.txt, output/KD/KNN/KD.KNN.test.txt, output/viral_infection/1_feature_selection/viral_infection.counts.val.VST.SIG.tsv, output/viral_infection/NNET/viral_infection.NNET.rds, output/bacterial_infection/LDA/bacterial_infection.LDA.train.txt
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 22:02:18 2023]
+Finished job 0.
+74 of 74 steps (100%) done
+Complete log: .snakemake/log/2023-11-20T214942.351577.snakemake.log

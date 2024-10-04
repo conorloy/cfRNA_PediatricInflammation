@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        1              1              1
+total         2              1              1
+
+Select jobs to execute...
+
+[Thu Nov  9 15:52:42 2023]
+rule models:
+    input: output/seed_100_sep/1_feature_selection/seed_100_sep.counts.train.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.test.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.val.VST.tsv, input/seed_100_sep/seed_100_sep.metadata.train.tsv, input/seed_100_sep/seed_100_sep.metadata.test.tsv, input/seed_100_sep/seed_100_sep.metadata.val.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.deseqResults.tsv
+    output: output/seed_100_sep/GLM/seed_100_sep.GLM.rds, output/seed_100_sep/GLM/seed_100_sep.GLM.train.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.test.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.val.txt
+    jobid: 2
+    reason: Missing output files: output/seed_100_sep/GLM/seed_100_sep.GLM.test.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.train.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.val.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.rds
+    wildcards: sample=seed_100_sep, model=GLM
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 15:52:46 2023]
+Finished job 2.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Thu Nov  9 15:52:46 2023]
+localrule all:
+    input: output/seed_100_sep/1_feature_selection/seed_100_sep.counts.train.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.test.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.counts.val.VST.tsv, output/seed_100_sep/1_feature_selection/seed_100_sep.deseqResults.tsv, output/seed_100_sep/GLM/seed_100_sep.GLM.rds, output/seed_100_sep/GLM/seed_100_sep.GLM.train.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.test.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.val.txt, output/seed_100_sep/GFSu/GFSu_seed_100_sep.GFSu.rds, output/seed_100_sep/GFSu/GFSu_seed_100_sep.GFSu.train.txt, output/seed_100_sep/GFSu/GFSu_seed_100_sep.GFSu.test.txt, output/seed_100_sep/GFSu/GFSu_seed_100_sep.GFSu.val.txt
+    jobid: 0
+    reason: Input files updated by another job: output/seed_100_sep/GLM/seed_100_sep.GLM.val.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.train.txt, output/seed_100_sep/GLM/seed_100_sep.GLM.rds, output/seed_100_sep/GLM/seed_100_sep.GLM.test.txt
+    resources: tmpdir=/tmp
+
+[Thu Nov  9 15:52:46 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2023-11-09T155242.655822.snakemake.log

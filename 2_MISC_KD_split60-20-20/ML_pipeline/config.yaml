@@ -1,0 +1,29 @@
+# MODELS: GLM
+# MODELS: [GLMNETLasso, C5]
+MODELS:  [C5, EXTRATREES, GLM, GLMNETLasso, GLMNETRidge, KNN, LDA, NB, NNET, PAM, RF, RPART, SVMLIN, SVMRAD]
+
+
+OUTPUT: output/
+
+## Samples to use ase comparison group
+CONDITIONS: [MISC, KD] # viral_infection, bacterial_infection]
+
+## RELEVANT COLUMNS
+id_column: "cfrna_id"                                           
+group_column: "inflam_cat"       
+
+## Number of top differentially abundant genes to use
+NUM_MARKERS: 150
+
+## DATA PATHS
+meta_train_path: ../../0_DATA/meta_data_train.602020.csv
+meta_test_path: ../../0_DATA/meta_data_test.602020.csv
+meta_val_path: ../../0_DATA/meta_data_val.602020.csv
+
+counts_train_path: ../../0_DATA/counts_train.602020.csv
+counts_test_path: ../../0_DATA/counts_test.602020.csv
+counts_val_path: ../../0_DATA/counts_val.602020.csv
+
+counts_vst_train_path: ../../0_DATA/counts_train_vst.602020.csv
+counts_vst_test_path: ../../0_DATA/counts_test_vst.602020.csv
+counts_vst_val_path: ../../0_DATA/counts_val_vst.602020.csv

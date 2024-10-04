@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count    min threads    max threads
+------  -------  -------------  -------------
+all           1              1              1
+models        1              1              1
+total         2              1              1
+
+Select jobs to execute...
+
+[Mon Nov 20 21:00:55 2023]
+rule models:
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/GLM/MISC.GLM.rds, output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLM/MISC.GLM.test.txt, output/MISC/GLM/MISC.GLM.val.txt
+    jobid: 2
+    reason: Missing output files: output/MISC/GLM/MISC.GLM.rds, output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLM/MISC.GLM.test.txt, output/MISC/GLM/MISC.GLM.val.txt
+    wildcards: sample=MISC, model=GLM
+    resources: tmpdir=/tmp
+
+[Mon Nov 20 21:00:57 2023]
+Error in rule models:
+    jobid: 2
+    input: output/MISC/1_feature_selection/MISC.counts.train.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.test.VST.SIG.tsv, output/MISC/1_feature_selection/MISC.counts.val.VST.SIG.tsv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_train.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv, /workdir/cjl332/prevail/PAPER2/0_DATA/meta_data_test.7030.csv
+    output: output/MISC/GLM/MISC.GLM.rds, output/MISC/GLM/MISC.GLM.train.txt, output/MISC/GLM/MISC.GLM.test.txt, output/MISC/GLM/MISC.GLM.val.txt
+
+RuleException:
+CalledProcessError in line 50 of /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk:
+Command 'set -euo pipefail;  Rscript --vanilla /local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/.snakemake/scripts/tmpwtc3dhvv.2_train-models.R' returned non-zero exit status 1.
+  File "/local/workdir/cjl332/prevail/PAPER2/3_Multiclass/ML_split70-30/1_all/workflow/rules/main.smk", line 50, in __rule_models
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-20T210055.068439.snakemake.log
